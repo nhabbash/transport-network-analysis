@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  db:
+    container_name: milan-gtfs-db
+    image: postgres
+    build: "./db"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: always
+    ports:
+    - 5432:5432
+    environment:
+      POSTGRES_HOST: 'db'
+      POSTGRES_DB: 'milan-gtfs'
+      DATABASE_USER: 'postgres'
+      DATABASE_PASSWORD: 'admin'
+
+  db-admin:
+    container_name: milan-gtfs-db-admin
+    image: dpage/pgadmin4
+    depends_on:
+    - db
+    ports:
+      - 3000:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'admin'
+      PGADMIN_DEFAULT_PASSWORD: 'admin'
+
+volumes:
+  db_data: {}

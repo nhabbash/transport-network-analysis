@@ -1,1 +1,2 @@
-dataset/*
+db/dataset/*
+.venv
