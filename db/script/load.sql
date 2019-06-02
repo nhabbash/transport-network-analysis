@@ -60,8 +60,8 @@ CREATE TABLE stop_times (
     trip_id text,
 	arrival_time text,
 	departure_time text,
-	stop_id text,
-	stop_sequence text,
+	stop_id int,
+	stop_sequence int,
 	stop_headsign text,
 	pickup_type text,
 	drop_off_type text,
@@ -76,7 +76,7 @@ CREATE INDEX ON stop_times (drop_off_type);
 
 DROP TABLE IF EXISTS stops;
 CREATE TABLE stops (
-    stop_id text,
+    stop_id int,
 	stop_code text,
 	stop_name text,
 	stop_desc text,

@@ -11,11 +11,17 @@ TODO
 ## Prerequisites
 
 * Python 3.0 or greater
+* Docker
+* Docker Compose
 
 ## Installation
 ```sh
 $ git clone https://github.com/Dodicin/transportation-network-analysis
 $ cd transportation-network-analysis
+# Download the dataset
+$ python init_data.py
+# Launch DB
+$ docker-compose up --build
 ```
 
 #
@@ -23,11 +29,3 @@ $ cd transportation-network-analysis
 
 * **Nassim Habbash** (808292) - [dodicin](https://github.com/dodicin)
 * **Ricardo Matomoros** 
-
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
