@@ -13,6 +13,7 @@ TODO
 * Python 3.0 or greater
 * Docker
 * Docker Compose
+* PostgreSQL (Binary necessary for the psycopg2 Python connector)
 
 ## Installation
 ```sh
