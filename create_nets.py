@@ -27,13 +27,13 @@ try:
 
     for key, w in where.items():
         cursor.execute('''
-        select route_id, stop_name, stop_id, stop_sequence, stop_lat, stop_lon
+        select route_id, stop_name, stop_id, stop_sequence, stop_lat, stop_lon, shape_id
         from
         (
-            select distinct on (route_id) route_id, trip_id
+            select distinct on (route_id) route_id, trip_id, shape_id
             from 
             (
-                select route_id, trip_id, count(trip_id) as count
+                select route_id, trip_id, count(trip_id) as count, shape_id
                 from trips
                 join stop_times using (trip_id)
                 group by route_id, trip_id
