@@ -1,4 +1,4 @@
-Creator "igraph version 0.7.1 Mon Jun  3 13:01:41 2019"
+Creator "igraph version 0.7.1 Tue Jun  4 13:32:41 2019"
 Version 1
 graph
 [
@@ -9,6 +9,7 @@ graph
     stopLon "9.11289401203625"
     stopId "BISCEGLIE"
     stopLat "45.4550279741738"
+    routes "M1"
     label "BISCEGLIE"
   ]
   node
@@ -17,6 +18,7 @@ graph
     stopLon "9.11292550791171"
     stopId "INGANNI"
     stopLat "45.4553804010375"
+    routes "M1"
     label "INGANNI"
   ]
   node
@@ -25,6 +27,7 @@ graph
     stopLon "9.12226290790823"
     stopId "PRIMATICCIO"
     stopLat "45.4575630010367"
+    routes "M1"
     label "PRIMATICCIO"
   ]
   node
@@ -33,6 +36,7 @@ graph
     stopLon "9.12925970790564"
     stopId "BANDE NERE"
     stopLat "45.459413601036"
+    routes "M1"
     label "BANDE NERE"
   ]
   node
@@ -41,6 +45,7 @@ graph
     stopLon "9.136484507903"
     stopId "GAMBARA"
     stopLat "45.4615040010352"
+    routes "M1"
     label "GAMBARA"
   ]
   node
@@ -49,6 +54,7 @@ graph
     stopLon "9.14302800790081"
     stopId "DE ANGELI"
     stopLat "45.4648963010345"
+    routes "M1"
     label "DE ANGELI"
   ]
   node
@@ -57,6 +63,7 @@ graph
     stopLon "9.14956580789837"
     stopId "WAGNER"
     stopLat "45.4664306010339"
+    routes "M1"
     label "WAGNER"
   ]
   node
@@ -65,6 +72,7 @@ graph
     stopLon "9.15591440789601"
     stopId "PAGANO"
     stopLat "45.4679501010333"
+    routes "M1"
     label "PAGANO"
   ]
   node
@@ -73,6 +81,7 @@ graph
     stopLon "9.16109520789396"
     stopId "CONCILIAZIONE"
     stopLat "45.4682808010329"
+    routes "M1"
     label "CONCILIAZIONE"
   ]
   node
@@ -81,6 +90,7 @@ graph
     stopLon "9.16648700789168"
     stopId "CADORNA"
     stopLat "45.4675341010325"
+    routes "M1,M2"
     label "CADORNA"
   ]
   node
@@ -89,6 +99,7 @@ graph
     stopLon "9.17642630788776"
     stopId "CAIROLI"
     stopLat "45.4681953010317"
+    routes "M1"
     label "CAIROLI"
   ]
   node
@@ -97,6 +108,7 @@ graph
     stopLon "9.18202500788552"
     stopId "CORDUSIO"
     stopLat "45.4683672010313"
+    routes "M1"
     label "CORDUSIO"
   ]
   node
@@ -105,6 +117,7 @@ graph
     stopLon "9.18623540788344"
     stopId "DUOMO"
     stopLat "45.4655319010313"
+    routes "M1,M3"
     label "DUOMO"
   ]
   node
@@ -113,6 +126,7 @@ graph
     stopLon "9.18959606423539"
     stopId "SAN BABILA"
     stopLat "45.4646220563982"
+    routes "M1"
     label "SAN BABILA"
   ]
   node
@@ -121,6 +135,7 @@ graph
     stopLon "9.197528607879"
     stopId "PALESTRO"
     stopLat "45.4665214010304"
+    routes "M1"
     label "PALESTRO"
   ]
   node
@@ -129,6 +144,7 @@ graph
     stopLon "9.20194900787787"
     stopId "P.TA VENEZIA"
     stopLat "45.4714250010296"
+    routes "M1"
     label "P.TA VENEZIA"
   ]
   node
@@ -137,6 +153,7 @@ graph
     stopLon "9.20504640787702"
     stopId "LIMA"
     stopLat "45.4744187010291"
+    routes "M1"
     label "LIMA"
   ]
   node
@@ -145,6 +162,7 @@ graph
     stopLon "9.21098270787541"
     stopId "LORETO"
     stopLat "45.4803459010282"
+    routes "M1,M2"
     label "LORETO"
   ]
   node
@@ -153,6 +171,7 @@ graph
     stopLon "9.2169815783692"
     stopId "PASTEUR"
     stopLat "45.4862401109857"
+    routes "M1"
     label "PASTEUR"
   ]
   node
@@ -161,6 +180,7 @@ graph
     stopLon "9.21818010787393"
     stopId "ROVERETO"
     stopLat "45.4910692010267"
+    routes "M1"
     label "ROVERETO"
   ]
   node
@@ -169,6 +189,7 @@ graph
     stopLon "9.21950580787399"
     stopId "TURRO"
     stopLat "45.4955331010262"
+    routes "M1"
     label "TURRO"
   ]
   node
@@ -177,6 +198,7 @@ graph
     stopLon "9.22100470787404"
     stopId "GORLA"
     stopLat "45.5004455010256"
+    routes "M1"
     label "GORLA"
   ]
   node
@@ -185,6 +207,7 @@ graph
     stopLon "9.22273880787417"
     stopId "PRECOTTO"
     stopLat "45.5067343010249"
+    routes "M1"
     label "PRECOTTO"
   ]
   node
@@ -193,6 +216,7 @@ graph
     stopLon "9.22449910787417"
     stopId "VILLA S.G."
     stopLat "45.5120295010243"
+    routes "M1"
     label "VILLA S.G."
   ]
   node
@@ -201,6 +225,7 @@ graph
     stopLon "9.22613020787423"
     stopId "SESTO MARELLI"
     stopLat "45.5174545010237"
+    routes "M1"
     label "SESTO MARELLI"
   ]
   node
@@ -209,6 +234,7 @@ graph
     stopLon "9.22796150787429"
     stopId "SESTO RONDO"
     stopLat "45.523477101023"
+    routes "M1"
     label "SESTO RONDO"
   ]
   node
@@ -217,6 +243,7 @@ graph
     stopLon "9.23124580787439"
     stopId "SESTO 1 MAGGIO FS"
     stopLat "45.5341593010219"
+    routes "M1"
     label "SESTO 1 MAGGIO FS"
   ]
   node
@@ -225,6 +252,7 @@ graph
     stopLon "9.16109520789396"
     stopId "BUONARROTI"
     stopLat "45.4682808010329"
+    routes "M1"
     label "BUONARROTI"
   ]
   node
@@ -233,6 +261,7 @@ graph
     stopLon "9.15529230789659"
     stopId "AMENDOLA"
     stopLat "45.4704020010331"
+    routes "M1"
     label "AMENDOLA"
   ]
   node
@@ -241,6 +270,7 @@ graph
     stopLon "9.15096930789877"
     stopId "LOTTO"
     stopLat "45.4736789010331"
+    routes "M1,M5"
     label "LOTTO"
   ]
   node
@@ -249,6 +279,7 @@ graph
     stopLon "9.14374880790241"
     stopId "QT8"
     stopLat "45.4791454010331"
+    routes "M1"
     label "QT8"
   ]
   node
@@ -257,6 +288,7 @@ graph
     stopLon "9.13718230790598"
     stopId "LAMPUGNANO"
     stopLat "45.485958101033"
+    routes "M1"
     label "LAMPUGNANO"
   ]
   node
@@ -265,6 +297,7 @@ graph
     stopLon "9.12731920791042"
     stopId "URUGUAY"
     stopLat "45.4894017010334"
+    routes "M1"
     label "URUGUAY"
   ]
   node
@@ -273,6 +306,7 @@ graph
     stopLon "9.12054590791373"
     stopId "BONOLA"
     stopLat "45.4937169010335"
+    routes "M1"
     label "BONOLA"
   ]
   node
@@ -281,6 +315,7 @@ graph
     stopLon "9.11014780791837"
     stopId "S.LEONARDO"
     stopLat "45.4970026010339"
+    routes "M1"
     label "S.LEONARDO"
   ]
   node
@@ -289,6 +324,7 @@ graph
     stopLon "9.10148120792243"
     stopId "MOLINO DORINO"
     stopLat "45.5011555010342"
+    routes "M1"
     label "MOLINO DORINO"
   ]
   node
@@ -297,6 +333,7 @@ graph
     stopLon "9.0929661079264"
     stopId "PERO"
     stopLat "45.5052116010345"
+    routes "M1"
     label "PERO"
   ]
   node
@@ -305,6 +342,7 @@ graph
     stopLon "9.08580670792978"
     stopId "RHO FIERAMILANO"
     stopLat "45.5087997010347"
+    routes "M1"
     label "RHO FIERAMILANO"
   ]
   node
@@ -313,6 +351,7 @@ graph
     stopLon "9.08710730793072"
     stopId "ABBIATEGRASSO"
     stopLat "45.5198398010336"
+    routes "M2"
     label "ABBIATEGRASSO"
   ]
   node
@@ -321,6 +360,7 @@ graph
     stopLon "9.17732280788232"
     stopId "FAMAGOSTA"
     stopLat "45.4299949010351"
+    routes "M2"
     label "FAMAGOSTA"
   ]
   node
@@ -329,6 +369,7 @@ graph
     stopLon "9.168012607887"
     stopId "ROMOLO"
     stopLat "45.4368950010352"
+    routes "M2"
     label "ROMOLO"
   ]
   node
@@ -337,6 +378,7 @@ graph
     stopLon "9.16767680788804"
     stopId "P.TA GENOVA F.S."
     stopLat "45.4437333010346"
+    routes "M2"
     label "P.TA GENOVA F.S."
   ]
   node
@@ -345,6 +387,7 @@ graph
     stopLon "9.16960610788841"
     stopId "S.AGOSTINO"
     stopLat "45.4523782010337"
+    routes "M2"
     label "S.AGOSTINO"
   ]
   node
@@ -353,6 +396,7 @@ graph
     stopLon "9.16981440788915"
     stopId "S.AMBROGIO"
     stopLat "45.4586201010331"
+    routes "M2"
     label "S.AMBROGIO"
   ]
   node
@@ -361,6 +405,7 @@ graph
     stopLon "9.17710240788748"
     stopId "LANZA"
     stopLat "45.4681551010317"
+    routes "M2"
     label "LANZA"
   ]
   node
@@ -369,6 +414,7 @@ graph
     stopLon "9.18254810788582"
     stopId "MOSCOVA"
     stopLat "45.4722295010309"
+    routes "M2"
     label "MOSCOVA"
   ]
   node
@@ -377,6 +423,7 @@ graph
     stopLon "9.18447570788573"
     stopId "GARIBALDI FS"
     stopLat "45.4774395010303"
+    routes "M2,M5"
     label "GARIBALDI FS"
   ]
   node
@@ -385,6 +432,7 @@ graph
     stopLon "9.18674240788565"
     stopId "GIOIA"
     stopLat "45.4836397010296"
+    routes "M2"
     label "GIOIA"
   ]
   node
@@ -393,6 +441,7 @@ graph
     stopLon "9.19485740788253"
     stopId "CENTRALE FS"
     stopLat "45.4848999010289"
+    routes "M2,M3"
     label "CENTRALE FS"
   ]
   node
@@ -401,6 +450,7 @@ graph
     stopLon "9.20261280787934"
     stopId "CAIAZZO"
     stopLat "45.4844397010284"
+    routes "M2"
     label "CAIAZZO"
   ]
   node
@@ -409,6 +459,7 @@ graph
     stopLon "9.21516600787429"
     stopId "PIOLA"
     stopLat "45.4845943010275"
+    routes "M2"
     label "PIOLA"
   ]
   node
@@ -417,6 +468,7 @@ graph
     stopLon "9.22591680786948"
     stopId "LAMBRATE FS"
     stopLat "45.481145001027"
+    routes "M2"
     label "LAMBRATE FS"
   ]
   node
@@ -425,6 +477,7 @@ graph
     stopLon "9.23482980786629"
     stopId "UDINE"
     stopLat "45.4842475010261"
+    routes "M2"
     label "UDINE"
   ]
   node
@@ -433,6 +486,7 @@ graph
     stopLon "9.23699640786635"
     stopId "CIMIANO"
     stopLat "45.4912044010253"
+    routes "M2"
     label "CIMIANO"
   ]
   node
@@ -441,6 +495,7 @@ graph
     stopLon "9.24142570786573"
     stopId "CRESCENZAGO"
     stopLat "45.5000415010242"
+    routes "M2"
     label "CRESCENZAGO"
   ]
   node
@@ -449,6 +504,7 @@ graph
     stopLon "9.24819330786369"
     stopId "CASCINA GOBBA"
     stopLat "45.5052544010232"
+    routes "M2"
     label "CASCINA GOBBA"
   ]
   node
@@ -457,6 +513,7 @@ graph
     stopLon "9.26051020785954"
     stopId "VIMODRONE"
     stopLat "45.5114424010218"
+    routes "M2"
     label "VIMODRONE"
   ]
   node
@@ -465,6 +522,7 @@ graph
     stopLon "9.28598910784982"
     stopId "CASCINA BURRONA"
     stopLat "45.5157833010196"
+    routes "M2"
     label "CASCINA BURRONA"
   ]
   node
@@ -473,6 +531,7 @@ graph
     stopLon "9.29783542421091"
     stopId "CERNUSCO SUL NAVIGLIO"
     stopLat "45.5173643568875"
+    routes "M2"
     label "CERNUSCO SUL NAVIGLIO"
   ]
   node
@@ -481,6 +540,7 @@ graph
     stopLon "9.33137771302968"
     stopId "VILLA FIORITA"
     stopLat "45.5210690111993"
+    routes "M2"
     label "VILLA FIORITA"
   ]
   node
@@ -489,6 +549,7 @@ graph
     stopLon "9.34597136677814"
     stopId "CASSINA DE PECCHI"
     stopLat "45.5207397997328"
+    routes "M2"
     label "CASSINA DE PECCHI"
   ]
   node
@@ -497,6 +558,7 @@ graph
     stopLon "9.36312160213117"
     stopId "BUSSERO"
     stopLat "45.521864033703"
+    routes "M2"
     label "BUSSERO"
   ]
   node
@@ -505,6 +567,7 @@ graph
     stopLon "9.37589692165833"
     stopId "VILLA POMPEA"
     stopLat "45.5253016625452"
+    routes "M2"
     label "VILLA POMPEA"
   ]
   node
@@ -513,6 +576,7 @@ graph
     stopLon "9.38497435183026"
     stopId "GORGONZOLA"
     stopLat "45.5278485186639"
+    routes "M2"
     label "GORGONZOLA"
   ]
   node
@@ -521,6 +585,7 @@ graph
     stopLon "9.40345410780515"
     stopId "CASCINA ANTONIETTA"
     stopLat "45.5367410010093"
+    routes "M2"
     label "CASCINA ANTONIETTA"
   ]
   node
@@ -529,6 +594,7 @@ graph
     stopLon "9.42350019149011"
     stopId "GESSATE"
     stopLat "45.5420794775495"
+    routes "M2"
     label "GESSATE"
   ]
   node
@@ -537,6 +603,7 @@ graph
     stopLon "9.43662513013151"
     stopId "ASSAGO MILANOFIORI FORUM"
     stopLat "45.545287231276"
+    routes "M2"
     label "ASSAGO MILANOFIORI FORUM"
   ]
   node
@@ -545,6 +612,7 @@ graph
     stopLon "9.14553880789141"
     stopId "ASSAGO MILANOFIORI NORD"
     stopLat "45.40174850104"
+    routes "M2"
     label "ASSAGO MILANOFIORI NORD"
   ]
   node
@@ -553,6 +621,7 @@ graph
     stopLon "9.26051020785954"
     stopId "COLOGNO SUD"
     stopLat "45.5114424010218"
+    routes "M2"
     label "COLOGNO SUD"
   ]
   node
@@ -561,6 +630,7 @@ graph
     stopLon "9.27492710785488"
     stopId "COLOGNO CENTRO"
     stopLat "45.5202131010199"
+    routes "M2"
     label "COLOGNO CENTRO"
   ]
   node
@@ -569,6 +639,7 @@ graph
     stopLon "9.2829642078526"
     stopId "COLOGNO NORD"
     stopLat "45.5274782010187"
+    routes "M2"
     label "COLOGNO NORD"
   ]
   node
@@ -577,6 +648,7 @@ graph
     stopLon "9.29109410785023"
     stopId "SAN DONATO"
     stopLat "45.5343028010175"
+    routes "M3"
     label "SAN DONATO"
   ]
   node
@@ -585,6 +657,7 @@ graph
     stopLon "9.25623390785034"
     stopId "ROGOREDO FS"
     stopLat "45.4292064010295"
+    routes "M3"
     label "ROGOREDO FS"
   ]
   node
@@ -593,6 +666,7 @@ graph
     stopLon "9.23808910785825"
     stopId "PORTO DI MARE"
     stopLat "45.4335862010304"
+    routes "M3"
     label "PORTO DI MARE"
   ]
   node
@@ -601,6 +675,7 @@ graph
     stopLon "9.23031110786186"
     stopId "CORVETTO"
     stopLat "45.4371279010307"
+    routes "M3"
     label "CORVETTO"
   ]
   node
@@ -609,6 +684,7 @@ graph
     stopLon "9.22346950786506"
     stopId "BRENTA"
     stopLat "45.4404109010309"
+    routes "M3"
     label "BRENTA"
   ]
   node
@@ -617,6 +693,7 @@ graph
     stopLon "9.2184814078674"
     stopId "LODI T.I.B.B."
     stopLat "45.442810701031"
+    routes "M3"
     label "LODI T.I.B.B."
   ]
   node
@@ -625,6 +702,7 @@ graph
     stopLon "9.21081640787101"
     stopId "PORTA ROMANA"
     stopLat "45.4467636010312"
+    routes "M3"
     label "PORTA ROMANA"
   ]
   node
@@ -633,6 +711,7 @@ graph
     stopLon "9.20340020787463"
     stopId "CROCETTA"
     stopLat "45.4514341010313"
+    routes "M3"
     label "CROCETTA"
   ]
   node
@@ -641,6 +720,7 @@ graph
     stopLon "9.19510340787866"
     stopId "MISSORI"
     stopLat "45.4565508010315"
+    routes "M3"
     label "MISSORI"
   ]
   node
@@ -649,6 +729,7 @@ graph
     stopLon "9.18861101005318"
     stopId "MONTENAPOLEONE"
     stopLat "45.4639037177197"
+    routes "M3"
     label "MONTENAPOLEONE"
   ]
   node
@@ -657,6 +738,7 @@ graph
     stopLon "9.19284790788136"
     stopId "TURATI"
     stopLat "45.4700055010304"
+    routes "M3"
     label "TURATI"
   ]
   node
@@ -665,6 +747,7 @@ graph
     stopLon "9.19470670788128"
     stopId "REPUBBLICA"
     stopLat "45.4750407010298"
+    routes "M3"
     label "REPUBBLICA"
   ]
   node
@@ -673,6 +756,7 @@ graph
     stopLon "9.20261280787934"
     stopId "SONDRIO"
     stopLat "45.4844397010284"
+    routes "M3"
     label "SONDRIO"
   ]
   node
@@ -681,6 +765,7 @@ graph
     stopLon "9.20055840788091"
     stopId "ZARA"
     stopLat "45.489990201028"
+    routes "M3,M5"
     label "ZARA"
   ]
   node
@@ -689,6 +774,7 @@ graph
     stopLon "9.19260110788448"
     stopId "MACIACHINI"
     stopLat "45.4926644010284"
+    routes "M3"
     label "MACIACHINI"
   ]
   node
@@ -697,6 +783,7 @@ graph
     stopLon "9.1850425078882"
     stopId "DERGANO"
     stopLat "45.4977017010284"
+    routes "M3"
     label "DERGANO"
   ]
   node
@@ -705,6 +792,7 @@ graph
     stopLon "9.17960310789145"
     stopId "AFFORI CENTRO"
     stopLat "45.5055370010281"
+    routes "M3"
     label "AFFORI CENTRO"
   ]
   node
@@ -713,6 +801,7 @@ graph
     stopLon "9.17397990789478"
     stopId "AFFORI FN"
     stopLat "45.5135543010278"
+    routes "M3"
     label "AFFORI FN"
   ]
   node
@@ -721,6 +810,7 @@ graph
     stopLon "9.16825160789818"
     stopId "COMASINA"
     stopLat "45.5216818010275"
+    routes "M3"
     label "COMASINA"
   ]
   node
@@ -729,6 +819,7 @@ graph
     stopLon "9.25623390785034"
     stopId "SAN SIRO STADIO"
     stopLat "45.4292064010295"
+    routes "M5"
     label "SAN SIRO STADIO"
   ]
   node
@@ -737,6 +828,7 @@ graph
     stopLon "9.11831543256738"
     stopId "SAN SIRO IPPODROMO"
     stopLat "45.4762588946168"
+    routes "M5"
     label "SAN SIRO IPPODROMO"
   ]
   node
@@ -745,6 +837,7 @@ graph
     stopLon "9.12901244641325"
     stopId "SEGESTA"
     stopLat "45.4762089724848"
+    routes "M5"
     label "SEGESTA"
   ]
   node
@@ -753,6 +846,7 @@ graph
     stopLon "9.14366872151745"
     stopId "PORTELLO"
     stopLat "45.4797818727906"
+    routes "M5"
     label "PORTELLO"
   ]
   node
@@ -761,6 +855,7 @@ graph
     stopLon "9.15149944089912"
     stopId "TRE TORRI"
     stopLat "45.4807995479255"
+    routes "M5"
     label "TRE TORRI"
   ]
   node
@@ -769,6 +864,7 @@ graph
     stopLon "9.15667532734001"
     stopId "DOMODOSSOLA"
     stopLat "45.478140184674"
+    routes "M5"
     label "DOMODOSSOLA"
   ]
   node
@@ -777,6 +873,7 @@ graph
     stopLon "9.16226040292661"
     stopId "GERUSALEMME"
     stopLat "45.4816190261232"
+    routes "M5"
     label "GERUSALEMME"
   ]
   node
@@ -785,6 +882,7 @@ graph
     stopLon "9.16677778724863"
     stopId "CENISIO"
     stopLat "45.4845217522064"
+    routes "M5"
     label "CENISIO"
   ]
   node
@@ -793,6 +891,7 @@ graph
     stopLon "9.17194683918035"
     stopId "MONUMENTALE"
     stopLat "45.4874900006087"
+    routes "M5"
     label "MONUMENTALE"
   ]
   node
@@ -801,6 +900,7 @@ graph
     stopLon "9.18674240788565"
     stopId "ISOLA"
     stopLat "45.4836397010296"
+    routes "M5"
     label "ISOLA"
   ]
   node
@@ -809,6 +909,7 @@ graph
     stopLon "9.19260110788448"
     stopId "MARCHE"
     stopLat "45.4926644010284"
+    routes "M5"
     label "MARCHE"
   ]
   node
@@ -817,6 +918,7 @@ graph
     stopLon "9.19482360788404"
     stopId "ISTRIA"
     stopLat "45.4961456010279"
+    routes "M5"
     label "ISTRIA"
   ]
   node
@@ -825,6 +927,7 @@ graph
     stopLon "9.19792000788352"
     stopId "CA GRANDA"
     stopLat "45.5016262010272"
+    routes "M5"
     label "CA GRANDA"
   ]
   node
@@ -833,6 +936,7 @@ graph
     stopLon "9.20111030788298"
     stopId "BICOCCA"
     stopLat "45.5072425010265"
+    routes "M5"
     label "BICOCCA"
   ]
   node
@@ -841,6 +945,7 @@ graph
     stopLon "9.20536990788226"
     stopId "PONALE"
     stopLat "45.5147339010255"
+    routes "M5"
     label "PONALE"
   ]
   node
@@ -849,6 +954,7 @@ graph
     stopLon "9.20947360788156"
     stopId "BIGNAMI"
     stopLat "45.5219945010245"
+    routes "M5"
     label "BIGNAMI"
   ]
   edge
