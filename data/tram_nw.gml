@@ -1,4 +1,4 @@
-Creator "igraph version 0.7.1 Mon Jun  3 15:32:19 2019"
+Creator "igraph version 0.7.1 Tue Jun  4 13:47:44 2019"
 Version 1
 graph
 [
@@ -9,6 +9,7 @@ graph
     stopLon "9.19289990590099"
     idStop "11829"
     stopLat "45.4702360347978"
+    routes "T1"
     label "montenapoleone m3"
   ]
   node
@@ -17,6 +18,7 @@ graph
     stopLon "9.20560888066468"
     idStop "11824"
     stopLat "45.4575091994896"
+    routes "T9"
     label "v.le monte nero via bergamo"
   ]
   node
@@ -25,6 +27,7 @@ graph
     stopLon "9.20624185619175"
     idStop "11827"
     stopLat "45.4575261942109"
+    routes "T16"
     label "v.le monte nero via bergamo"
   ]
   node
@@ -33,6 +36,7 @@ graph
     stopLon "9.20329684545175"
     idStop "11820"
     stopLat "45.4623401614245"
+    routes "T12"
     label "c.so p.ta vittoria (camera del lavoro)"
   ]
   node
@@ -41,6 +45,7 @@ graph
     stopLon "9.20382684463351"
     idStop "11823"
     stopLat "45.4622751421515"
+    routes "T27,T19"
     label "c.so p.ta vittoria (camera del lavoro)"
   ]
   node
@@ -49,6 +54,7 @@ graph
     stopLon "9.22184559791726"
     idStop "12412"
     stopLat "45.4716810827821"
+    routes "T5"
     label "p.za aspari"
   ]
   node
@@ -57,6 +63,7 @@ graph
     stopLon "9.18196806354204"
     idStop "11542"
     stopLat "45.4721919764079"
+    routes "T14,T12"
     label "lanza m2"
   ]
   node
@@ -65,6 +72,7 @@ graph
     stopLon "9.18204909363292"
     idStop "11541"
     stopLat "45.471997998978"
+    routes "T2"
     label "lanza m2"
   ]
   node
@@ -73,6 +81,7 @@ graph
     stopLon "9.18517607636754"
     idStop "11547"
     stopLat "45.4693850250889"
+    routes "T2"
     label "via cusani"
   ]
   node
@@ -81,6 +90,7 @@ graph
     stopLon "9.18455504630233"
     idStop "11544"
     stopLat "45.4688640138805"
+    routes "T1"
     label "via cusani"
   ]
   node
@@ -89,6 +99,7 @@ graph
     stopLon "9.18523003067947"
     idStop "11548"
     stopLat "45.4695290193298"
+    routes "T14,T12"
     label "via cusani"
   ]
   node
@@ -97,6 +108,7 @@ graph
     stopLon "9.20326356080949"
     idStop "11986"
     stopLat "45.5116376072507"
+    routes "T7,T31"
     label "v.le testi via s. marcellina"
   ]
   node
@@ -105,6 +117,7 @@ graph
     stopLon "9.16483830590783"
     idStop "10899"
     stopLat "45.4663559880751"
+    routes "T10"
     label "p.le baracca"
   ]
   node
@@ -113,6 +126,7 @@ graph
     stopLon "9.16446435135818"
     idStop "10898"
     stopLat "45.4661519678759"
+    routes "T16"
     label "p.le baracca"
   ]
   node
@@ -121,6 +135,7 @@ graph
     stopLon "9.17253019052481"
     idStop "11263"
     stopLat "45.4682979880739"
+    routes "T19"
     label "p.za virgilio"
   ]
   node
@@ -129,6 +144,7 @@ graph
     stopLon "9.17151918007782"
     idStop "11262"
     stopLat "45.476308899474"
+    routes "T10"
     label "arco della pace"
   ]
   node
@@ -137,6 +153,7 @@ graph
     stopLon "9.17069816313322"
     idStop "11261"
     stopLat "45.4770468678148"
+    routes "T1"
     label "arco della pace"
   ]
   node
@@ -145,6 +162,7 @@ graph
     stopLon "9.16331834665059"
     idStop "10890"
     stopLat "45.4610550422339"
+    routes "T10"
     label "p.le aquileia"
   ]
   node
@@ -153,6 +171,7 @@ graph
     stopLon "9.16412034741655"
     idStop "10896"
     stopLat "45.4639230205238"
+    routes "T10"
     label "v.le s. michele del carso p.za de meis"
   ]
   node
@@ -161,6 +180,7 @@ graph
     stopLon "9.17246521503509"
     idStop "11264"
     stopLat "45.468472990791"
+    routes "T1"
     label "p.za virgilio"
   ]
   node
@@ -169,6 +189,7 @@ graph
     stopLon "9.19747671100822"
     idStop "11910"
     stopLat "45.494814776391"
+    routes "T5"
     label "p.za carbonari"
   ]
   node
@@ -177,6 +198,7 @@ graph
     stopLon "9.20207669497161"
     idStop "11915"
     stopLat "45.48686887957"
+    routes "T5"
     label "stazione centrale m2 m3"
   ]
   node
@@ -185,6 +207,7 @@ graph
     stopLon "9.20186968479484"
     idStop "11916"
     stopLat "45.4868168682125"
+    routes "T10"
     label "stazione centrale m2 m3"
   ]
   node
@@ -193,6 +216,7 @@ graph
     stopLon "9.20121977060903"
     idStop "11850"
     stopLat "45.4764550069834"
+    routes "T9"
     label "v.le vittorio veneto"
   ]
   node
@@ -201,6 +225,7 @@ graph
     stopLon "9.205625783845"
     idStop "11856"
     stopLat "45.4744450178288"
+    routes "T9"
     label "p.ta venezia m1"
   ]
   node
@@ -209,6 +234,7 @@ graph
     stopLon "9.20358071311584"
     idStop "15612"
     stopLat "45.4924148188491"
+    routes "T5"
     label "v.le lunigiana via gioia"
   ]
   node
@@ -217,6 +243,7 @@ graph
     stopLon "9.16978532380795"
     idStop "11181"
     stopLat "45.4535581445273"
+    routes "T9"
     label "p.ta genova m2"
   ]
   node
@@ -225,6 +252,7 @@ graph
     stopLon "9.17207924366631"
     idStop "11187"
     stopLat "45.4553101603712"
+    routes "T14,T10"
     label "p.le cantore"
   ]
   node
@@ -233,6 +261,7 @@ graph
     stopLon "9.1870740317486"
     idStop "12938"
     stopLat "45.4636750993966"
+    routes "T3"
     label "duomo m1 m3"
   ]
   node
@@ -241,6 +270,7 @@ graph
     stopLon "9.21598075571388"
     idStop "12069"
     stopLat "45.4519863126009"
+    routes "T16"
     label "via tito livio"
   ]
   node
@@ -249,6 +279,7 @@ graph
     stopLon "9.12352397870908"
     idStop "10204"
     stopLat "45.4424781741286"
+    routes "T14"
     label "via gonin via giordani"
   ]
   node
@@ -257,6 +288,7 @@ graph
     stopLon "9.23588831194952"
     idStop "12707"
     stopLat "45.4845769770016"
+    routes "T19"
     label "stazione lambrate m2"
   ]
   node
@@ -265,6 +297,7 @@ graph
     stopLon "9.23647233888519"
     idStop "12709"
     stopLat "45.4849009662731"
+    routes "T19"
     label "stazione lambrate m2"
   ]
   node
@@ -273,6 +306,7 @@ graph
     stopLon "9.2132747843636"
     idStop "12062"
     stopLat "45.4546962783859"
+    routes "T16"
     label "via comelico"
   ]
   node
@@ -281,6 +315,7 @@ graph
     stopLon "9.21450577604497"
     idStop "12065"
     stopLat "45.453478279848"
+    routes "T16"
     label "v.le umbria via comelico"
   ]
   node
@@ -289,6 +324,7 @@ graph
     stopLon "9.18558310080378"
     idStop "14188"
     stopLat "45.4615401046536"
+    routes "T3,T14"
     label "via torino via palla"
   ]
   node
@@ -297,6 +333,7 @@ graph
     stopLon "9.15178236350315"
     idStop "10965"
     stopLat "45.4899016897828"
+    routes "T14,T1"
     label "v.le certosa v.le serra"
   ]
   node
@@ -305,6 +342,7 @@ graph
     stopLon "9.16351622211644"
     idStop "10961"
     stopLat "45.4821317870153"
+    routes "T1"
     label "domodossola fn m5"
   ]
   node
@@ -313,6 +351,7 @@ graph
     stopLon "9.16295125215183"
     idStop "10960"
     stopLat "45.4824267848038"
+    routes "T19"
     label "domodossola fn m5"
   ]
   node
@@ -321,6 +360,7 @@ graph
     stopLon "9.21104178227657"
     idStop "12099"
     stopLat "45.4621901552634"
+    routes "T27"
     label "p.za s. maria del suffragio"
   ]
   node
@@ -329,6 +369,7 @@ graph
     stopLon "9.18557704995127"
     idStop "14187"
     stopLat "45.4616571077757"
+    routes "T2"
     label "via torino via palla"
   ]
   node
@@ -337,6 +378,7 @@ graph
     stopLon "9.11875000342125"
     idStop "10199"
     stopLat "45.4409311663186"
+    routes "T14"
     label "via gonin via m. di lorenteggio"
   ]
   node
@@ -345,6 +387,7 @@ graph
     stopLon "9.13987569320092"
     idStop "10519"
     stopLat "45.4440061605077"
+    routes "T2"
     label "p.le negrelli"
   ]
   node
@@ -353,6 +396,7 @@ graph
     stopLon "9.18568688476607"
     idStop "15533"
     stopLat "45.4975157156127"
+    routes "T4"
     label "maciachini m3"
   ]
   node
@@ -361,6 +405,7 @@ graph
     stopLon "9.17931117606135"
     idStop "17553"
     stopLat "45.4518782138197"
+    routes "T10"
     label "p.za ventiquattro maggio"
   ]
   node
@@ -369,6 +414,7 @@ graph
     stopLon "9.16017229785411"
     idStop "17552"
     stopLat "45.4797148517667"
+    routes "T19"
     label "v.le boezio"
   ]
   node
@@ -377,6 +423,7 @@ graph
     stopLon "9.1618512563932"
     idStop "17550"
     stopLat "45.4814457851761"
+    routes "T19"
     label "domodossola fn m5"
   ]
   node
@@ -385,6 +432,7 @@ graph
     stopLon "9.1589152229126"
     idStop "18079"
     stopLat "45.3818930101591"
+    routes "T15"
     label "viale lonni"
   ]
   node
@@ -393,6 +441,7 @@ graph
     stopLon "9.17775536455982"
     idStop "11136"
     stopLat "45.4329064221783"
+    routes "T3"
     label "via montegani via neera"
   ]
   node
@@ -401,6 +450,7 @@ graph
     stopLon "9.11699204465723"
     idStop "12984"
     stopLat "45.4417471615128"
+    routes "T14"
     label "lorenteggio"
   ]
   node
@@ -409,6 +459,7 @@ graph
     stopLon "9.17760135984553"
     idStop "11131"
     stopLat "45.4294264517323"
+    routes "T3"
     label "p.za abbiategrasso m2"
   ]
   node
@@ -417,6 +468,7 @@ graph
     stopLon "9.17745335565019"
     idStop "11130"
     stopLat "45.4292914632928"
+    routes "T15"
     label "p.za abbiategrasso m2"
   ]
   node
@@ -425,6 +477,7 @@ graph
     stopLon "9.16181755854565"
     idStop "18077"
     stopLat "45.3828534802707"
+    routes "T15"
     label "romagna - cabrini"
   ]
   node
@@ -433,6 +486,7 @@ graph
     stopLon "9.15001487046494"
     idStop "18076"
     stopLat "45.3769384070206"
+    routes "T15"
     label "guido rossa"
   ]
   node
@@ -441,6 +495,7 @@ graph
     stopLon "9.23634733579253"
     idStop "12703"
     stopLat "45.4811950703495"
+    routes "T33,T19"
     label "via valvassori peroni"
   ]
   node
@@ -449,6 +504,7 @@ graph
     stopLon "9.18013920948999"
     idStop "11443"
     stopLat "45.4518721886766"
+    routes "T3"
     label "p.za ventiquattro maggio"
   ]
   node
@@ -457,6 +513,7 @@ graph
     stopLon "9.17972424124046"
     idStop "11441"
     stopLat "45.44866424825"
+    routes "T3"
     label "c.so s. gottardo via lagrange"
   ]
   node
@@ -465,6 +522,7 @@ graph
     stopLon "9.19905494183543"
     idStop "11769"
     stopLat "45.4565492041264"
+    routes "T16"
     label "via lamarmora via commenda"
   ]
   node
@@ -473,6 +531,7 @@ graph
     stopLon "9.15496118548927"
     idStop "18081"
     stopLat "45.3806403670588"
+    routes "T15"
     label "viale liguria"
   ]
   node
@@ -481,6 +540,7 @@ graph
     stopLon "9.17904519385861"
     idStop "11444"
     stopLat "45.4523232055787"
+    routes "T9"
     label "p.za ventiquattro maggio"
   ]
   node
@@ -489,6 +549,7 @@ graph
     stopLon "9.19657697523771"
     idStop "11762"
     stopLat "45.4561432012332"
+    routes "T16"
     label "crocetta m3"
   ]
   node
@@ -497,6 +558,7 @@ graph
     stopLon "9.19560001262714"
     idStop "11761"
     stopLat "45.4559341973187"
+    routes "T24"
     label "crocetta m3"
   ]
   node
@@ -505,6 +567,7 @@ graph
     stopLon "9.19756398945683"
     idStop "11765"
     stopLat "45.4483113061179"
+    routes "T24"
     label "via ripamonti via bellezza"
   ]
   node
@@ -513,6 +576,7 @@ graph
     stopLon "9.14157839367364"
     idStop "10708"
     stopLat "45.498007593506"
+    routes "T19"
     label "v.le espinasse via nuvolone"
   ]
   node
@@ -521,6 +585,7 @@ graph
     stopLon "9.13173483298613"
     idStop "10337"
     stopLat "45.445125140236"
+    routes "T14"
     label "via giambellino via sanniti"
   ]
   node
@@ -529,6 +594,7 @@ graph
     stopLon "9.13043188166146"
     idStop "10335"
     stopLat "45.4447261533902"
+    routes "T14"
     label "san cristoforo fs"
   ]
   node
@@ -537,6 +603,7 @@ graph
     stopLon "9.13953638340741"
     idStop "10701"
     stopLat "45.5009395480359"
+    routes "T19"
     label "p.le santorre di santarosa"
   ]
   node
@@ -545,6 +612,7 @@ graph
     stopLon "9.14182742010024"
     idStop "10707"
     stopLat "45.4978586147749"
+    routes "T1"
     label "v.le espinasse via nuvolone"
   ]
   node
@@ -553,6 +621,7 @@ graph
     stopLon "9.17595413965814"
     idStop "11269"
     stopLat "45.4680309805364"
+    routes "T1"
     label "cadorna m1 m2"
   ]
   node
@@ -561,6 +630,7 @@ graph
     stopLon "9.14011638749871"
     idStop "10705"
     stopLat "45.5003045154162"
+    routes "T1"
     label "p.le santorre di santarosa"
   ]
   node
@@ -569,6 +639,7 @@ graph
     stopLon "9.20562963821296"
     idStop "15401"
     stopLat "45.4914268413932"
+    routes "T10"
     label "v.le lunigiana"
   ]
   node
@@ -577,6 +648,7 @@ graph
     stopLon "9.16159623570906"
     idStop "11002"
     stopLat "45.4911919156457"
+    routes "T12"
     label "via mac mahon via caracciolo"
   ]
   node
@@ -585,6 +657,7 @@ graph
     stopLon "9.16144724098829"
     idStop "11001"
     stopLat "45.4877917770698"
+    routes "T14"
     label "p.za caneva"
   ]
   node
@@ -593,6 +666,7 @@ graph
     stopLon "9.21265057742706"
     idStop "12243"
     stopLat "45.4881808683513"
+    routes "T1"
     label "v.le brianza"
   ]
   node
@@ -601,6 +675,7 @@ graph
     stopLon "9.21431456148973"
     idStop "12246"
     stopLat "45.4897578855006"
+    routes "T1"
     label "via venini via battaglia"
   ]
   node
@@ -609,6 +684,7 @@ graph
     stopLon "9.21584756494792"
     idStop "12248"
     stopLat "45.4913338652486"
+    routes "T1"
     label "via venini via sauli"
   ]
   node
@@ -617,6 +693,7 @@ graph
     stopLon "9.21617349283916"
     idStop "12249"
     stopLat "45.4933908361383"
+    routes "T1"
     label "p.za morbegno"
   ]
   node
@@ -625,6 +702,7 @@ graph
     stopLon "9.16493021149474"
     idStop "11008"
     stopLat "45.4877107662017"
+    routes "T14"
     label "p.za diocleziano"
   ]
   node
@@ -633,6 +711,7 @@ graph
     stopLon "9.19084381958635"
     idStop "11631"
     stopLat "45.4896318260418"
+    routes "T7,T33"
     label "p.le lagosta"
   ]
   node
@@ -641,6 +720,7 @@ graph
     stopLon "9.20711278735173"
     idStop "12086"
     stopLat "45.4595972035537"
+    routes "T9"
     label "v.le monte nero via spartaco"
   ]
   node
@@ -649,6 +729,7 @@ graph
     stopLon "9.18502192585911"
     idStop "11617"
     stopLat "45.4945977372535"
+    routes "T2"
     label "via farini v.le stelvio"
   ]
   node
@@ -657,6 +738,7 @@ graph
     stopLon "9.18398794907195"
     idStop "11614"
     stopLat "45.4916017823239"
+    routes "T2"
     label "via farini via alserio"
   ]
   node
@@ -665,6 +747,7 @@ graph
     stopLon "9.22006670281871"
     idStop "12082"
     stopLat "45.4503263071614"
+    routes "T16"
     label "p.za salgari"
   ]
   node
@@ -673,6 +756,7 @@ graph
     stopLon "9.18332597503036"
     idStop "11611"
     stopLat "45.4886768117023"
+    routes "T33"
     label "via ugo bassi"
   ]
   node
@@ -681,6 +765,7 @@ graph
     stopLon "9.21776165911175"
     idStop "12124"
     stopLat "45.4581712599382"
+    routes "T12"
     label "via arconati"
   ]
   node
@@ -689,6 +774,7 @@ graph
     stopLon "9.20771482608823"
     idStop "12089"
     stopLat "45.4617851473368"
+    routes "T9"
     label "p.za cinque giornate"
   ]
   node
@@ -697,6 +783,7 @@ graph
     stopLon "9.1967547256998"
     idStop "11948"
     stopLat "45.4989427086075"
+    routes "T5"
     label "v.le zara via laurana"
   ]
   node
@@ -705,6 +792,7 @@ graph
     stopLon "9.19637771825862"
     idStop "11947"
     stopLat "45.499444714275"
+    routes "T7"
     label "v.le zara via laurana"
   ]
   node
@@ -713,6 +801,7 @@ graph
     stopLon "9.19438475984993"
     idStop "11944"
     stopLat "45.4959167415215"
+    routes "T7"
     label "marche m5"
   ]
   node
@@ -721,6 +810,7 @@ graph
     stopLon "9.17656720660009"
     idStop "11225"
     stopLat "45.4580351205189"
+    routes "T2"
     label "c.so genova via ariberto"
   ]
   node
@@ -729,6 +819,7 @@ graph
     stopLon "9.19256590879545"
     idStop "11859"
     stopLat "45.4803489347859"
+    routes "T10"
     label "p.le principessa clotilde (osp. fatebenefratelli)"
   ]
   node
@@ -737,6 +828,7 @@ graph
     stopLon "9.24183167519169"
     idStop "19621"
     stopLat "45.457058951276"
+    routes "T27"
     label "ovidio"
   ]
   node
@@ -745,6 +837,7 @@ graph
     stopLon "9.14835555256929"
     idStop "10561"
     stopLat "45.4505121651993"
+    routes "T14"
     label "via giambellino via vignoli"
   ]
   node
@@ -753,6 +846,7 @@ graph
     stopLon "9.15064956934592"
     idStop "10564"
     stopLat "45.4512671075312"
+    routes "T14"
     label "via giambellino via tolstoj"
   ]
   node
@@ -761,6 +855,7 @@ graph
     stopLon "9.15834748001891"
     idStop "10845"
     stopLat "45.4482702328788"
+    routes "T2"
     label "ponte delle milizie"
   ]
   node
@@ -769,6 +864,7 @@ graph
     stopLon "9.15878948164598"
     idStop "10846"
     stopLat "45.4539021387673"
+    routes "T14"
     label "via solari via stendhal"
   ]
   node
@@ -777,6 +873,7 @@ graph
     stopLon "9.18157005780353"
     idStop "11533"
     stopLat "45.4752289384666"
+    routes "T14,T12"
     label "arena"
   ]
   node
@@ -785,6 +882,7 @@ graph
     stopLon "9.18139000343162"
     idStop "11532"
     stopLat "45.4753719554926"
+    routes "T2"
     label "arena"
   ]
   node
@@ -793,6 +891,7 @@ graph
     stopLon "9.18193105936099"
     idStop "11535"
     stopLat "45.4681590569695"
+    routes "T1"
     label "cairoli m1"
   ]
   node
@@ -801,6 +900,7 @@ graph
     stopLon "9.19273587623043"
     idStop "11860"
     stopLat "45.4802219362898"
+    routes "T33"
     label "p.le principessa clotilde (osp. fatebenefratelli)"
   ]
   node
@@ -809,6 +909,7 @@ graph
     stopLon "9.19482785041019"
     idStop "11863"
     stopLat "45.4797369226096"
+    routes "T10"
     label "v.le monte santo"
   ]
   node
@@ -817,6 +918,7 @@ graph
     stopLon "9.19491587469604"
     idStop "11862"
     stopLat "45.4793469612183"
+    routes "T9"
     label "v.le monte santo"
   ]
   node
@@ -825,6 +927,7 @@ graph
     stopLon "9.19420085313927"
     idStop "11864"
     stopLat "45.4796579382844"
+    routes "T33"
     label "v.le monte santo"
   ]
   node
@@ -833,6 +936,7 @@ graph
     stopLon "9.20476386549787"
     idStop "17611"
     stopLat "45.4897074762311"
+    routes "T10"
     label "via schiaparelli via p.te seveso"
   ]
   node
@@ -841,6 +945,7 @@ graph
     stopLon "9.18042268226992"
     idStop "17612"
     stopLat "45.4845858230071"
+    routes "T10"
     label "monumentale m5"
   ]
   node
@@ -849,6 +954,7 @@ graph
     stopLon "9.17803859425653"
     idStop "17613"
     stopLat "45.4843166934545"
+    routes "T10"
     label "p.le cim.monumentale via bramante"
   ]
   node
@@ -857,6 +963,7 @@ graph
     stopLon "9.20890881553843"
     idStop "12052"
     stopLat "45.456450235954"
+    routes "T16"
     label "via bergamo"
   ]
   node
@@ -865,6 +972,7 @@ graph
     stopLon "9.21080277628161"
     idStop "12056"
     stopLat "45.4556992639624"
+    routes "T16"
     label "via cadore via bergamo"
   ]
   node
@@ -873,6 +981,7 @@ graph
     stopLon "9.19147685602777"
     idStop "12941"
     stopLat "45.4895617878111"
+    routes "T7"
     label "p.le lagosta"
   ]
   node
@@ -881,6 +990,7 @@ graph
     stopLon "9.21162277559805"
     idStop "12098"
     stopLat "45.4622821817372"
+    routes "T12"
     label "p.za s. maria del suffragio"
   ]
   node
@@ -889,6 +999,7 @@ graph
     stopLon "9.15602149718539"
     idStop "10836"
     stopLat "45.4477521753616"
+    routes "T2"
     label "via l. il moro via pestalozzi"
   ]
   node
@@ -897,6 +1008,7 @@ graph
     stopLon "9.16404327992962"
     idStop "10932"
     stopLat "45.4747409024801"
+    routes "T19"
     label "via monti via savoia cavalleria"
   ]
   node
@@ -905,6 +1017,7 @@ graph
     stopLon "9.22968943496716"
     idStop "12494"
     stopLat "45.4792640299711"
+    routes "T33,T19"
     label "via bassini via ponzio"
   ]
   node
@@ -913,6 +1026,7 @@ graph
     stopLon "9.20573051165624"
     idStop "12280"
     stopLat "45.5149205453731"
+    routes "T31"
     label "bicocca m5"
   ]
   node
@@ -921,6 +1035,7 @@ graph
     stopLon "9.20669650646638"
     idStop "12281"
     stopLat "45.5150165828622"
+    routes "T7"
     label "v.le rodi (bicocca m5)"
   ]
   node
@@ -929,6 +1044,7 @@ graph
     stopLon "9.17903925589525"
     idStop "11165"
     stopLat "45.4432963042936"
+    routes "T3"
     label "v.le tibaldi via meda"
   ]
   node
@@ -937,6 +1053,7 @@ graph
     stopLon "9.14797834784699"
     idStop "10688"
     stopLat "45.4916266426338"
+    routes "T14,T1"
     label "v.le certosa via grosotto"
   ]
   node
@@ -945,6 +1062,7 @@ graph
     stopLon "9.17861828266864"
     idStop "11163"
     stopLat "45.4401333620137"
+    routes "T3"
     label "via meda via spaventa"
   ]
   node
@@ -953,6 +1071,7 @@ graph
     stopLon "9.20082801684842"
     idStop "11714"
     stopLat "45.4356314696317"
+    routes "T24"
     label "via ripamonti via quaranta"
   ]
   node
@@ -961,6 +1080,7 @@ graph
     stopLon "9.13808843772913"
     idStop "10699"
     stopLat "45.5030075254349"
+    routes "T19"
     label "v.le espinasse via palizzi"
   ]
   node
@@ -969,6 +1089,7 @@ graph
     stopLon "9.21127647979684"
     idStop "15288"
     stopLat "45.5137325969746"
+    routes "T7"
     label "universita' bicocca scienza"
   ]
   node
@@ -977,6 +1098,7 @@ graph
     stopLon "9.13465879897272"
     idStop "10342"
     stopLat "45.4460931463901"
+    routes "T14"
     label "via giambellino via odazio"
   ]
   node
@@ -985,6 +1107,7 @@ graph
     stopLon "9.15105531013437"
     idStop "10694"
     stopLat "45.4901136882784"
+    routes "T19"
     label "v.le certosa v.le serra"
   ]
   node
@@ -993,6 +1116,7 @@ graph
     stopLon "9.1380095105751"
     idStop "10697"
     stopLat "45.4961756171235"
+    routes "T14"
     label "v.le certosa via giannini"
   ]
   node
@@ -1001,6 +1125,7 @@ graph
     stopLon "9.18291224122985"
     idStop "15368"
     stopLat "45.4327894465378"
+    routes "T15"
     label "agrippa"
   ]
   node
@@ -1009,6 +1134,7 @@ graph
     stopLon "9.22948752608532"
     idStop "12402"
     stopLat "45.4622341958362"
+    routes "T27"
     label "v.le corsica via lomellina"
   ]
   node
@@ -1017,6 +1143,7 @@ graph
     stopLon "9.14468643501001"
     idStop "10686"
     stopLat "45.4935436351715"
+    routes "T19"
     label "v.le espinasse p.le accursio"
   ]
   node
@@ -1025,6 +1152,7 @@ graph
     stopLon "9.18034529433028"
     idStop "15366"
     stopLat "45.4314544353441"
+    routes "T15"
     label "medeghino"
   ]
   node
@@ -1033,6 +1161,7 @@ graph
     stopLon "9.2319625424855"
     idStop "12407"
     stopLat "45.4621832164951"
+    routes "T27"
     label "v.le corsica via negroli"
   ]
   node
@@ -1041,6 +1170,7 @@ graph
     stopLon "9.20670473267057"
     idStop "12174"
     stopLat "45.482538941786"
+    routes "T1"
     label "via vitruvio"
   ]
   node
@@ -1049,6 +1179,7 @@ graph
     stopLon "9.20649169512411"
     idStop "12172"
     stopLat "45.4821619344192"
+    routes "T5"
     label "via vitruvio"
   ]
   node
@@ -1057,6 +1188,7 @@ graph
     stopLon "9.14269074573845"
     idStop "10523"
     stopLat "45.4449042130434"
+    routes "T2"
     label "via l. il moro via guintellino"
   ]
   node
@@ -1065,6 +1197,7 @@ graph
     stopLon "9.19470287422038"
     idStop "11837"
     stopLat "45.4760389873771"
+    routes "T1"
     label "turati m3"
   ]
   node
@@ -1073,6 +1206,7 @@ graph
     stopLon "9.19510590391631"
     idStop "11835"
     stopLat "45.4726270085721"
+    routes "T1"
     label "p.za cavour"
   ]
   node
@@ -1081,6 +1215,7 @@ graph
     stopLon "9.1246436205356"
     idStop "10448"
     stopLat "45.5022354983323"
+    routes "T14"
     label "v.le certosa via giorgini"
   ]
   node
@@ -1089,6 +1224,7 @@ graph
     stopLon "9.15889140217736"
     idStop "10881"
     stopLat "45.466562026122"
+    routes "T16"
     label "c.so vercelli via cherubini"
   ]
   node
@@ -1097,6 +1233,7 @@ graph
     stopLon "9.18152799623956"
     idStop "11577"
     stopLat "45.4831068603367"
+    routes "T2"
     label "p.le baiamonti"
   ]
   node
@@ -1105,6 +1242,7 @@ graph
     stopLon "9.18104002263016"
     idStop "11574"
     stopLat "45.4802468870304"
+    routes "T2"
     label "v.le montello"
   ]
   node
@@ -1113,6 +1251,7 @@ graph
     stopLon "9.16210833911192"
     idStop "10888"
     stopLat "45.4663280288142"
+    routes "T16"
     label "c.so vercelli l.go settimio severo"
   ]
   node
@@ -1121,6 +1260,7 @@ graph
     stopLon "9.18074405253813"
     idStop "11572"
     stopLat "45.4787219018947"
+    routes "T2"
     label "p.za lega lombarda"
   ]
   node
@@ -1129,6 +1269,7 @@ graph
     stopLon "9.14537342326833"
     idStop "14998"
     stopLat "45.4928266349142"
+    routes "T14,T1"
     label "p.le accursio"
   ]
   node
@@ -1137,6 +1278,7 @@ graph
     stopLon "9.19501674201892"
     idStop "11903"
     stopLat "45.4959197609264"
+    routes "T5"
     label "marche m5"
   ]
   node
@@ -1145,6 +1287,7 @@ graph
     stopLon "9.20730548732508"
     idStop "12302"
     stopLat "45.5187665202402"
+    routes "T31"
     label "v.le testi via s. glicerio"
   ]
   node
@@ -1153,6 +1296,7 @@ graph
     stopLon "9.200348804051"
     idStop "11882"
     stopLat "45.4767429882315"
+    routes "T33"
     label "v.le vittorio veneto"
   ]
   node
@@ -1161,6 +1305,7 @@ graph
     stopLon "9.19983475846331"
     idStop "11880"
     stopLat "45.4835508957916"
+    routes "T9"
     label "via filzi via pirelli"
   ]
   node
@@ -1169,6 +1314,7 @@ graph
     stopLon "9.20307275874837"
     idStop "11887"
     stopLat "45.4784499734366"
+    routes "T5"
     label "v.le tunisia"
   ]
   node
@@ -1177,6 +1323,7 @@ graph
     stopLon "9.20258476953191"
     idStop "11886"
     stopLat "45.4783119768467"
+    routes "T33"
     label "v.le tunisia"
   ]
   node
@@ -1185,6 +1332,7 @@ graph
     stopLon "9.20292073571543"
     idStop "11888"
     stopLat "45.47885098904"
+    routes "T1"
     label "v.le tunisia"
   ]
   node
@@ -1193,6 +1341,7 @@ graph
     stopLon "9.12673860001937"
     idStop "10453"
     stopLat "45.5012654915251"
+    routes "T14"
     label "v.le certosa via cormons"
   ]
   node
@@ -1201,6 +1350,7 @@ graph
     stopLon "9.23940642697004"
     idStop "12653"
     stopLat "45.4592182974563"
+    routes "T27"
     label "via marco bruto"
   ]
   node
@@ -1209,6 +1359,7 @@ graph
     stopLon "9.15619430630304"
     idStop "10979"
     stopLat "45.4878577415298"
+    routes "T1"
     label "p.za firenze"
   ]
   node
@@ -1217,6 +1368,7 @@ graph
     stopLon "9.23806840039889"
     idStop "12651"
     stopLat "45.4615102897308"
+    routes "T27"
     label "via repetti"
   ]
   node
@@ -1225,6 +1377,7 @@ graph
     stopLon "9.166951206733"
     idStop "11283"
     stopLat "45.4793498665305"
+    routes "T10"
     label "c.so sempione via villasanta"
   ]
   node
@@ -1233,6 +1386,7 @@ graph
     stopLon "9.1673582295656"
     idStop "11282"
     stopLat "45.4791968663061"
+    routes "T1"
     label "c.so sempione via villasanta"
   ]
   node
@@ -1241,6 +1395,7 @@ graph
     stopLon "9.16637423349196"
     idStop "11284"
     stopLat "45.4809848278498"
+    routes "T10"
     label "c.so sempione via procaccini"
   ]
   node
@@ -1249,6 +1404,7 @@ graph
     stopLon "9.16897420161929"
     idStop "11287"
     stopLat "45.4778718866219"
+    routes "T10"
     label "c.so sempione via canova"
   ]
   node
@@ -1257,6 +1413,7 @@ graph
     stopLon "9.20063377419253"
     idStop "15528"
     stopLat "45.4848138752184"
+    routes "T9"
     label "via filzi via galvani"
   ]
   node
@@ -1265,6 +1422,7 @@ graph
     stopLon "9.20011976706521"
     idStop "15529"
     stopLat "45.4842249064654"
+    routes "T10"
     label "via filzi via pirelli"
   ]
   node
@@ -1273,6 +1431,7 @@ graph
     stopLon "9.19807882565433"
     idStop "12991"
     stopLat "45.4814609463724"
+    routes "T10"
     label "p.za s. gioachimo"
   ]
   node
@@ -1281,6 +1440,7 @@ graph
     stopLon "9.17337857574673"
     idStop "11088"
     stopLat "45.3982867973836"
+    routes "T15"
     label "via curiel via maggi (rozzano)"
   ]
   node
@@ -1289,6 +1449,7 @@ graph
     stopLon "9.17478147824661"
     idStop "11082"
     stopLat "45.4145175973147"
+    routes "T15"
     label "via dei missaglia via feraboli"
   ]
   node
@@ -1297,6 +1458,7 @@ graph
     stopLon "9.17486546946645"
     idStop "11081"
     stopLat "45.4141915949451"
+    routes "T3"
     label "via dei missaglia via feraboli"
   ]
   node
@@ -1305,6 +1467,7 @@ graph
     stopLon "9.17430347564298"
     idStop "11080"
     stopLat "45.4106166559011"
+    routes "T15"
     label "via dei missaglia via saponaro"
   ]
   node
@@ -1313,6 +1476,7 @@ graph
     stopLon "9.19695897345624"
     idStop "11756"
     stopLat "45.4506962729166"
+    routes "T24"
     label "via ripamonti v.le sabotino"
   ]
   node
@@ -1321,6 +1485,7 @@ graph
     stopLon "9.1962990056012"
     idStop "11755"
     stopLat "45.4509012457772"
+    routes "T9"
     label "via ripamonti v.le sabotino"
   ]
   node
@@ -1329,6 +1494,7 @@ graph
     stopLon "9.19374203804143"
     idStop "11752"
     stopLat "45.4509062787846"
+    routes "T9"
     label "v.le bligny"
   ]
   node
@@ -1337,6 +1503,7 @@ graph
     stopLon "9.1962100147882"
     idStop "11758"
     stopLat "45.4535252477037"
+    routes "T24"
     label "c.so p.ta vigentina"
   ]
   node
@@ -1345,6 +1512,7 @@ graph
     stopLon "9.20396458400356"
     idStop "17303"
     stopLat "45.5116645728909"
+    routes "T31"
     label "v.le testi via s. marcellina"
   ]
   node
@@ -1353,6 +1521,7 @@ graph
     stopLon "9.15408646915881"
     idStop "10906"
     stopLat "45.4669149845136"
+    routes "T16"
     label "p.za piemonte"
   ]
   node
@@ -1361,6 +1530,7 @@ graph
     stopLon "9.18628714372405"
     idStop "11458"
     stopLat "45.4510612101604"
+    routes "T15"
     label "porta lodovica"
   ]
   node
@@ -1369,6 +1539,7 @@ graph
     stopLon "9.18391314900765"
     idStop "11451"
     stopLat "45.4519972185071"
+    routes "T9"
     label "v.le col di lana"
   ]
   node
@@ -1377,6 +1548,7 @@ graph
     stopLon "9.18247123583827"
     idStop "17668"
     stopLat "45.485704266209"
+    routes "T10"
     label "via farini via ferrari"
   ]
   node
@@ -1385,6 +1557,7 @@ graph
     stopLon "9.19768184393929"
     idStop "17436"
     stopLat "45.4779729484842"
+    routes "T33"
     label "repubblica m3"
   ]
   node
@@ -1393,6 +1566,7 @@ graph
     stopLon "9.15806624626551"
     idStop "10995"
     stopLat "45.4939016700346"
+    routes "T12"
     label "via mac mahon v.le m.te ceneri"
   ]
   node
@@ -1401,6 +1575,7 @@ graph
     stopLon "9.12065262597097"
     idStop "10308"
     stopLat "45.5032824444863"
+    routes "T14"
     label "p.le cimitero maggiore"
   ]
   node
@@ -1409,6 +1584,7 @@ graph
     stopLon "9.12139264155983"
     idStop "10305"
     stopLat "45.5029284804319"
+    routes "T14"
     label "p.le cimitero maggiore"
   ]
   node
@@ -1417,6 +1593,7 @@ graph
     stopLon "9.19004698049582"
     idStop "11558"
     stopLat "45.4675770543613"
+    routes "T1"
     label "teatro alla scala"
   ]
   node
@@ -1425,6 +1602,7 @@ graph
     stopLon "9.1904037399218"
     idStop "15412"
     stopLat "45.5089475767787"
+    routes "T5"
     label "ospedale maggiore (niguarda)"
   ]
   node
@@ -1433,6 +1611,7 @@ graph
     stopLon "9.15317127977516"
     idStop "11014"
     stopLat "45.4975696077979"
+    routes "T12"
     label "via mac mahon via bramantino"
   ]
   node
@@ -1441,6 +1620,7 @@ graph
     stopLon "9.15545326942868"
     idStop "11016"
     stopLat "45.4958576300895"
+    routes "T12"
     label "via mac mahon via artieri"
   ]
   node
@@ -1449,6 +1629,7 @@ graph
     stopLon "9.16407521540013"
     idStop "11010"
     stopLat "45.4893367543516"
+    routes "T12"
     label "via mac mahon via p. eugenio"
   ]
   node
@@ -1457,6 +1638,7 @@ graph
     stopLon "9.21096167847399"
     idStop "12139"
     stopLat "45.472360071479"
+    routes "T19"
     label "via bixio"
   ]
   node
@@ -1465,6 +1647,7 @@ graph
     stopLon "9.2067187721618"
     idStop "12133"
     stopLat "45.4716880863354"
+    routes "T9,T19"
     label "v.le piave"
   ]
   node
@@ -1473,6 +1656,7 @@ graph
     stopLon "9.18615304868802"
     idStop "11497"
     stopLat "45.4662150396436"
+    routes "T2"
     label "cordusio m1"
   ]
   node
@@ -1481,6 +1665,7 @@ graph
     stopLon "9.2108436981292"
     idStop "12136"
     stopLat "45.474759006797"
+    routes "T33"
     label "p.za otto novembre"
   ]
   node
@@ -1489,6 +1674,7 @@ graph
     stopLon "9.20164962276304"
     idStop "11979"
     stopLat "45.5087806308861"
+    routes "T7"
     label "v.le testi via pianell"
   ]
   node
@@ -1497,6 +1683,7 @@ graph
     stopLon "9.20050962322763"
     idStop "11973"
     stopLat "45.5067656409491"
+    routes "T7"
     label "ca' granda m5"
   ]
   node
@@ -1505,6 +1692,7 @@ graph
     stopLon "9.19990862620985"
     idStop "11974"
     stopLat "45.5066486202228"
+    routes "T5"
     label "ca' granda m5"
   ]
   node
@@ -1513,6 +1701,7 @@ graph
     stopLon "9.16588309992133"
     idStop "11335"
     stopLat "45.501795571391"
+    routes "T2"
     label "bausan"
   ]
   node
@@ -1521,6 +1710,7 @@ graph
     stopLon "9.16926005319143"
     idStop "11334"
     stopLat "45.4989776775121"
+    routes "T2"
     label "via imbriani via scalvini"
   ]
   node
@@ -1529,6 +1719,7 @@ graph
     stopLon "9.17073904316202"
     idStop "11339"
     stopLat "45.4969596989716"
+    routes "T2"
     label "p.le nigra"
   ]
   node
@@ -1537,6 +1728,7 @@ graph
     stopLon "9.17536221980451"
     idStop "11231"
     stopLat "45.4661470386711"
+    routes "T19"
     label "l.go d'ancona"
   ]
   node
@@ -1545,6 +1737,7 @@ graph
     stopLon "9.17748517901606"
     idStop "11234"
     stopLat "45.4584971293284"
+    routes "T14"
     label "p.za resistenza partigiana"
   ]
   node
@@ -1553,6 +1746,7 @@ graph
     stopLon "9.17800830683496"
     idStop "11137"
     stopLat "45.4348324232179"
+    routes "T3"
     label "via montegani via palmieri"
   ]
   node
@@ -1561,6 +1755,7 @@ graph
     stopLon "9.14589231534189"
     idStop "10717"
     stopLat "45.5010535230653"
+    routes "T12"
     label "via c. marcello (villapizzone)"
   ]
   node
@@ -1569,6 +1764,7 @@ graph
     stopLon "9.14359940039174"
     idStop "10713"
     stopLat "45.5021505714809"
+    routes "T12"
     label "via c. marcello via m. altissimo"
   ]
   node
@@ -1577,6 +1773,7 @@ graph
     stopLon "9.21743864832333"
     idStop "14871"
     stopLat "45.4619472045348"
+    routes "T12"
     label "p.za emilia"
   ]
   node
@@ -1585,6 +1782,7 @@ graph
     stopLon "9.22206167321199"
     idStop "14870"
     stopLat "45.4576142950938"
+    routes "T12"
     label "p.le martini"
   ]
   node
@@ -1593,6 +1791,7 @@ graph
     stopLon "9.21339017570056"
     idStop "15878"
     stopLat "45.5598140715795"
+    routes "T31"
     label "monte ortigara (cinisello b.)"
   ]
   node
@@ -1601,6 +1800,7 @@ graph
     stopLon "9.21461720485732"
     idStop "15879"
     stopLat "45.5579121075402"
+    routes "T31"
     label "villa ghirlanda (cinisello b.)"
   ]
   node
@@ -1609,6 +1809,7 @@ graph
     stopLon "9.21107419311881"
     idStop "15877"
     stopLat "45.5599030962331"
+    routes "T31"
     label "cinisello (primo maggio)"
   ]
   node
@@ -1617,6 +1818,7 @@ graph
     stopLon "9.23149020912402"
     idStop "15874"
     stopLat "45.5147856489961"
+    routes "T7"
     label "anassagora"
   ]
   node
@@ -1625,6 +1827,7 @@ graph
     stopLon "9.11979556986555"
     idStop "14970"
     stopLat "45.517672316924"
+    routes "T12,T1"
     label "roserio (ospedale sacco)"
   ]
   node
@@ -1633,6 +1836,7 @@ graph
     stopLon "9.13890438430005"
     idStop "14972"
     stopLat "45.5028875212289"
+    routes "T12,T1"
     label "v.le espinasse via palizzi"
   ]
   node
@@ -1641,6 +1845,7 @@ graph
     stopLon "9.1282725133039"
     idStop "10474"
     stopLat "45.5115693729542"
+    routes "T12,T1"
     label "l.go boccioni"
   ]
   node
@@ -1649,6 +1854,7 @@ graph
     stopLon "9.192461021905"
     idStop "11520"
     stopLat "45.4582071672587"
+    routes "T24"
     label "c.so p.ta romana via s. sofia"
   ]
   node
@@ -1657,6 +1863,7 @@ graph
     stopLon "9.17982411844395"
     idStop "11521"
     stopLat "45.4676340278903"
+    routes "T1"
     label "foro buonaparte via ricasoli"
   ]
   node
@@ -1665,6 +1872,7 @@ graph
     stopLon "9.12570550798404"
     idStop "10472"
     stopLat "45.5138083460708"
+    routes "T12,T1"
     label "via grassi"
   ]
   node
@@ -1673,6 +1881,7 @@ graph
     stopLon "9.18315713265118"
     idStop "11486"
     stopLat "45.4606821324187"
+    routes "T3,T14"
     label "via torino via s. maria valle"
   ]
   node
@@ -1681,6 +1890,7 @@ graph
     stopLon "9.18172709432447"
     idStop "11485"
     stopLat "45.4656910495222"
+    routes "T19,T16"
     label "via meravigli"
   ]
   node
@@ -1689,6 +1899,7 @@ graph
     stopLon "9.18323209813633"
     idStop "11484"
     stopLat "45.460788116359"
+    routes "T2"
     label "via torino via s. maria valle"
   ]
   node
@@ -1697,6 +1908,7 @@ graph
     stopLon "9.18090813483"
     idStop "11482"
     stopLat "45.4600781094434"
+    routes "T14"
     label "carrobbio"
   ]
   node
@@ -1705,6 +1917,7 @@ graph
     stopLon "9.18128812426206"
     idStop "11481"
     stopLat "45.4599041329824"
+    routes "T3"
     label "carrobbio"
   ]
   node
@@ -1713,6 +1926,7 @@ graph
     stopLon "9.16591924430126"
     idStop "11249"
     stopLat "45.4699539462175"
+    routes "T10"
     label "via ariosto"
   ]
   node
@@ -1721,6 +1935,7 @@ graph
     stopLon "9.16529130059694"
     idStop "11245"
     stopLat "45.4678720165757"
+    routes "T10"
     label "conciliazione m1"
   ]
   node
@@ -1729,6 +1944,7 @@ graph
     stopLon "9.17801112735125"
     idStop "11241"
     stopLat "45.4658080335444"
+    routes "T19,T16"
     label "c.so magenta via nirone"
   ]
   node
@@ -1737,6 +1953,7 @@ graph
     stopLon "9.19744180581786"
     idStop "11871"
     stopLat "45.478120954068"
+    routes "T1"
     label "repubblica m3"
   ]
   node
@@ -1745,6 +1962,7 @@ graph
     stopLon "9.17830429313343"
     idStop "11139"
     stopLat "45.4372483800801"
+    routes "T3"
     label "via montegani v.le da cermenate"
   ]
   node
@@ -1753,6 +1971,7 @@ graph
     stopLon "9.19729686363376"
     idStop "11874"
     stopLat "45.4808229311183"
+    routes "T9"
     label "p.za s. gioachimo"
   ]
   node
@@ -1761,6 +1980,7 @@ graph
     stopLon "9.19941078708611"
     idStop "11879"
     stopLat "45.4831148921049"
+    routes "T10"
     label "via filzi via adda"
   ]
   node
@@ -1769,6 +1989,7 @@ graph
     stopLon "9.14894989470566"
     idStop "18083"
     stopLat "45.3785679363101"
+    routes "T15"
     label "v.le liguria"
   ]
   node
@@ -1777,6 +1998,7 @@ graph
     stopLon "9.19785491803363"
     idStop "11798"
     stopLat "45.462537160389"
+    routes "T27,T19"
     label "l.go augusto"
   ]
   node
@@ -1785,6 +2007,7 @@ graph
     stopLon "9.19419997218072"
     idStop "11793"
     stopLat "45.4627231416687"
+    routes "T12"
     label "via larga"
   ]
   node
@@ -1793,6 +2016,7 @@ graph
     stopLon "9.17944324350881"
     idStop "11419"
     stopLat "45.4461082890318"
+    routes "T3"
     label "l.go mahler"
   ]
   node
@@ -1801,6 +2025,7 @@ graph
     stopLon "9.19761689828615"
     idStop "11797"
     stopLat "45.4627611188968"
+    routes "T12"
     label "l.go augusto"
   ]
   node
@@ -1809,6 +2034,7 @@ graph
     stopLon "9.19456395380851"
     idStop "11794"
     stopLat "45.4627781401537"
+    routes "T24,T19"
     label "via larga"
   ]
   node
@@ -1817,6 +2043,7 @@ graph
     stopLon "9.15386453212647"
     idStop "10825"
     stopLat "45.452304163843"
+    routes "T14"
     label "p.za napoli"
   ]
   node
@@ -1825,6 +2052,7 @@ graph
     stopLon "9.15839526654548"
     idStop "10945"
     stopLat "45.4861337533816"
+    routes "T19"
     label "c.so sempione via e. filiberto"
   ]
   node
@@ -1833,6 +2061,7 @@ graph
     stopLon "9.15881426071326"
     idStop "10944"
     stopLat "45.4856897701075"
+    routes "T1"
     label "c.so sempione via e. filiberto"
   ]
   node
@@ -1841,6 +2070,7 @@ graph
     stopLon "9.1606692693743"
     idStop "10947"
     stopLat "45.4770999025595"
+    routes "T19"
     label "p.za sei febbraio"
   ]
   node
@@ -1849,6 +2079,7 @@ graph
     stopLon "9.22570249142784"
     idStop "12489"
     stopLat "45.4790960262013"
+    routes "T33,T19"
     label "p.za leonardo da vinci (politecnico)"
   ]
   node
@@ -1857,6 +2088,7 @@ graph
     stopLon "9.17514313940652"
     idStop "11230"
     stopLat "45.465809038762"
+    routes "T16"
     label "l.go d'ancona"
   ]
   node
@@ -1865,6 +2097,7 @@ graph
     stopLon "9.18052604890366"
     idStop "15689"
     stopLat "45.4780189382899"
+    routes "T14,T12"
     label "p.za lega lombarda"
   ]
   node
@@ -1873,6 +2106,7 @@ graph
     stopLon "9.17728535607377"
     idStop "11111"
     stopLat "45.4266535089838"
+    routes "T3"
     label "via dei missaglia via boifava"
   ]
   node
@@ -1881,6 +2115,7 @@ graph
     stopLon "9.17709236395569"
     idStop "11110"
     stopLat "45.4244965275307"
+    routes "T3"
     label "via dei missaglia via s. abbondio"
   ]
   node
@@ -1889,6 +2124,7 @@ graph
     stopLon "9.17718134984659"
     idStop "11112"
     stopLat "45.4270694938102"
+    routes "T15"
     label "via dei missaglia via boifava"
   ]
   node
@@ -1897,6 +2133,7 @@ graph
     stopLon "9.18739805922845"
     idStop "11465"
     stopLat "45.4566881770133"
+    routes "T15"
     label "c.so italia via s. sofia"
   ]
   node
@@ -1905,6 +2142,7 @@ graph
     stopLon "9.19228567317219"
     idStop "15581"
     stopLat "45.5248594153103"
+    routes "T4"
     label "niguarda (parco nord)"
   ]
   node
@@ -1913,6 +2151,7 @@ graph
     stopLon "9.18748908823274"
     idStop "11461"
     stopLat "45.4515902177572"
+    routes "T9"
     label "porta lodovica"
   ]
   node
@@ -1921,6 +2160,7 @@ graph
     stopLon "9.18694610581698"
     idStop "11462"
     stopLat "45.4540732129878"
+    routes "T15"
     label "c.so italia via lusardi"
   ]
   node
@@ -1929,6 +2169,7 @@ graph
     stopLon "9.19007810280653"
     idStop "11469"
     stopLat "45.4509432470461"
+    routes "T9"
     label "via bocconi"
   ]
   node
@@ -1937,6 +2178,7 @@ graph
     stopLon "9.18671194765306"
     idStop "11619"
     stopLat "45.4892068041375"
+    routes "T33"
     label "via porro lambertenghi"
   ]
   node
@@ -1945,6 +2187,7 @@ graph
     stopLon "9.13706540243501"
     idStop "10727"
     stopLat "45.5079934408745"
+    routes "T12,T1"
     label "certosa s"
   ]
   node
@@ -1953,6 +2196,7 @@ graph
     stopLon "9.20916842892547"
     idStop "12311"
     stopLat "45.522032474031"
+    routes "T31"
     label "ponale m5"
   ]
   node
@@ -1961,6 +2205,7 @@ graph
     stopLon "9.14964528708812"
     idStop "10720"
     stopLat "45.4992396149831"
+    routes "T12"
     label "p.za castelli"
   ]
   node
@@ -1969,6 +2214,7 @@ graph
     stopLon "9.14800130867019"
     idStop "10722"
     stopLat "45.5000085929927"
+    routes "T12"
     label "via c. marcello via grugnola"
   ]
   node
@@ -1977,6 +2223,7 @@ graph
     stopLon "9.22684751361401"
     idStop "12437"
     stopLat "45.4709571205968"
+    routes "T5"
     label "via b. angelico via colombo"
   ]
   node
@@ -1985,6 +2232,7 @@ graph
     stopLon "9.22551252294448"
     idStop "12435"
     stopLat "45.4767780499947"
+    routes "T33,T19"
     label "via pascoli p.za l. da vinci"
   ]
   node
@@ -1993,6 +2241,7 @@ graph
     stopLon "9.14757140211411"
     idStop "10689"
     stopLat "45.4917016832332"
+    routes "T19"
     label "v.le certosa via grosotto"
   ]
   node
@@ -2001,6 +2250,7 @@ graph
     stopLon "9.20614749494013"
     idStop "17157"
     stopLat "45.5167055457579"
+    routes "T31"
     label "v.le testi via la farina"
   ]
   node
@@ -2009,6 +2259,7 @@ graph
     stopLon "9.14337940876164"
     idStop "10682"
     stopLat "45.4954306156009"
+    routes "T19"
     label "v.le espinasse via casella"
   ]
   node
@@ -2017,6 +2268,7 @@ graph
     stopLon "9.14342040160549"
     idStop "10683"
     stopLat "45.4956146026333"
+    routes "T1"
     label "v.le espinasse via casella"
   ]
   node
@@ -2025,6 +2277,7 @@ graph
     stopLon "9.2210843349316"
     idStop "15294"
     stopLat "45.5140475824537"
+    routes "T7"
     label "l.go mattei"
   ]
   node
@@ -2033,6 +2286,7 @@ graph
     stopLon "9.20512155739588"
     idStop "17158"
     stopLat "45.5149215486945"
+    routes "T7,T31"
     label "bicocca m5"
   ]
   node
@@ -2041,6 +2295,7 @@ graph
     stopLon "9.21372741996636"
     idStop "15292"
     stopLat "45.5157185773825"
+    routes "T7"
     label "arcimboldi ateneo nuovo"
   ]
   node
@@ -2049,6 +2304,7 @@ graph
     stopLon "9.21388544464774"
     idStop "15290"
     stopLat "45.5133675932973"
+    routes "T7"
     label "greco"
   ]
   node
@@ -2057,6 +2313,7 @@ graph
     stopLon "9.14448436274813"
     idStop "10685"
     stopLat "45.4941336682635"
+    routes "T1"
     label "v.le espinasse p.le accursio"
   ]
   node
@@ -2065,6 +2322,7 @@ graph
     stopLon "9.18043119697001"
     idStop "11448"
     stopLat "45.4537531639846"
+    routes "T3"
     label "p.za s. eustorgio"
   ]
   node
@@ -2073,6 +2331,7 @@ graph
     stopLon "9.22892456064416"
     idStop "12385"
     stopLat "45.4530633566515"
+    routes "T16"
     label "via monte velino"
   ]
   node
@@ -2081,6 +2340,7 @@ graph
     stopLon "9.22921662441498"
     idStop "12387"
     stopLat "45.4526053722387"
+    routes "T16"
     label "via varsavia via m.te velino"
   ]
   node
@@ -2089,6 +2349,7 @@ graph
     stopLon "9.2273505769189"
     idStop "12383"
     stopLat "45.4518023808703"
+    routes "T16"
     label "via del turchino via maspero"
   ]
   node
@@ -2097,6 +2358,7 @@ graph
     stopLon "9.22497268533444"
     idStop "12382"
     stopLat "45.4512083451425"
+    routes "T16"
     label "p.le cuoco"
   ]
   node
@@ -2105,6 +2367,7 @@ graph
     stopLon "9.21140269171232"
     idStop "12141"
     stopLat "45.4746320277622"
+    routes "T5"
     label "p.za otto novembre"
   ]
   node
@@ -2113,6 +2376,7 @@ graph
     stopLon "9.21428166500764"
     idStop "12146"
     stopLat "45.4731920669064"
+    routes "T33"
     label "p.za adelaide di savoia"
   ]
   node
@@ -2121,6 +2385,7 @@ graph
     stopLon "9.21414164958944"
     idStop "12145"
     stopLat "45.4727820883379"
+    routes "T19"
     label "p.za adelaide di savoia"
   ]
   node
@@ -2129,6 +2394,7 @@ graph
     stopLon "9.14587065565397"
     idStop "10530"
     stopLat "45.4455882184033"
+    routes "T2"
     label "via l. il moro cavalcavia don milani"
   ]
   node
@@ -2137,6 +2403,7 @@ graph
     stopLon "9.15062258010518"
     idStop "10537"
     stopLat "45.4466041844549"
+    routes "T2"
     label "via l. il moro 25"
   ]
   node
@@ -2145,6 +2412,7 @@ graph
     stopLon "9.13944169343484"
     idStop "10539"
     stopLat "45.4476541462602"
+    routes "T14"
     label "l.go gelsomini l.go giambellino"
   ]
   node
@@ -2153,6 +2421,7 @@ graph
     stopLon "9.17908006892279"
     idStop "11568"
     stopLat "45.481550886961"
+    routes "T14,T12"
     label "via bramante via sarpi"
   ]
   node
@@ -2161,6 +2430,7 @@ graph
     stopLon "9.17546324662997"
     idStop "11200"
     stopLat "45.4571441588258"
+    routes "T14"
     label "c.so genova via ariberto"
   ]
   node
@@ -2169,6 +2439,7 @@ graph
     stopLon "9.16550937992451"
     idStop "11204"
     stopLat "45.4596130569741"
+    routes "T10"
     label "v.le coni zugna via foppa"
   ]
   node
@@ -2177,6 +2448,7 @@ graph
     stopLon "9.17991902011311"
     idStop "11567"
     stopLat "45.4795638862716"
+    routes "T14,T12"
     label "via bramante via giannone"
   ]
   node
@@ -2185,6 +2457,7 @@ graph
     stopLon "9.23396438808537"
     idStop "12505"
     stopLat "45.4802360373179"
+    routes "T33,T19"
     label "via bassini via golgi"
   ]
   node
@@ -2193,6 +2466,7 @@ graph
     stopLon "9.20553463076684"
     idStop "11938"
     stopLat "45.4914478458019"
+    routes "T5"
     label "v.le lunigiana"
   ]
   node
@@ -2201,6 +2475,7 @@ graph
     stopLon "9.20347871385857"
     idStop "11930"
     stopLat "45.4882018674076"
+    routes "T5"
     label "stazione centrale via tonale"
   ]
   node
@@ -2209,6 +2484,7 @@ graph
     stopLon "9.21538029517173"
     idStop "15884"
     stopLat "45.5336963856893"
+    routes "T31"
     label "parco nord clerici (sesto s.g.)"
   ]
   node
@@ -2217,6 +2493,7 @@ graph
     stopLon "9.21760625092496"
     idStop "15883"
     stopLat "45.5373593263986"
+    routes "T31"
     label "parco nord (ist. tecnico)(cinisello b.)"
   ]
   node
@@ -2225,6 +2502,7 @@ graph
     stopLon "9.21800616215888"
     idStop "15882"
     stopLat "45.5456372557378"
+    routes "T31"
     label "parco nord (osp.bassini)(cinisello b.)"
   ]
   node
@@ -2233,6 +2511,7 @@ graph
     stopLon "9.21759220125627"
     idStop "15881"
     stopLat "45.5510701855485"
+    routes "T31"
     label "gorky monfalcone (cinisello b.)"
   ]
   node
@@ -2241,6 +2520,7 @@ graph
     stopLon "9.21664014680327"
     idStop "15880"
     stopLat "45.5532731864251"
+    routes "T31"
     label "liberta' (cinisello b.)"
   ]
   node
@@ -2249,6 +2529,7 @@ graph
     stopLon "9.14352771017477"
     idStop "10547"
     stopLat "45.44896716484"
+    routes "T14"
     label "via brunelleschi"
   ]
   node
@@ -2257,6 +2538,7 @@ graph
     stopLon "9.20259573380986"
     idStop "11890"
     stopLat "45.4846348838559"
+    routes "T5"
     label "stazione centrale p.za duca d'aosta m2 m3"
   ]
   node
@@ -2265,6 +2547,7 @@ graph
     stopLon "9.20393074897193"
     idStop "11891"
     stopLat "45.4799019498292"
+    routes "T1"
     label "p.za cincinnato"
   ]
   node
@@ -2273,6 +2556,7 @@ graph
     stopLon "9.20409670776781"
     idStop "11892"
     stopLat "45.4799289672622"
+    routes "T5"
     label "p.za cincinnato"
   ]
   node
@@ -2281,6 +2565,7 @@ graph
     stopLon "9.19309401758225"
     idStop "11519"
     stopLat "45.4577181934169"
+    routes "T16"
     label "c.so p.ta romana via s. sofia"
   ]
   node
@@ -2289,6 +2574,7 @@ graph
     stopLon "9.15704431555813"
     idStop "10988"
     stopLat "45.4879177747983"
+    routes "T14"
     label "p.za firenze"
   ]
   node
@@ -2297,6 +2583,7 @@ graph
     stopLon "9.19040402505794"
     idStop "11515"
     stopLat "45.4607571488549"
+    routes "T24,T19"
     label "missori m3"
   ]
   node
@@ -2305,6 +2592,7 @@ graph
     stopLon "9.18993803357686"
     idStop "11514"
     stopLat "45.4609281485808"
+    routes "T12"
     label "missori m3"
   ]
   node
@@ -2313,6 +2601,7 @@ graph
     stopLon "9.18857106831907"
     idStop "11511"
     stopLat "45.460495149215"
+    routes "T24"
     label "missori m3"
   ]
   node
@@ -2321,6 +2610,7 @@ graph
     stopLon "9.23614845317218"
     idStop "12646"
     stopLat "45.4620092411579"
+    routes "T27"
     label "forlanini"
   ]
   node
@@ -2329,6 +2619,7 @@ graph
     stopLon "9.18972297119549"
     idStop "11512"
     stopLat "45.4632121245754"
+    routes "T15"
     label "duomo m1 m3"
   ]
   node
@@ -2337,6 +2628,7 @@ graph
     stopLon "9.16802316266376"
     idStop "11290"
     stopLat "45.4820308554856"
+    routes "T10"
     label "p.za gramsci"
   ]
   node
@@ -2345,6 +2637,7 @@ graph
     stopLon "9.168495175002"
     idStop "11291"
     stopLat "45.4783408796735"
+    routes "T1"
     label "c.so sempione via canova"
   ]
   node
@@ -2353,6 +2646,7 @@ graph
     stopLon "9.17104311754285"
     idStop "11297"
     stopLat "45.4837228239003"
+    routes "T10"
     label "via procaccini via lomazzo"
   ]
   node
@@ -2361,6 +2655,7 @@ graph
     stopLon "9.17444154048102"
     idStop "11094"
     stopLat "45.4036587419503"
+    routes "T15"
     label "gratosoglio"
   ]
   node
@@ -2369,6 +2664,7 @@ graph
     stopLon "9.17477049712377"
     idStop "11095"
     stopLat "45.4066026758483"
+    routes "T3"
     label "via dei missaglia (scuola santarosa)"
   ]
   node
@@ -2377,6 +2673,7 @@ graph
     stopLon "9.17458550678063"
     idStop "11096"
     stopLat "45.4067887093713"
+    routes "T15"
     label "via dei missaglia (scuola santarosa)"
   ]
   node
@@ -2385,6 +2682,7 @@ graph
     stopLon "9.17393553868903"
     idStop "11091"
     stopLat "45.4036847559222"
+    routes "T3"
     label "gratosoglio"
   ]
   node
@@ -2393,6 +2691,7 @@ graph
     stopLon "9.17463755430778"
     idStop "11093"
     stopLat "45.4038397394779"
+    routes "T3"
     label "via dei missaglia via baroni"
   ]
   node
@@ -2401,6 +2700,7 @@ graph
     stopLon "9.20243908694179"
     idStop "15084"
     stopLat "45.4291435229819"
+    routes "T24"
     label "via ripamonti via val di sole"
   ]
   node
@@ -2409,6 +2709,7 @@ graph
     stopLon "9.20349609201869"
     idStop "15083"
     stopLat "45.4252665810322"
+    routes "T24"
     label "via ripamonti via chopin"
   ]
   node
@@ -2417,6 +2718,7 @@ graph
     stopLon "9.20339411437607"
     idStop "15082"
     stopLat "45.4218866230584"
+    routes "T24"
     label "vigentino"
   ]
   node
@@ -2425,6 +2727,7 @@ graph
     stopLon "9.20679470905679"
     idStop "12969"
     stopLat "45.476608991924"
+    routes "T33"
     label "p.ta venezia v.le tunisia"
   ]
   node
@@ -2433,6 +2736,7 @@ graph
     stopLon "9.22465631008104"
     idStop "15648"
     stopLat "45.5136086524979"
+    routes "T7"
     label "precotto m1"
   ]
   node
@@ -2441,6 +2745,7 @@ graph
     stopLon "9.22752222903556"
     idStop "15647"
     stopLat "45.5139466758169"
+    routes "T7"
     label "parmenide"
   ]
   node
@@ -2449,6 +2754,7 @@ graph
     stopLon "9.23290217435261"
     idStop "15646"
     stopLat "45.5178626024757"
+    routes "T7"
     label "precotto (int.deposito)"
   ]
   node
@@ -2457,6 +2763,7 @@ graph
     stopLon "9.19898300828081"
     idStop "11740"
     stopLat "45.4432243487429"
+    routes "T24"
     label "via ripamonti via lorenzini"
   ]
   node
@@ -2465,6 +2772,7 @@ graph
     stopLon "9.20029703889687"
     idStop "11743"
     stopLat "45.4380064299797"
+    routes "T24"
     label "via ripamonti via barletta"
   ]
   node
@@ -2473,6 +2781,7 @@ graph
     stopLon "9.18185200114683"
     idStop "11587"
     stopLat "45.4851498059787"
+    routes "T2"
     label "via farini via ferrari"
   ]
   node
@@ -2481,6 +2790,7 @@ graph
     stopLon "9.19131582279979"
     idStop "17337"
     stopLat "45.4900308380286"
+    routes "T33"
     label "p.le lagosta"
   ]
   node
@@ -2489,6 +2799,7 @@ graph
     stopLon "9.18965896492853"
     idStop "17331"
     stopLat "45.4807209225556"
+    routes "T33"
     label "v.le m.te grappa via gioia"
   ]
   node
@@ -2497,6 +2808,7 @@ graph
     stopLon "9.18825492705763"
     idStop "17330"
     stopLat "45.4812609134129"
+    routes "T33"
     label "via rosales"
   ]
   node
@@ -2505,6 +2817,7 @@ graph
     stopLon "9.1221356243195"
     idStop "10314"
     stopLat "45.503367447254"
+    routes "T14"
     label "v.le certosa (cimitero  maggiore)"
   ]
   node
@@ -2513,6 +2826,7 @@ graph
     stopLon "9.19221763562509"
     idStop "15398"
     stopLat "45.5217274726495"
+    routes "T4"
     label "cascina california"
   ]
   node
@@ -2521,6 +2835,7 @@ graph
     stopLon "9.19084976293136"
     idStop "15392"
     stopLat "45.51122057939"
+    routes "T4"
     label "girola"
   ]
   node
@@ -2529,6 +2844,7 @@ graph
     stopLon "9.18959575354242"
     idStop "15390"
     stopLat "45.5086486079893"
+    routes "T4"
     label "ospedale maggiore (niguarda)"
   ]
   node
@@ -2537,6 +2853,7 @@ graph
     stopLon "9.19204667950344"
     idStop "15396"
     stopLat "45.5188644679323"
+    routes "T4"
     label "niguarda nord"
   ]
   node
@@ -2545,6 +2862,7 @@ graph
     stopLon "9.19131671914591"
     idStop "15394"
     stopLat "45.5145685229895"
+    routes "T4"
     label "niguarda centro"
   ]
   node
@@ -2553,6 +2871,7 @@ graph
     stopLon "9.16706076900055"
     idStop "11061"
     stopLat "45.383515930841"
+    routes "T15"
     label "v.le romagna (rozzano)"
   ]
   node
@@ -2561,6 +2880,7 @@ graph
     stopLon "9.1706317214547"
     idStop "11062"
     stopLat "45.3843019531731"
+    routes "T15"
     label "via grandi via buozzi (rozzano)"
   ]
   node
@@ -2569,6 +2889,7 @@ graph
     stopLon "9.17212665663699"
     idStop "11065"
     stopLat "45.3895748769935"
+    routes "T15"
     label "via curiel via isonzo (rozzano)"
   ]
   node
@@ -2577,6 +2898,7 @@ graph
     stopLon "9.17288659467447"
     idStop "11067"
     stopLat "45.3943708757854"
+    routes "T15"
     label "via curiel via lambro (rozzano)"
   ]
   node
@@ -2585,6 +2907,7 @@ graph
     stopLon "9.21427674341147"
     idStop "12108"
     stopLat "45.4621872019833"
+    routes "T27"
     label "via cadore c.so ventidue marzo"
   ]
   node
@@ -2593,6 +2916,7 @@ graph
     stopLon "9.19815397833525"
     idStop "11736"
     stopLat "45.4462573181162"
+    routes "T24"
     label "v.le isonzo via ripamonti"
   ]
   node
@@ -2601,6 +2925,7 @@ graph
     stopLon "9.19217286378601"
     idStop "11639"
     stopLat "45.4920327670103"
+    routes "T7"
     label "zara m3/m5"
   ]
   node
@@ -2609,6 +2934,7 @@ graph
     stopLon "9.19935904925875"
     idStop "11738"
     stopLat "45.4418253944279"
+    routes "T24"
     label "via ripamonti via serio"
   ]
   node
@@ -2617,6 +2943,7 @@ graph
     stopLon "9.18884205885316"
     idStop "11510"
     stopLat "45.4602031189369"
+    routes "T16"
     label "missori m3"
   ]
   node
@@ -2625,6 +2952,7 @@ graph
     stopLon "9.17297707636552"
     idStop "11323"
     stopLat "45.4875027900256"
+    routes "T14,T12"
     label "cenisio m5"
   ]
   node
@@ -2633,6 +2961,7 @@ graph
     stopLon "9.16891512395899"
     idStop "11321"
     stopLat "45.4876207649711"
+    routes "T14,T12"
     label "via cenisio via induno"
   ]
   node
@@ -2641,6 +2970,7 @@ graph
     stopLon "9.17602798944365"
     idStop "11325"
     stopLat "45.4951917130143"
+    routes "T2"
     label "lancetti"
   ]
   node
@@ -2649,6 +2979,7 @@ graph
     stopLon "9.20712477875138"
     idStop "12129"
     stopLat "45.4675080868562"
+    routes "T9,T19"
     label "p.za tricolore"
   ]
   node
@@ -2657,6 +2988,7 @@ graph
     stopLon "9.21124441442423"
     idStop "14884"
     stopLat "45.525694470319"
+    routes "T31"
     label "bignami m5"
   ]
   node
@@ -2665,6 +2997,7 @@ graph
     stopLon "9.2336693959817"
     idStop "12461"
     stopLat "45.4710111101932"
+    routes "T5"
     label "via amadeo via paladini"
   ]
   node
@@ -2673,6 +3006,7 @@ graph
     stopLon "9.13203847510563"
     idStop "10480"
     stopLat "45.5093064216955"
+    routes "T12,T1"
     label "via mambretti"
   ]
   node
@@ -2681,6 +3015,7 @@ graph
     stopLon "9.11975555161892"
     idStop "14909"
     stopLat "45.517371283956"
+    routes "T1"
     label "roserio (ospedale sacco)"
   ]
   node
@@ -2689,6 +3024,7 @@ graph
     stopLon "9.21495869383894"
     idStop "12111"
     stopLat "45.4622541837805"
+    routes "T12"
     label "via cadore c.so ventidue marzo"
   ]
   node
@@ -2697,6 +3033,7 @@ graph
     stopLon "9.14023044996291"
     idStop "14905"
     stopLat "45.5008445211783"
+    routes "T12"
     label "p.le santorre di santarosa"
   ]
   node
@@ -2705,6 +3042,7 @@ graph
     stopLon "9.22393161156749"
     idStop "14869"
     stopLat "45.4572373061018"
+    routes "T12"
     label "v.le molise"
   ]
   node
@@ -2713,6 +3051,7 @@ graph
     stopLon "9.1878500813527"
     idStop "11498"
     stopLat "45.4593111474841"
+    routes "T15"
     label "c.so italia (missori m3)"
   ]
   node
@@ -2721,6 +3060,7 @@ graph
     stopLon "9.1292255833263"
     idStop "10462"
     stopLat "45.5001415193143"
+    routes "T14"
     label "v.le certosa via gradisca"
   ]
   node
@@ -2729,6 +3069,7 @@ graph
     stopLon "9.18701004458218"
     idStop "11490"
     stopLat "45.4643260914874"
+    routes "T3"
     label "duomo m1 m3"
   ]
   node
@@ -2737,6 +3078,7 @@ graph
     stopLon "9.18722703026785"
     idStop "11491"
     stopLat "45.4645690826372"
+    routes "T14,T12"
     label "via orefici p.za cordusio"
   ]
   node
@@ -2745,6 +3087,7 @@ graph
     stopLon "9.18584806291649"
     idStop "11492"
     stopLat "45.4654820778596"
+    routes "T19,T16"
     label "cordusio m1"
   ]
   node
@@ -2753,6 +3096,7 @@ graph
     stopLon "9.18681801459969"
     idStop "11493"
     stopLat "45.4656690825621"
+    routes "T1"
     label "cordusio m1"
   ]
   node
@@ -2761,6 +3105,7 @@ graph
     stopLon "9.1369244496754"
     idStop "10469"
     stopLat "45.5043594659156"
+    routes "T19"
     label "p.le cacciatori delle alpi"
   ]
   node
@@ -2769,6 +3114,7 @@ graph
     stopLon "9.17001519835832"
     idStop "11258"
     stopLat "45.4741879449934"
+    routes "T10"
     label "via pagano via canova"
   ]
   node
@@ -2777,6 +3123,7 @@ graph
     stopLon "9.16932620261984"
     idStop "11259"
     stopLat "45.4736119206355"
+    routes "T1"
     label "via pagano via canova"
   ]
   node
@@ -2785,6 +3132,7 @@ graph
     stopLon "9.17000919383641"
     idStop "11256"
     stopLat "45.4701829654469"
+    routes "T19"
     label "via venti settembre"
   ]
   node
@@ -2793,6 +3141,7 @@ graph
     stopLon "9.16770627023952"
     idStop "11254"
     stopLat "45.4720939356737"
+    routes "T1"
     label "l.go quinto alpini"
   ]
   node
@@ -2801,6 +3150,7 @@ graph
     stopLon "9.17064918244665"
     idStop "11255"
     stopLat "45.4698579870305"
+    routes "T1"
     label "via venti settembre"
   ]
   node
@@ -2809,6 +3159,7 @@ graph
     stopLon "9.16757622317937"
     idStop "11252"
     stopLat "45.4726029560821"
+    routes "T10"
     label "l.go quinto alpini"
   ]
   node
@@ -2817,6 +3168,7 @@ graph
     stopLon "9.16692324515614"
     idStop "11253"
     stopLat "45.4725639526005"
+    routes "T19"
     label "l.go quinto alpini"
   ]
   node
@@ -2825,6 +3177,7 @@ graph
     stopLon "9.1954257173708"
     idStop "11964"
     stopLat "45.5077496131152"
+    routes "T5"
     label "v.le ca' granda via val furva"
   ]
   node
@@ -2833,6 +3186,7 @@ graph
     stopLon "9.19960966645881"
     idStop "11961"
     stopLat "45.5040416512645"
+    routes "T5"
     label "v.le testi via dolcebuono"
   ]
   node
@@ -2841,6 +3195,7 @@ graph
     stopLon "9.20113081189649"
     idStop "11849"
     stopLat "45.4769099961834"
+    routes "T1"
     label "v.le vittorio veneto"
   ]
   node
@@ -2849,6 +3204,7 @@ graph
     stopLon "9.21854265064629"
     idStop "12126"
     stopLat "45.4621612235296"
+    routes "T27"
     label "p.za emilia"
   ]
   node
@@ -2857,6 +3213,7 @@ graph
     stopLon "9.19831065400786"
     idStop "11968"
     stopLat "45.5070376557213"
+    routes "T5"
     label "v.le ca' granda v.le suzzani"
   ]
   node
@@ -2865,6 +3222,7 @@ graph
     stopLon "9.17289125303977"
     idStop "11191"
     stopLat "45.4530071802505"
+    routes "T9,T10"
     label "via vigevano via corsico"
   ]
   node
@@ -2873,6 +3231,7 @@ graph
     stopLon "9.17264224674673"
     idStop "11194"
     stopLat "45.4553221817677"
+    routes "T2"
     label "p.le cantore"
   ]
   node
@@ -2881,6 +3240,7 @@ graph
     stopLon "9.17581221839884"
     idStop "11198"
     stopLat "45.4527851674734"
+    routes "T9,T10"
     label "via vigevano v.le gorizia"
   ]
   node
@@ -2889,6 +3249,7 @@ graph
     stopLon "9.13928712610291"
     idStop "17923"
     stopLat "45.4442212591256"
+    routes "T2"
     label "p.le negrelli"
   ]
   node
@@ -2897,6 +3258,7 @@ graph
     stopLon "9.20423089418229"
     idStop "11783"
     stopLat "45.4549502315485"
+    routes "T9"
     label "v.le monte nero via pier lombardo"
   ]
   node
@@ -2905,6 +3267,7 @@ graph
     stopLon "9.19402891845866"
     idStop "11788"
     stopLat "45.463302098617"
+    routes "T24"
     label "p.za fontana"
   ]
   node
@@ -2913,6 +3276,7 @@ graph
     stopLon "9.23782538221839"
     idStop "12678"
     stopLat "45.4714071613076"
+    routes "T5"
     label "ortica"
   ]
   node
@@ -2921,6 +3285,7 @@ graph
     stopLon "9.23661139836835"
     idStop "12676"
     stopLat "45.4711391547611"
+    routes "T5"
     label "via amadeo via s. benigno"
   ]
   node
@@ -2929,6 +3294,7 @@ graph
     stopLon "9.16605421563529"
     idStop "11279"
     stopLat "45.4802108444533"
+    routes "T1"
     label "c.so sempione via procaccini"
   ]
   node
@@ -2937,6 +3303,7 @@ graph
     stopLon "9.16057426487559"
     idStop "10953"
     stopLat "45.4842287741834"
+    routes "T19"
     label "c.so sempione via arona"
   ]
   node
@@ -2945,6 +3312,7 @@ graph
     stopLon "9.16106126332287"
     idStop "10957"
     stopLat "45.483980785116"
+    routes "T1"
     label "c.so sempione via arona"
   ]
   node
@@ -2953,6 +3321,7 @@ graph
     stopLon "9.19739884439542"
     idStop "11877"
     stopLat "45.4782059380898"
+    routes "T9"
     label "repubblica m3"
   ]
   node
@@ -2961,6 +3330,7 @@ graph
     stopLon "9.19226273296045"
     idStop "11672"
     stopLat "45.5084845985815"
+    routes "T5"
     label "v.le ca' granda via cherasco"
   ]
   node
@@ -2969,6 +3339,7 @@ graph
     stopLon "9.17694839431006"
     idStop "11108"
     stopLat "45.4227775220961"
+    routes "T3"
     label "via dei missaglia (isola anita)"
   ]
   node
@@ -2977,6 +3348,7 @@ graph
     stopLon "9.17698734662371"
     idStop "11109"
     stopLat "45.4247565068183"
+    routes "T15"
     label "via dei missaglia via s. abbondio"
   ]
   node
@@ -2985,6 +3357,7 @@ graph
     stopLon "9.17535944824001"
     idStop "11106"
     stopLat "45.4185846026737"
+    routes "T15"
     label "via dei missaglia via de ruggiero"
   ]
   node
@@ -2993,6 +3366,7 @@ graph
     stopLon "9.17684044495151"
     idStop "11107"
     stopLat "45.4231105371777"
+    routes "T15"
     label "via dei missaglia (isola anita)"
   ]
   node
@@ -3001,6 +3375,7 @@ graph
     stopLon "9.17547740717463"
     idStop "11105"
     stopLat "45.4182505834287"
+    routes "T3"
     label "via dei missaglia via de ruggiero"
   ]
   node
@@ -3009,6 +3384,7 @@ graph
     stopLon "9.17972312624602"
     idStop "11477"
     stopLat "45.4597221119452"
+    routes "T2"
     label "carrobbio"
   ]
   node
@@ -3017,6 +3393,7 @@ graph
     stopLon "9.20034096136499"
     idStop "11771"
     stopLat "45.4508852854889"
+    routes "T9"
     label "v.le sabotino"
   ]
   node
@@ -3025,6 +3402,7 @@ graph
     stopLon "9.20123692043224"
     idStop "11775"
     stopLat "45.4568872330591"
+    routes "T16"
     label "via lamarmora"
   ]
   node
@@ -3033,6 +3411,7 @@ graph
     stopLon "9.20259893074092"
     idStop "11777"
     stopLat "45.4516832551615"
+    routes "T9"
     label "p.ta romana m3"
   ]
   node
@@ -3041,6 +3420,7 @@ graph
     stopLon "9.11977955197985"
     idStop "10323"
     stopLat "45.5173373311372"
+    routes "T12"
     label "roserio (ospedale sacco)"
   ]
   node
@@ -3049,6 +3429,7 @@ graph
     stopLon "9.22428153710862"
     idStop "12422"
     stopLat "45.470940086376"
+    routes "T5"
     label "p.za ferravilla"
   ]
   node
@@ -3057,6 +3438,7 @@ graph
     stopLon "9.2231975335897"
     idStop "12429"
     stopLat "45.4758760742162"
+    routes "T33,T19"
     label "v.le romagna via pascoli"
   ]
   node
@@ -3065,6 +3447,7 @@ graph
     stopLon "9.18976077990994"
     idStop "17142"
     stopLat "45.5085475860434"
+    routes "T5"
     label "ospedale maggiore (niguarda)"
   ]
   node
@@ -3073,6 +3456,7 @@ graph
     stopLon "9.21624148069724"
     idStop "12254"
     stopLat "45.4949988165282"
+    routes "T1"
     label "greco rovereto"
   ]
   node
@@ -3081,6 +3465,7 @@ graph
     stopLon "9.22346556401549"
     idStop "12392"
     stopLat "45.4621342092355"
+    routes "T27"
     label "v.le campania v.le corsica"
   ]
   node
@@ -3089,6 +3474,7 @@ graph
     stopLon "9.22106567289266"
     idStop "12390"
     stopLat "45.4621661853892"
+    routes "T27"
     label "p.za grandi"
   ]
   node
@@ -3097,6 +3483,7 @@ graph
     stopLon "9.20802777322981"
     idStop "12095"
     stopLat "45.4623021841201"
+    routes "T12"
     label "p.za cinque giornate"
   ]
   node
@@ -3105,6 +3492,7 @@ graph
     stopLon "9.20875575639384"
     idStop "12094"
     stopLat "45.4622111782892"
+    routes "T27"
     label "p.za cinque giornate"
   ]
   node
@@ -3113,6 +3501,7 @@ graph
     stopLon "9.20736082464877"
     idStop "12090"
     stopLat "45.4617641907139"
+    routes "T19"
     label "p.za cinque giornate"
   ]
   node
@@ -3121,6 +3510,7 @@ graph
     stopLon "9.20731379722101"
     idStop "12092"
     stopLat "45.4653281609673"
+    routes "T9,T19"
     label "v.le premuda"
   ]
   node
@@ -3129,6 +3519,7 @@ graph
     stopLon "9.21531466626877"
     idStop "12154"
     stopLat "45.4730320518035"
+    routes "T5"
     label "p.za adelaide di savoia"
   ]
   node
@@ -3137,6 +3528,7 @@ graph
     stopLon "9.18291094489147"
     idStop "11609"
     stopLat "45.4890537874859"
+    routes "T2"
     label "via farini via valtellina"
   ]
   node
@@ -3145,6 +3537,7 @@ graph
     stopLon "9.18094995221951"
     idStop "11608"
     stopLat "45.4956117346891"
+    routes "T2"
     label "via bernina"
   ]
   node
@@ -3153,6 +3546,7 @@ graph
     stopLon "9.1989966389267"
     idStop "11958"
     stopLat "45.5040816865236"
+    routes "T7"
     label "v.le testi via dolcebuono"
   ]
   node
@@ -3161,6 +3555,7 @@ graph
     stopLon "9.19838767713695"
     idStop "11956"
     stopLat "45.5018496728659"
+    routes "T5"
     label "istria m5"
   ]
   node
@@ -3169,6 +3564,7 @@ graph
     stopLon "9.19754973154264"
     idStop "11950"
     stopLat "45.5015536917228"
+    routes "T7"
     label "istria m5"
   ]
   node
@@ -3177,6 +3573,7 @@ graph
     stopLon "9.16922727056079"
     idStop "11212"
     stopLat "45.4572121360316"
+    routes "T10"
     label "v.le coni zugna via solari"
   ]
   node
@@ -3185,6 +3582,7 @@ graph
     stopLon "9.17010428445648"
     idStop "11216"
     stopLat "45.4656640526553"
+    routes "T16"
     label "s. maria delle grazie"
   ]
   node
@@ -3193,6 +3591,7 @@ graph
     stopLon "9.23068044005646"
     idStop "12450"
     stopLat "45.4709811337786"
+    routes "T5"
     label "via b. angelico via aselli"
   ]
   node
@@ -3201,6 +3600,7 @@ graph
     stopLon "9.20372266139448"
     idStop "11929"
     stopLat "45.4886048783494"
+    routes "T10"
     label "stazione centrale via tonale"
   ]
   node
@@ -3209,6 +3609,7 @@ graph
     stopLon "9.20277672045857"
     idStop "11923"
     stopLat "45.4869978630769"
+    routes "T9"
     label "stazione centrale m2 m3"
   ]
   node
@@ -3217,6 +3618,7 @@ graph
     stopLon "9.21550718432335"
     idStop "15893"
     stopLat "45.5556391374331"
+    routes "T31"
     label "gramsci (cinisello b.)"
   ]
   node
@@ -3225,6 +3627,7 @@ graph
     stopLon "9.21335134903026"
     idStop "15894"
     stopLat "45.5298044478701"
+    routes "T31"
     label "parco nord (torretta)"
   ]
   node
@@ -3233,6 +3636,7 @@ graph
     stopLon "9.1642534060256"
     idStop "10856"
     stopLat "45.4494881829809"
+    routes "T2"
     label "ripa di p.ta ticinese via lombardini"
   ]
   node
@@ -3241,6 +3645,7 @@ graph
     stopLon "9.16301837711347"
     idStop "10854"
     stopLat "45.4552601578658"
+    routes "T14"
     label "p.za del rosario"
   ]
   node
@@ -3249,6 +3654,7 @@ graph
     stopLon "9.16037948835503"
     idStop "10850"
     stopLat "45.4486702217635"
+    routes "T2"
     label "ripa di p.ta ticinese via d'adda"
   ]
   node
@@ -3257,6 +3663,7 @@ graph
     stopLon "9.18799900708334"
     idStop "11504"
     stopLat "45.4634760898664"
+    routes "T14"
     label "duomo m1 m3"
   ]
   node
@@ -3265,6 +3672,7 @@ graph
     stopLon "9.18798705769749"
     idStop "11505"
     stopLat "45.4639120894044"
+    routes "T2"
     label "duomo m1 m3"
   ]
   node
@@ -3273,6 +3681,7 @@ graph
     stopLon "9.18762304054479"
     idStop "11502"
     stopLat "45.46330508679"
+    routes "T2"
     label "duomo m1 m3"
   ]
   node
@@ -3281,6 +3690,7 @@ graph
     stopLon "9.18856300373474"
     idStop "11503"
     stopLat "45.463254089597"
+    routes "T12"
     label "duomo m1 m3"
   ]
   node
@@ -3289,6 +3699,7 @@ graph
     stopLon "9.18840204168583"
     idStop "11500"
     stopLat "45.4629681261669"
+    routes "T19,T16"
     label "duomo m1 m3"
   ]
   node
@@ -3297,6 +3708,7 @@ graph
     stopLon "9.20077685716806"
     idStop "11816"
     stopLat "45.4623001537483"
+    routes "T27,T19"
     label "palazzo di giustizia"
   ]
   node
@@ -3305,6 +3717,7 @@ graph
     stopLon "9.20002191028841"
     idStop "11810"
     stopLat "45.4623761267274"
+    routes "T12"
     label "palazzo di giustizia"
   ]
   node
@@ -3313,6 +3726,7 @@ graph
     stopLon "9.18096113486575"
     idStop "15077"
     stopLat "45.4572041735175"
+    routes "T3"
     label "colonne di s. lorenzo"
   ]
   node
@@ -3321,6 +3735,7 @@ graph
     stopLon "9.16497310776317"
     idStop "12978"
     stopLat "45.5023975979307"
+    routes "T2"
     label "bausan"
   ]
   node
@@ -3329,6 +3744,7 @@ graph
     stopLon "9.13360354389146"
     idStop "10466"
     stopLat "45.4981525272304"
+    routes "T14"
     label "v.le certosa via tibullo"
   ]
   node
@@ -3337,6 +3753,7 @@ graph
     stopLon "9.20946264423446"
     idStop "12182"
     stopLat "45.485153935942"
+    routes "T1"
     label "caiazzo m2"
   ]
   node
@@ -3345,6 +3762,7 @@ graph
     stopLon "9.20739072874187"
     idStop "12970"
     stopLat "45.4764730111725"
+    routes "T5"
     label "p.ta venezia v.le tunisia"
   ]
   node
@@ -3353,6 +3771,7 @@ graph
     stopLon "9.2080326742858"
     idStop "12180"
     stopLat "45.4837699097838"
+    routes "T1"
     label "via settembrini"
   ]
   node
@@ -3361,6 +3780,7 @@ graph
     stopLon "9.18271900370767"
     idStop "17328"
     stopLat "45.485607846777"
+    routes "T33"
     label "via farini via ferrari"
   ]
   node
@@ -3369,6 +3789,7 @@ graph
     stopLon "9.18637096596707"
     idStop "17329"
     stopLat "45.483717877877"
+    routes "T33"
     label "stazione garibaldi m2 m5"
   ]
   node
@@ -3377,6 +3798,7 @@ graph
     stopLon "9.18624994957007"
     idStop "17326"
     stopLat "45.4839138579424"
+    routes "T10"
     label "stazione garibaldi m2 m5"
   ]
   node
@@ -3385,6 +3807,7 @@ graph
     stopLon "9.24140229150796"
     idStop "12717"
     stopLat "45.4826850381575"
+    routes "T33"
     label "rimembranze di lambrate"
   ]
   node
@@ -3393,6 +3816,7 @@ graph
     stopLon "9.18578988111178"
     idStop "15384"
     stopLat "45.498154687824"
+    routes "T4"
     label "maciachini m3"
   ]
   node
@@ -3401,6 +3825,7 @@ graph
     stopLon "9.18826479949635"
     idStop "15386"
     stopLat "45.5010636669095"
+    routes "T4"
     label "valassina"
   ]
   node
@@ -3409,6 +3834,7 @@ graph
     stopLon "9.14147042795874"
     idStop "10678"
     stopLat "45.494587583498"
+    routes "T14"
     label "v.le certosa via casella"
   ]
   node
@@ -3417,6 +3843,7 @@ graph
     stopLon "9.18546614709973"
     idStop "15380"
     stopLat "45.4486692606674"
+    routes "T15"
     label "castelbarco"
   ]
   node
@@ -3425,6 +3852,7 @@ graph
     stopLon "9.19405098884712"
     idStop "15381"
     stopLat "45.4633710872224"
+    routes "T27"
     label "p.za fontana"
   ]
   node
@@ -3433,6 +3861,7 @@ graph
     stopLon "9.18913979338883"
     idStop "15388"
     stopLat "45.5031606641051"
+    routes "T4"
     label "nizza"
   ]
   node
@@ -3441,6 +3870,7 @@ graph
     stopLon "9.16617031178559"
     idStop "11172"
     stopLat "45.4562821076961"
+    routes "T14"
     label "via montevideo"
   ]
   node
@@ -3449,6 +3879,7 @@ graph
     stopLon "9.1744125037394"
     idStop "11078"
     stopLat "45.4101916652732"
+    routes "T3"
     label "via dei missaglia via saponaro"
   ]
   node
@@ -3457,6 +3888,7 @@ graph
     stopLon "9.16985530021825"
     idStop "11177"
     stopLat "45.4524151943421"
+    routes "T2"
     label "p.ta genova m2"
   ]
   node
@@ -3465,6 +3897,7 @@ graph
     stopLon "9.16900734968246"
     idStop "11175"
     stopLat "45.4570281513848"
+    routes "T14"
     label "v.le coni zugna via solari"
   ]
   node
@@ -3473,6 +3906,7 @@ graph
     stopLon "9.16810633693128"
     idStop "11174"
     stopLat "45.4506591840181"
+    routes "T2"
     label "via valenza alzaia nav. grande"
   ]
   node
@@ -3481,6 +3915,7 @@ graph
     stopLon "9.17002129411278"
     idStop "11179"
     stopLat "45.4534181670206"
+    routes "T10"
     label "p.ta genova m2"
   ]
   node
@@ -3489,6 +3924,7 @@ graph
     stopLon "9.20132005830378"
     idStop "11722"
     stopLat "45.4331104669655"
+    routes "T24"
     label "via ripamonti via dell'assunta"
   ]
   node
@@ -3497,6 +3933,7 @@ graph
     stopLon "9.2017830190436"
     idStop "11720"
     stopLat "45.4314355135248"
+    routes "T24"
     label "via ripamonti via noto"
   ]
   node
@@ -3505,6 +3942,7 @@ graph
     stopLon "9.16536478321342"
     idStop "11317"
     stopLat "45.4883508095706"
+    routes "T12"
     label "p.za diocleziano"
   ]
   node
@@ -3513,6 +3951,7 @@ graph
     stopLon "9.17769606473353"
     idStop "11313"
     stopLat "45.483873822918"
+    routes "T14,T12"
     label "p.le cim.monumentale via bramante"
   ]
   node
@@ -3521,6 +3960,7 @@ graph
     stopLon "9.184531201866"
     idStop "15378"
     stopLat "45.445555277391"
+    routes "T15"
     label "giambologna"
   ]
   node
@@ -3529,6 +3969,7 @@ graph
     stopLon "9.18361526005031"
     idStop "15370"
     stopLat "45.4344054461405"
+    routes "T15"
     label "volvinio"
   ]
   node
@@ -3537,6 +3978,7 @@ graph
     stopLon "9.18337921854995"
     idStop "15372"
     stopLat "45.437635394442"
+    routes "T15"
     label "g. da cermenate"
   ]
   node
@@ -3545,6 +3987,7 @@ graph
     stopLon "9.22085956668486"
     idStop "12415"
     stopLat "45.4748930555659"
+    routes "T33,T19"
     label "p.za carlo erba"
   ]
   node
@@ -3553,6 +3996,7 @@ graph
     stopLon "9.18310120379161"
     idStop "15374"
     stopLat "45.440707331052"
+    routes "T15"
     label "pezzotti"
   ]
   node
@@ -3561,6 +4005,7 @@ graph
     stopLon "9.188483882555"
     idStop "17582"
     stopLat "45.4808469215911"
+    routes "T10"
     label "v.le m.te grappa via gioia"
   ]
   node
@@ -3569,6 +4014,7 @@ graph
     stopLon "9.18323223340319"
     idStop "15376"
     stopLat "45.4444513246959"
+    routes "T15"
     label "tibaldi"
   ]
   node
@@ -3577,6 +4023,7 @@ graph
     stopLon "9.15607230631443"
     idStop "10978"
     stopLat "45.4878336994227"
+    routes "T19"
     label "p.za firenze"
   ]
   node
@@ -3585,6 +4032,7 @@ graph
     stopLon "9.21669865313967"
     idStop "12163"
     stopLat "45.473259060136"
+    routes "T33,T19"
     label "p.za ascoli"
   ]
   node
@@ -3593,6 +4041,7 @@ graph
     stopLon "9.21806463319082"
     idStop "12168"
     stopLat "45.4730260782517"
+    routes "T5"
     label "p.za ascoli"
   ]
   edge
