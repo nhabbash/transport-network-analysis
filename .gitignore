@@ -1,4 +1,4 @@
-db/dataset/*
+container/db/dataset/
 .venv
 .vscode
 __pycache__
