@@ -1,3 +1,5 @@
 db/dataset/*
 .venv
 .vscode
+__pycache__
+debug
