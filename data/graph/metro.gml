@@ -1,4 +1,4 @@
-Creator "igraph version 0.7.1 Sat Jun  8 14:33:22 2019"
+Creator "igraph version 0.7.1 Sun Jun  9 19:57:30 2019"
 Version 1
 graph
 [
@@ -8,7 +8,7 @@ graph
     id 0
     routes "M1"
     name "BISCEGLIE"
-    coord "45.4550279741738, 9.11289401203625"
+    coord "45.4553804010375, 9.11292550791171"
     label "BISCEGLIE"
   ]
   node
@@ -16,7 +16,7 @@ graph
     id 1
     routes "M1"
     name "INGANNI"
-    coord "45.4553804010375, 9.11292550791171"
+    coord "45.4575630010367, 9.12226290790823"
     label "INGANNI"
   ]
   node
@@ -24,7 +24,7 @@ graph
     id 2
     routes "M1"
     name "PRIMATICCIO"
-    coord "45.4575630010367, 9.12226290790823"
+    coord "45.459413601036, 9.12925970790564"
     label "PRIMATICCIO"
   ]
   node
@@ -32,7 +32,7 @@ graph
     id 3
     routes "M1"
     name "BANDE NERE"
-    coord "45.459413601036, 9.12925970790564"
+    coord "45.4615040010352, 9.136484507903"
     label "BANDE NERE"
   ]
   node
@@ -40,7 +40,7 @@ graph
     id 4
     routes "M1"
     name "GAMBARA"
-    coord "45.4615040010352, 9.136484507903"
+    coord "45.4648963010345, 9.14302800790081"
     label "GAMBARA"
   ]
   node
@@ -48,7 +48,7 @@ graph
     id 5
     routes "M1"
     name "DE ANGELI"
-    coord "45.4648963010345, 9.14302800790081"
+    coord "45.4664306010339, 9.14956580789837"
     label "DE ANGELI"
   ]
   node
@@ -56,7 +56,7 @@ graph
     id 6
     routes "M1"
     name "WAGNER"
-    coord "45.4664306010339, 9.14956580789837"
+    coord "45.4679501010333, 9.15591440789601"
     label "WAGNER"
   ]
   node
@@ -64,7 +64,7 @@ graph
     id 7
     routes "M1"
     name "PAGANO"
-    coord "45.4679501010333, 9.15591440789601"
+    coord "45.4682808010329, 9.16109520789396"
     label "PAGANO"
   ]
   node
@@ -72,7 +72,7 @@ graph
     id 8
     routes "M1"
     name "CONCILIAZIONE"
-    coord "45.4682808010329, 9.16109520789396"
+    coord "45.4675341010325, 9.16648700789168"
     label "CONCILIAZIONE"
   ]
   node
@@ -80,7 +80,7 @@ graph
     id 9
     routes "M1,M2"
     name "CADORNA"
-    coord "45.4675341010325, 9.16648700789168"
+    coord "45.4681551010317, 9.17710240788748"
     label "CADORNA"
   ]
   node
@@ -88,7 +88,7 @@ graph
     id 10
     routes "M1"
     name "CAIROLI"
-    coord "45.4681953010317, 9.17642630788776"
+    coord "45.4683672010313, 9.18202500788552"
     label "CAIROLI"
   ]
   node
@@ -96,7 +96,7 @@ graph
     id 11
     routes "M1"
     name "CORDUSIO"
-    coord "45.4683672010313, 9.18202500788552"
+    coord "45.4655319010313, 9.18623540788344"
     label "CORDUSIO"
   ]
   node
@@ -104,7 +104,7 @@ graph
     id 12
     routes "M1,M3"
     name "DUOMO"
-    coord "45.4655319010313, 9.18623540788344"
+    coord "45.4646220563982, 9.18959606423539"
     label "DUOMO"
   ]
   node
@@ -112,7 +112,7 @@ graph
     id 13
     routes "M1"
     name "SAN BABILA"
-    coord "45.4646220563982, 9.18959606423539"
+    coord "45.4665214010304, 9.197528607879"
     label "SAN BABILA"
   ]
   node
@@ -120,7 +120,7 @@ graph
     id 14
     routes "M1"
     name "PALESTRO"
-    coord "45.4665214010304, 9.197528607879"
+    coord "45.4714250010296, 9.20194900787787"
     label "PALESTRO"
   ]
   node
@@ -128,7 +128,7 @@ graph
     id 15
     routes "M1"
     name "P.TA VENEZIA"
-    coord "45.4714250010296, 9.20194900787787"
+    coord "45.4744187010291, 9.20504640787702"
     label "P.TA VENEZIA"
   ]
   node
@@ -136,7 +136,7 @@ graph
     id 16
     routes "M1"
     name "LIMA"
-    coord "45.4744187010291, 9.20504640787702"
+    coord "45.4803459010282, 9.21098270787541"
     label "LIMA"
   ]
   node
@@ -144,7 +144,7 @@ graph
     id 17
     routes "M1,M2"
     name "LORETO"
-    coord "45.4803459010282, 9.21098270787541"
+    coord "45.4862401109857, 9.2169815783692"
     label "LORETO"
   ]
   node
@@ -152,7 +152,7 @@ graph
     id 18
     routes "M1"
     name "PASTEUR"
-    coord "45.4862401109857, 9.2169815783692"
+    coord "45.4910692010267, 9.21818010787393"
     label "PASTEUR"
   ]
   node
@@ -160,7 +160,7 @@ graph
     id 19
     routes "M1"
     name "ROVERETO"
-    coord "45.4910692010267, 9.21818010787393"
+    coord "45.4955331010262, 9.21950580787399"
     label "ROVERETO"
   ]
   node
@@ -168,7 +168,7 @@ graph
     id 20
     routes "M1"
     name "TURRO"
-    coord "45.4955331010262, 9.21950580787399"
+    coord "45.5004455010256, 9.22100470787404"
     label "TURRO"
   ]
   node
@@ -176,7 +176,7 @@ graph
     id 21
     routes "M1"
     name "GORLA"
-    coord "45.5004455010256, 9.22100470787404"
+    coord "45.5067343010249, 9.22273880787417"
     label "GORLA"
   ]
   node
@@ -184,7 +184,7 @@ graph
     id 22
     routes "M1"
     name "PRECOTTO"
-    coord "45.5067343010249, 9.22273880787417"
+    coord "45.5120295010243, 9.22449910787417"
     label "PRECOTTO"
   ]
   node
@@ -192,7 +192,7 @@ graph
     id 23
     routes "M1"
     name "VILLA S.G."
-    coord "45.5120295010243, 9.22449910787417"
+    coord "45.5174545010237, 9.22613020787423"
     label "VILLA S.G."
   ]
   node
@@ -200,7 +200,7 @@ graph
     id 24
     routes "M1"
     name "SESTO MARELLI"
-    coord "45.5174545010237, 9.22613020787423"
+    coord "45.523477101023, 9.22796150787429"
     label "SESTO MARELLI"
   ]
   node
@@ -208,7 +208,7 @@ graph
     id 25
     routes "M1"
     name "SESTO RONDO"
-    coord "45.523477101023, 9.22796150787429"
+    coord "45.5341593010219, 9.23124580787439"
     label "SESTO RONDO"
   ]
   node
@@ -216,7 +216,7 @@ graph
     id 26
     routes "M1"
     name "SESTO 1 MAGGIO FS"
-    coord "45.5341593010219, 9.23124580787439"
+    coord "45.5416912010207, 9.23833340787253"
     label "SESTO 1 MAGGIO FS"
   ]
   node
@@ -224,7 +224,7 @@ graph
     id 27
     routes "M1"
     name "BUONARROTI"
-    coord "45.4682808010329, 9.16109520789396"
+    coord "45.4704020010331, 9.15529230789659"
     label "BUONARROTI"
   ]
   node
@@ -232,7 +232,7 @@ graph
     id 28
     routes "M1"
     name "AMENDOLA"
-    coord "45.4704020010331, 9.15529230789659"
+    coord "45.4736789010331, 9.15096930789877"
     label "AMENDOLA"
   ]
   node
@@ -240,7 +240,7 @@ graph
     id 29
     routes "M1,M5"
     name "LOTTO"
-    coord "45.4736789010331, 9.15096930789877"
+    coord "45.4797818727906, 9.14366872151745"
     label "LOTTO"
   ]
   node
@@ -248,7 +248,7 @@ graph
     id 30
     routes "M1"
     name "QT8"
-    coord "45.4791454010331, 9.14374880790241"
+    coord "45.485958101033, 9.13718230790598"
     label "QT8"
   ]
   node
@@ -256,7 +256,7 @@ graph
     id 31
     routes "M1"
     name "LAMPUGNANO"
-    coord "45.485958101033, 9.13718230790598"
+    coord "45.4894017010334, 9.12731920791042"
     label "LAMPUGNANO"
   ]
   node
@@ -264,7 +264,7 @@ graph
     id 32
     routes "M1"
     name "URUGUAY"
-    coord "45.4894017010334, 9.12731920791042"
+    coord "45.4937169010335, 9.12054590791373"
     label "URUGUAY"
   ]
   node
@@ -272,7 +272,7 @@ graph
     id 33
     routes "M1"
     name "BONOLA"
-    coord "45.4937169010335, 9.12054590791373"
+    coord "45.4970026010339, 9.11014780791837"
     label "BONOLA"
   ]
   node
@@ -280,7 +280,7 @@ graph
     id 34
     routes "M1"
     name "S.LEONARDO"
-    coord "45.4970026010339, 9.11014780791837"
+    coord "45.5011555010342, 9.10148120792243"
     label "S.LEONARDO"
   ]
   node
@@ -288,7 +288,7 @@ graph
     id 35
     routes "M1"
     name "MOLINO DORINO"
-    coord "45.5011555010342, 9.10148120792243"
+    coord "45.5052116010345, 9.0929661079264"
     label "MOLINO DORINO"
   ]
   node
@@ -296,7 +296,7 @@ graph
     id 36
     routes "M1"
     name "PERO"
-    coord "45.5052116010345, 9.0929661079264"
+    coord "45.5087997010347, 9.08580670792978"
     label "PERO"
   ]
   node
@@ -304,7 +304,7 @@ graph
     id 37
     routes "M1"
     name "RHO FIERAMILANO"
-    coord "45.5087997010347, 9.08580670792978"
+    coord "45.5198398010336, 9.08710730793072"
     label "RHO FIERAMILANO"
   ]
   node
@@ -312,7 +312,7 @@ graph
     id 38
     routes "M2"
     name "ABBIATEGRASSO"
-    coord "45.5198398010336, 9.08710730793072"
+    coord "45.4299949010351, 9.17732280788232"
     label "ABBIATEGRASSO"
   ]
   node
@@ -320,7 +320,7 @@ graph
     id 39
     routes "M2"
     name "FAMAGOSTA"
-    coord "45.4299949010351, 9.17732280788232"
+    coord "45.4368950010352, 9.168012607887"
     label "FAMAGOSTA"
   ]
   node
@@ -328,7 +328,7 @@ graph
     id 40
     routes "M2"
     name "ROMOLO"
-    coord "45.4368950010352, 9.168012607887"
+    coord "45.4437333010346, 9.16767680788804"
     label "ROMOLO"
   ]
   node
@@ -336,7 +336,7 @@ graph
     id 41
     routes "M2"
     name "P.TA GENOVA F.S."
-    coord "45.4437333010346, 9.16767680788804"
+    coord "45.4523782010337, 9.16960610788841"
     label "P.TA GENOVA F.S."
   ]
   node
@@ -344,7 +344,7 @@ graph
     id 42
     routes "M2"
     name "S.AGOSTINO"
-    coord "45.4523782010337, 9.16960610788841"
+    coord "45.4586201010331, 9.16981440788915"
     label "S.AGOSTINO"
   ]
   node
@@ -352,7 +352,7 @@ graph
     id 43
     routes "M2"
     name "S.AMBROGIO"
-    coord "45.4586201010331, 9.16981440788915"
+    coord "45.4616239010326, 9.1731680078882"
     label "S.AMBROGIO"
   ]
   node
@@ -360,7 +360,7 @@ graph
     id 44
     routes "M2"
     name "LANZA"
-    coord "45.4681551010317, 9.17710240788748"
+    coord "45.4722295010309, 9.18254810788582"
     label "LANZA"
   ]
   node
@@ -368,7 +368,7 @@ graph
     id 45
     routes "M2"
     name "MOSCOVA"
-    coord "45.4722295010309, 9.18254810788582"
+    coord "45.4774395010303, 9.18447570788573"
     label "MOSCOVA"
   ]
   node
@@ -376,7 +376,7 @@ graph
     id 46
     routes "M2,M5"
     name "GARIBALDI FS"
-    coord "45.4774395010303, 9.18447570788573"
+    coord "45.4836397010296, 9.18674240788565"
     label "GARIBALDI FS"
   ]
   node
@@ -384,7 +384,7 @@ graph
     id 47
     routes "M2"
     name "GIOIA"
-    coord "45.4836397010296, 9.18674240788565"
+    coord "45.4848999010289, 9.19485740788253"
     label "GIOIA"
   ]
   node
@@ -392,7 +392,7 @@ graph
     id 48
     routes "M2,M3"
     name "CENTRALE FS"
-    coord "45.4848999010289, 9.19485740788253"
+    coord "45.4844397010284, 9.20261280787934"
     label "CENTRALE FS"
   ]
   node
@@ -400,7 +400,7 @@ graph
     id 49
     routes "M2"
     name "CAIAZZO"
-    coord "45.4844397010284, 9.20261280787934"
+    coord "45.4853182010279, 9.20940940787671"
     label "CAIAZZO"
   ]
   node
@@ -408,7 +408,7 @@ graph
     id 50
     routes "M2"
     name "PIOLA"
-    coord "45.4845943010275, 9.21516600787429"
+    coord "45.481145001027, 9.22591680786948"
     label "PIOLA"
   ]
   node
@@ -416,7 +416,7 @@ graph
     id 51
     routes "M2"
     name "LAMBRATE FS"
-    coord "45.481145001027, 9.22591680786948"
+    coord "45.4842475010261, 9.23482980786629"
     label "LAMBRATE FS"
   ]
   node
@@ -424,7 +424,7 @@ graph
     id 52
     routes "M2"
     name "UDINE"
-    coord "45.4842475010261, 9.23482980786629"
+    coord "45.4912044010253, 9.23699640786635"
     label "UDINE"
   ]
   node
@@ -432,7 +432,7 @@ graph
     id 53
     routes "M2"
     name "CIMIANO"
-    coord "45.4912044010253, 9.23699640786635"
+    coord "45.5000415010242, 9.24142570786573"
     label "CIMIANO"
   ]
   node
@@ -440,7 +440,7 @@ graph
     id 54
     routes "M2"
     name "CRESCENZAGO"
-    coord "45.5000415010242, 9.24142570786573"
+    coord "45.5052544010232, 9.24819330786369"
     label "CRESCENZAGO"
   ]
   node
@@ -448,7 +448,7 @@ graph
     id 55
     routes "M2"
     name "CASCINA GOBBA"
-    coord "45.5052544010232, 9.24819330786369"
+    coord "45.5114424010218, 9.26051020785954"
     label "CASCINA GOBBA"
   ]
   node
@@ -456,7 +456,7 @@ graph
     id 56
     routes "M2"
     name "VIMODRONE"
-    coord "45.5114424010218, 9.26051020785954"
+    coord "45.5157833010196, 9.28598910784982"
     label "VIMODRONE"
   ]
   node
@@ -464,7 +464,7 @@ graph
     id 57
     routes "M2"
     name "CASCINA BURRONA"
-    coord "45.5157833010196, 9.28598910784982"
+    coord "45.5173643568875, 9.29783542421091"
     label "CASCINA BURRONA"
   ]
   node
@@ -472,7 +472,7 @@ graph
     id 58
     routes "M2"
     name "CERNUSCO SUL NAVIGLIO"
-    coord "45.5173643568875, 9.29783542421091"
+    coord "45.5210690111993, 9.33137771302968"
     label "CERNUSCO SUL NAVIGLIO"
   ]
   node
@@ -480,7 +480,7 @@ graph
     id 59
     routes "M2"
     name "VILLA FIORITA"
-    coord "45.5210690111993, 9.33137771302968"
+    coord "45.5207397997328, 9.34597136677814"
     label "VILLA FIORITA"
   ]
   node
@@ -488,7 +488,7 @@ graph
     id 60
     routes "M2"
     name "CASSINA DE PECCHI"
-    coord "45.5207397997328, 9.34597136677814"
+    coord "45.521864033703, 9.36312160213117"
     label "CASSINA DE PECCHI"
   ]
   node
@@ -496,7 +496,7 @@ graph
     id 61
     routes "M2"
     name "BUSSERO"
-    coord "45.521864033703, 9.36312160213117"
+    coord "45.5253016625452, 9.37589692165833"
     label "BUSSERO"
   ]
   node
@@ -504,7 +504,7 @@ graph
     id 62
     routes "M2"
     name "VILLA POMPEA"
-    coord "45.5253016625452, 9.37589692165833"
+    coord "45.5278485186639, 9.38497435183026"
     label "VILLA POMPEA"
   ]
   node
@@ -512,7 +512,7 @@ graph
     id 63
     routes "M2"
     name "GORGONZOLA"
-    coord "45.5278485186639, 9.38497435183026"
+    coord "45.5367410010093, 9.40345410780515"
     label "GORGONZOLA"
   ]
   node
@@ -520,7 +520,7 @@ graph
     id 64
     routes "M2"
     name "CASCINA ANTONIETTA"
-    coord "45.5367410010093, 9.40345410780515"
+    coord "45.5420794775495, 9.42350019149011"
     label "CASCINA ANTONIETTA"
   ]
   node
@@ -528,7 +528,7 @@ graph
     id 65
     routes "M2"
     name "GESSATE"
-    coord "45.5420794775495, 9.42350019149011"
+    coord "45.545287231276, 9.43662513013151"
     label "GESSATE"
   ]
   node
@@ -536,7 +536,7 @@ graph
     id 66
     routes "M2"
     name "ASSAGO MILANOFIORI FORUM"
-    coord "45.545287231276, 9.43662513013151"
+    coord "45.40174850104, 9.14553880789141"
     label "ASSAGO MILANOFIORI FORUM"
   ]
   node
@@ -544,7 +544,7 @@ graph
     id 67
     routes "M2"
     name "ASSAGO MILANOFIORI NORD"
-    coord "45.40174850104, 9.14553880789141"
+    coord "45.409454501039, 9.15004630789062"
     label "ASSAGO MILANOFIORI NORD"
   ]
   node
@@ -552,7 +552,7 @@ graph
     id 68
     routes "M2"
     name "COLOGNO SUD"
-    coord "45.5114424010218, 9.26051020785954"
+    coord "45.5202131010199, 9.27492710785488"
     label "COLOGNO SUD"
   ]
   node
@@ -560,7 +560,7 @@ graph
     id 69
     routes "M2"
     name "COLOGNO CENTRO"
-    coord "45.5202131010199, 9.27492710785488"
+    coord "45.5274782010187, 9.2829642078526"
     label "COLOGNO CENTRO"
   ]
   node
@@ -568,7 +568,7 @@ graph
     id 70
     routes "M2"
     name "COLOGNO NORD"
-    coord "45.5274782010187, 9.2829642078526"
+    coord "45.5343028010175, 9.29109410785023"
     label "COLOGNO NORD"
   ]
   node
@@ -576,7 +576,7 @@ graph
     id 71
     routes "M3"
     name "SAN DONATO"
-    coord "45.5343028010175, 9.29109410785023"
+    coord "45.4292064010295, 9.25623390785034"
     label "SAN DONATO"
   ]
   node
@@ -584,7 +584,7 @@ graph
     id 72
     routes "M3"
     name "ROGOREDO FS"
-    coord "45.4292064010295, 9.25623390785034"
+    coord "45.4335862010304, 9.23808910785825"
     label "ROGOREDO FS"
   ]
   node
@@ -592,7 +592,7 @@ graph
     id 73
     routes "M3"
     name "PORTO DI MARE"
-    coord "45.4335862010304, 9.23808910785825"
+    coord "45.4371279010307, 9.23031110786186"
     label "PORTO DI MARE"
   ]
   node
@@ -600,7 +600,7 @@ graph
     id 74
     routes "M3"
     name "CORVETTO"
-    coord "45.4371279010307, 9.23031110786186"
+    coord "45.4404109010309, 9.22346950786506"
     label "CORVETTO"
   ]
   node
@@ -608,7 +608,7 @@ graph
     id 75
     routes "M3"
     name "BRENTA"
-    coord "45.4404109010309, 9.22346950786506"
+    coord "45.442810701031, 9.2184814078674"
     label "BRENTA"
   ]
   node
@@ -616,7 +616,7 @@ graph
     id 76
     routes "M3"
     name "LODI T.I.B.B."
-    coord "45.442810701031, 9.2184814078674"
+    coord "45.4467636010312, 9.21081640787101"
     label "LODI T.I.B.B."
   ]
   node
@@ -624,7 +624,7 @@ graph
     id 77
     routes "M3"
     name "PORTA ROMANA"
-    coord "45.4467636010312, 9.21081640787101"
+    coord "45.4514341010313, 9.20340020787463"
     label "PORTA ROMANA"
   ]
   node
@@ -632,7 +632,7 @@ graph
     id 78
     routes "M3"
     name "CROCETTA"
-    coord "45.4514341010313, 9.20340020787463"
+    coord "45.4565508010315, 9.19510340787866"
     label "CROCETTA"
   ]
   node
@@ -640,7 +640,7 @@ graph
     id 79
     routes "M3"
     name "MISSORI"
-    coord "45.4565508010315, 9.19510340787866"
+    coord "45.4601086010316, 9.18902710788159"
     label "MISSORI"
   ]
   node
@@ -648,7 +648,7 @@ graph
     id 80
     routes "M3"
     name "MONTENAPOLEONE"
-    coord "45.4639037177197, 9.18861101005318"
+    coord "45.4700055010304, 9.19284790788136"
     label "MONTENAPOLEONE"
   ]
   node
@@ -656,7 +656,7 @@ graph
     id 81
     routes "M3"
     name "TURATI"
-    coord "45.4700055010304, 9.19284790788136"
+    coord "45.4750407010298, 9.19470670788128"
     label "TURATI"
   ]
   node
@@ -664,7 +664,7 @@ graph
     id 82
     routes "M3"
     name "REPUBBLICA"
-    coord "45.4750407010298, 9.19470670788128"
+    coord "45.4800896010291, 9.19885640788027"
     label "REPUBBLICA"
   ]
   node
@@ -672,7 +672,7 @@ graph
     id 83
     routes "M3"
     name "SONDRIO"
-    coord "45.4844397010284, 9.20261280787934"
+    coord "45.489990201028, 9.20055840788091"
     label "SONDRIO"
   ]
   node
@@ -680,7 +680,7 @@ graph
     id 84
     routes "M3,M5"
     name "ZARA"
-    coord "45.489990201028, 9.20055840788091"
+    coord "45.4926644010284, 9.19260110788448"
     label "ZARA"
   ]
   node
@@ -688,7 +688,7 @@ graph
     id 85
     routes "M3"
     name "MACIACHINI"
-    coord "45.4926644010284, 9.19260110788448"
+    coord "45.4977017010284, 9.1850425078882"
     label "MACIACHINI"
   ]
   node
@@ -696,7 +696,7 @@ graph
     id 86
     routes "M3"
     name "DERGANO"
-    coord "45.4977017010284, 9.1850425078882"
+    coord "45.5055370010281, 9.17960310789145"
     label "DERGANO"
   ]
   node
@@ -704,7 +704,7 @@ graph
     id 87
     routes "M3"
     name "AFFORI CENTRO"
-    coord "45.5055370010281, 9.17960310789145"
+    coord "45.5135543010278, 9.17397990789478"
     label "AFFORI CENTRO"
   ]
   node
@@ -712,7 +712,7 @@ graph
     id 88
     routes "M3"
     name "AFFORI FN"
-    coord "45.5135543010278, 9.17397990789478"
+    coord "45.5216818010275, 9.16825160789818"
     label "AFFORI FN"
   ]
   node
@@ -720,7 +720,7 @@ graph
     id 89
     routes "M3"
     name "COMASINA"
-    coord "45.5216818010275, 9.16825160789818"
+    coord "45.5281326010273, 9.16372910790087"
     label "COMASINA"
   ]
   node
@@ -728,7 +728,7 @@ graph
     id 90
     routes "M5"
     name "SAN SIRO STADIO"
-    coord "45.4292064010295, 9.25623390785034"
+    coord "45.4762588946168, 9.11831543256738"
     label "SAN SIRO STADIO"
   ]
   node
@@ -736,7 +736,7 @@ graph
     id 91
     routes "M5"
     name "SAN SIRO IPPODROMO"
-    coord "45.4762588946168, 9.11831543256738"
+    coord "45.4762089724848, 9.12901244641325"
     label "SAN SIRO IPPODROMO"
   ]
   node
@@ -744,7 +744,7 @@ graph
     id 92
     routes "M5"
     name "SEGESTA"
-    coord "45.4762089724848, 9.12901244641325"
+    coord "45.4763587387451, 9.13789399368297"
     label "SEGESTA"
   ]
   node
@@ -752,7 +752,7 @@ graph
     id 93
     routes "M5"
     name "PORTELLO"
-    coord "45.4797818727906, 9.14366872151745"
+    coord "45.4807995479255, 9.15149944089912"
     label "PORTELLO"
   ]
   node
@@ -760,7 +760,7 @@ graph
     id 94
     routes "M5"
     name "TRE TORRI"
-    coord "45.4807995479255, 9.15149944089912"
+    coord "45.478140184674, 9.15667532734001"
     label "TRE TORRI"
   ]
   node
@@ -768,7 +768,7 @@ graph
     id 95
     routes "M5"
     name "DOMODOSSOLA"
-    coord "45.478140184674, 9.15667532734001"
+    coord "45.4816190261232, 9.16226040292661"
     label "DOMODOSSOLA"
   ]
   node
@@ -776,7 +776,7 @@ graph
     id 96
     routes "M5"
     name "GERUSALEMME"
-    coord "45.4816190261232, 9.16226040292661"
+    coord "45.4845217522064, 9.16677778724863"
     label "GERUSALEMME"
   ]
   node
@@ -784,7 +784,7 @@ graph
     id 97
     routes "M5"
     name "CENISIO"
-    coord "45.4845217522064, 9.16677778724863"
+    coord "45.4874900006087, 9.17194683918035"
     label "CENISIO"
   ]
   node
@@ -792,7 +792,7 @@ graph
     id 98
     routes "M5"
     name "MONUMENTALE"
-    coord "45.4874900006087, 9.17194683918035"
+    coord "45.4848147763397, 9.17979312440481"
     label "MONUMENTALE"
   ]
   node
@@ -800,7 +800,7 @@ graph
     id 99
     routes "M5"
     name "ISOLA"
-    coord "45.4836397010296, 9.18674240788565"
+    coord "45.4876083010289, 9.19126340788434"
     label "ISOLA"
   ]
   node
@@ -808,7 +808,7 @@ graph
     id 100
     routes "M5"
     name "MARCHE"
-    coord "45.4926644010284, 9.19260110788448"
+    coord "45.4961456010279, 9.19482360788404"
     label "MARCHE"
   ]
   node
@@ -816,7 +816,7 @@ graph
     id 101
     routes "M5"
     name "ISTRIA"
-    coord "45.4961456010279, 9.19482360788404"
+    coord "45.5016262010272, 9.19792000788352"
     label "ISTRIA"
   ]
   node
@@ -824,7 +824,7 @@ graph
     id 102
     routes "M5"
     name "CA GRANDA"
-    coord "45.5016262010272, 9.19792000788352"
+    coord "45.5072425010265, 9.20111030788298"
     label "CA GRANDA"
   ]
   node
@@ -832,7 +832,7 @@ graph
     id 103
     routes "M5"
     name "BICOCCA"
-    coord "45.5072425010265, 9.20111030788298"
+    coord "45.5147339010255, 9.20536990788226"
     label "BICOCCA"
   ]
   node
@@ -840,7 +840,7 @@ graph
     id 104
     routes "M5"
     name "PONALE"
-    coord "45.5147339010255, 9.20536990788226"
+    coord "45.5219945010245, 9.20947360788156"
     label "PONALE"
   ]
   node
@@ -848,7 +848,7 @@ graph
     id 105
     routes "M5"
     name "BIGNAMI"
-    coord "45.5219945010245, 9.20947360788156"
+    coord "45.5267842010239, 9.21218050788111"
     label "BIGNAMI"
   ]
   edge
