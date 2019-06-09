@@ -1,5 +1,7 @@
 from geopy.distance import vincenty
-import pprint
+from scipy.spatial import Delaunay
+from collections import defaultdict
+import itertools
 
 def add_member(cell, new_member, recompute_centroid = False):
     """
@@ -49,8 +51,7 @@ def find_closest(stop_coord, cells, radius):
                 closest_cell_key = key
 
     return closest_cell_key
-
-        
+     
 def cluster_stops(stops, radius):
     """
     Grouping points into cells with a desired radius
@@ -88,3 +89,15 @@ def cluster_stops(stops, radius):
         cells[key] = add_member(cells[key], stop)
     
     return cells
+
+def get_neighbor_list(points):
+    tri = Delaunay(points)
+    neighbors = defaultdict(set)
+    for p in tri.vertices:
+        for i,j in itertools.combinations(p,2):
+            neighbors[i].add(j)
+            neighbors[j].add(i)
+    return neighbors
+
+#def c2c_flow(graph, ):
+

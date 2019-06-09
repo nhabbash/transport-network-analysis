@@ -3,3 +3,4 @@ container/db/dataset/
 .vscode
 __pycache__
 debug
+.ipynb*
