@@ -54,4 +54,4 @@ $ jupyter-notebook maps.ipynb
 ## Authors
 
 * **Nassim Habbash** (808292) - [dodicin](https://github.com/dodicin)
-* **Ricardo Matomoros** 
+* **Ricardo Matamoros** (807450) - [ricardo](https://github.com/ricardoanibalmatamorosaragon)
