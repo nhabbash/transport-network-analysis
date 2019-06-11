@@ -58,11 +58,11 @@ try:
 
     if not os.path.exists("data/"):
         os.makedirs("data/")
-        os.makedirs("data/csv")
+        os.makedirs("data/raw_data")
 
     for key, table in result.items():
 
-        with open("data/csv/" + key + ".csv", mode='w') as csv_file:
+        with open("data/raw_data/" + key + ".csv", mode='w') as csv_file:
             writer = csv.writer(csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             for row in table:
                 writer.writerow(row)
