@@ -1,5 +1,5 @@
 import networkx as nx
-import clustering as cl
+from clust_tools import clustering as cl
 
 import pprint
 import matplotlib.pyplot as plt
