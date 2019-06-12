@@ -63,10 +63,9 @@ def __voronoi_finite_polygons_2d(vor, radius=None):
         new_region = np.array(new_region)[
             np.argsort(angles)]
         new_regions.append(new_region.tolist())
-    return new_regions, np.asarray(new_vertices)
+    return {"regions": new_regions, "vertices": np.asarray(new_vertices)}
 
 def voronoi_finite(points):
 
     vor = spatial.Voronoi(points)
     return __voronoi_finite_polygons_2d(vor)
-
