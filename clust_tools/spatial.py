@@ -69,3 +69,6 @@ def voronoi_finite(points):
 
     vor = spatial.Voronoi(points)
     return __voronoi_finite_polygons_2d(vor)
+
+def convex_hull(points):
+    return spatial.ConvexHull(points)

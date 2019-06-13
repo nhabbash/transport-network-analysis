@@ -128,6 +128,8 @@ def get_neighbor_list(points, radius = 5):
     
     for p in tri.vertices:        
         for i, j in itertools.combinations(p, 2):
+            i = i.item()
+            j = j.item()
             dist = distance(points[i], points[j]).km
             if dist <= radius:
                 neighbors[i].add(j)
