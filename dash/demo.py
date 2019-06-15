@@ -31,6 +31,16 @@ def list_values(result):
 
 c2c = nx.read_gml("./data/graphs/net_c2c.gml")
 neighbor=nx.read_gml("./data/graphs/net_neighbor.gml")
+
+#misure da plottare
+nei_diam=nx.diameter(neighbor)
+nei_avg_clus=nx.average_clustering(neighbor)
+nei_avg_short=nx.average_shortest_path_length(neighbor)
+c2c_diam=nx.diameter(c2c)
+c2c_avg_clus=nx.average_clustering(c2c)
+c2c_avg_short=nx.average_shortest_path_length(c2c)
+
+#misure plottare
 x_d,y_d=degree_values(c2c.degree())
 x_n,y_n=degree_values(neighbor.degree())
 
