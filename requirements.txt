@@ -1,5 +1,11 @@
+# Container
 psycopg2
+# Notebook
 networkx
-geopy
+geojson
 scipy
 folium
+jupyter
+shapely
+# Jupyter Notebook
+ipykernel
