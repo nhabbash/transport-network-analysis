@@ -4,12 +4,14 @@ import dash_core_components as dcc
 from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 import networkx as nx
-
+import operator
+import random
 import dash_table_experiments as dt
 import folium
 import pandas as pd
 from collections import Counter
 import matplotlib.pyplot as plt
+from attacks import random_vertex, update_rank_attack
 
 def degree_values(G):
     support=[]
@@ -29,18 +31,41 @@ def list_values(result):
         x.append(result[i])
     return x
 
+def random_neighbor(dimension):
+    G = nx.read_gml("./data/graphs/net_c2c.gml")
+    N=nx.number_of_nodes(G)
+    S=[100]
+    #esegue gli attacchi
+    for i in range(dimension):
+        node=int(random.choice(list(G.nodes)))
+        neighbor=int(random.choice(list(G.neighbors(str(node)))))
+        G.remove_node(str(neighbor))
+        #prende max componente connessa
+        G = max(nx.connected_component_subgraphs(G), key=len)
+        S.append((float(nx.number_of_nodes(G))/N)*100)
+        if len(G.nodes) ==1:
+            return S
+    
+    return S 
+
+c2c = nx.read_gml("./data/graphs/net_c2c.gml")
+U=update_rank_attack(c2c,40,'degree',0)
+c2c = nx.read_gml("./data/graphs/net_c2c.gml")
+U1=update_rank_attack(c2c,40,'closeness',0)
+c2c = nx.read_gml("./data/graphs/net_c2c.gml")
+U2=update_rank_attack(c2c,40,'betweenness',0)
+c2c = nx.read_gml("./data/graphs/net_c2c.gml")
+U3=update_rank_attack(c2c,40,'eigenvector',0)
+c2c = nx.read_gml("./data/graphs/net_c2c.gml")
+U4=update_rank_attack(c2c,40,'pagerank',0)
+c2c = nx.read_gml("./data/graphs/net_c2c.gml")
+U5=update_rank_attack(c2c,40,'clustering',0)
+
+Rn=random_neighbor(40)
+Rv=random_vertex(nx.read_gml("./data/graphs/net_c2c.gml"),40)
+
 c2c = nx.read_gml("./data/graphs/net_c2c.gml")
 neighbor=nx.read_gml("./data/graphs/net_neighbor.gml")
-
-#misure da plottare
-nei_diam=nx.diameter(neighbor)
-nei_avg_clus=nx.average_clustering(neighbor)
-nei_avg_short=nx.average_shortest_path_length(neighbor)
-c2c_diam=nx.diameter(c2c)
-c2c_avg_clus=nx.average_clustering(c2c)
-c2c_avg_short=nx.average_shortest_path_length(c2c)
-
-#misure plottare
 x_d,y_d=degree_values(c2c.degree())
 x_n,y_n=degree_values(neighbor.degree())
 
@@ -70,6 +95,7 @@ app.layout = html.Div([
         dcc.Tab(label='Delaunay & Boronoy', value='tab-7-example'),
         dcc.Tab(label='Delaunay & C2C graph ', value='tab-8-example'),
         dcc.Tab(label='centrality measures', value='tab-9-example'),
+        dcc.Tab(label='attacks based on centrality measures', value='tab-10-example'),
     ]),
 
     html.Div(id='tabs-content-example')
@@ -298,7 +324,76 @@ def render_content(tab):
         ])
     elif tab == 'tab-6-example':
         return html.Div([
-            html.H3('degree'),
+            html.H1('metro net analysis'),
+            dcc.Slider(
+                min=0,
+                max=9,
+                marks={i: 'Label {}'.format(i) for i in range(10)},
+                value=5,
+            ) 
+        ])
+    elif tab == 'tab-10-example':
+        return html.Div([
+            html.H1('ATTACKS'),
+            html.Div([
+                    html.H3('attack random neighbor'),
+                    dcc.Graph(id='rn', figure={'data': [{
+                        'x':range(1,100),
+                        'y':Rn,
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'}]})
+                ],style={"height" : "25%", "width" : "25%"},
+                 className="six columns"),
+            html.Div([
+                    html.H3('attack random vertex'),
+                    dcc.Graph(id='rv', figure={'data': [{
+                        'x':range(1,100),
+                        'y':Rv,
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'}]})
+                ],style={"height" : "25%", "width" : "25%"},
+                 className="six columns"),
+            html.Div([
+                    html.H3('attack update measures'),
+                    dcc.Graph(id='attack', figure={'data': [{
+                        'x':range(1,100),
+                        'y':U,
+                        'name': 'degree',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':U1,
+                        'name': 'closeness',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':U2,
+                        'name': 'betweenness',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                        {
+                        'x':range(1,100),
+                        'y':U3,
+                        'name': 'eignvector',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines+markers'}, 
+                        {
+                        'x':range(1,100),
+                        'y':U4,
+                        'name': 'pagerank',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':U5,
+                        'name': 'clustering coefficient',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'} 
+                          ]})
+                ],style={"height" : "25%", "width" : "25%"},
+                 className="six columns"),
             
         ])
       
