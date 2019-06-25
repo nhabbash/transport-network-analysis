@@ -1,5 +1,5 @@
 ---
-title: '**Public Transport Network Analysis**'
+title: '**Averaged graph analysis and random failure resilience of a public transport network**'
 author: "Authors: Nassim Habbash (808292), Ricardo Matamoros (807450)"
 classoption: twocolumn
 output:
@@ -8,12 +8,12 @@ output:
 subtitle: Final project for the Data Analytics course for the MSc in Computer Science
   at University of Milano-Bicocca.
 bibliography: bibliography.bib
+subparagraph: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
 
 ## Introduction
 
@@ -63,13 +63,14 @@ Following are some statistics for the resulting graphs:
 
 The graphs of metro lines, buses and trams are disjoint: although different stops refer to the same street, they are located at different coordinates and have a different unique IDs. As such, metro stations, bus stops and tram stops never intersecate, although there are some exceptions for buses and trams sharing the same stop (same unique ID).
 
-It's not sensible to conduct a connectivity analysis and failure test on a disjointed network: although not directly connected, people can and will move from a metro station to its nearest bus or tram station, to move from point A to point B. In case of failures between stops, spatially close stops work as a back-off to allow paths A and B, with C failed, to be reached by a working stop D.
+It's not sensible to conduct a network analysis and failure test on a disjointed network: although not directly connected, people can and will move from a metro station to its nearest bus or tram station, to move from point A to point B. In case of failures between stops, spatially close stops work as a back-off to allow paths A and B, with C failed, to be reached by a working stop D.
 
 Graphs derived from large transit systems networks and how to represent mobility has been extensively studied. An approach to represent trajectory data of city-wide traffic dynamics in spatial and temporal domains has been proposed by @inproceedings. An approach building on the previous, by @multilayertraffic, analyzes different traffic flows on a shared spatial grid, allowing for multiple traffic flows to be analyzed as a real world network.
 
 This project takes inspiration from both these approaches to analyze how Milan's transport network behaves in the spatial domain.
 
-## Partitioning a network in cells
+## Neighbor graph
+### Partitioning a network in cells
 
 The partitioning of a network in regions (hereon cells) according to the spatial relation of its nodes (the stops in this case) is based on a method developed by @spgen.
 
@@ -88,9 +89,47 @@ $$
 Where $C_i$ in the presentated formula is a cell of points each inside the radius of the cell's centroid, $C_i.m$ represents the cell's members and $C_i.c$ is the cell's centroid. The centroid of each cell is estimated iteratively by finding the mean of each point as they get assigned to each cell. 
 After all the points $p$ have been grouped into cells $G_i$, the cells are emptied and the points redistributed to the closest cell.
 
-The set of cells $C$ represents the partitions into which the stops are grouped. From this, it is possible to compute the Voronoi diagram of $C$, which partitions the space into geometrical cells with $C_i.centroid$ as a center, delineating the boundaries between each cell. It's complementary graph, computed through the Delaunay triangulation of the centroids, represents the *graph of neighboring regions*, while the Voronoi diagram represents the *spatial subdivision of the area*.
+The set of cells $C$ represents the partitions into which the stops are grouped. 
 
-TODO: include voronoi diagram and Delanay diagram images
+
+![Metro network, stops colored according to the line they belong to](images/metro.png)
+
+![Partitioned metro network with $\gamma = 2km$, $\sigma = 5km$, stops colored according to the $C_i$ region they belong to](images/metro-centroids.png)
+
+
+
+
+From $C$, it is possible to compute the Voronoi diagram of $C$, which partitions the space into geometrical cells with $C_i.centroid$ as a center, delineating the boundaries between each cell Its complementary graph, computed through the Delaunay triangulation of the centroids, represents the *graph of neighboring regions* (hereon neighbor graph), while the Voronoi diagram represents the *spatial subdivision of the area*.
+Since boundary regions can be neighbor to other distant regions through to-infinity borders (i.e. Voronoi Diagrams aren't bounded per se), a parameter $\sigma$ is given as a neighboring distance limit. The value chosen for this network is $\sigma = 5km$.
+
+The neighbor graph represents the spatial connections between regions of a city. While connected spatially, neighboring regions might not be served by public transport. To obtain a graph representing the actual transit connections between regions of a city, we'll check the cell-to-cell flow between regions.
+
+
+## Cell-to-cell flow graph
+
+The cell-to-cell flow takes into account the number of effective *direct links* between the single stops inside the regions. While the node of each regions remains the same, the edges vary according to the number of direct between the stops in the regions. Two regions having many stops directly connected between them will have a higher weight to their edges, and the opposite holds true as well. Two neighboring regions not connected by a direct link of their stops will not be connected in the cell-to-cell graph.
+
+The cell-to-cell flow graph represent the actual connections served by the public transport.
+
+
+![Voronoi diagram of the public transport network](images/net-voronoi.png)
+
+![Partitions of the public transport network with $\gamma = 2km$, $\sigma = 5km$, corresponds to the Delaunay triangulation of the Voronoi diagram](images/net-centroids.png)
+
+![Cell-to-cell flow graph of the public transport network](images/net-c2c.png)
+
+## Network Analytics
+
+Analyzing the difference between the neighbor graph and the cell-to-cell graph can give an interesting insight into how well-connected are different city regions and how resilient each connection is. Centrality measures can help measuring these differences.
+
+Nodes in the cell-to-cell graph with lower degree and eigenvector centralities represent regions weakly connected to the network - hence regions that might cause more troubles to the passengers of those regions if the stops were to undergo failures.
+
+The nodes' closeness represent how much a node can influence other nodes, or spread information, in the network. Highly connected networks tend to have similar closeness for every node. This represents for transit systems a measure of how much a node can offer access to other nodes and spread passengers quickly to any destination of the network.
+
+The nodes' betweenness represent how much a node has influence over flows in a graph. For transit systems this is a measure of "gateway" regions that act as a bridge between different regions.
+
+
+
 \pagebreak
 
 ## References
