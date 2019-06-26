@@ -92,15 +92,12 @@ After all the points $p$ have been grouped into cells $G_i$, the cells are empti
 The set of cells $C$ represents the partitions into which the stops are grouped. 
 
 
-![Metro network, stops colored according to the line they belong to](images/metro.png)
+![Metro network, stops colored according to the line they belong to](images/metro.png) 
 
-![Partitioned metro network with $\gamma = 2km$, $\sigma = 5km$, stops colored according to the $C_i$ region they belong to](images/metro-centroids.png)
-
-
-
+![Partitioned metro network with $\gamma = 2km$, $\rho = 5km$, stops colored according to the $C_i$ region they belong to](images/metro-centroids.png)
 
 From $C$, it is possible to compute the Voronoi diagram of $C$, which partitions the space into geometrical cells with $C_i.centroid$ as a center, delineating the boundaries between each cell Its complementary graph, computed through the Delaunay triangulation of the centroids, represents the *graph of neighboring regions* (hereon neighbor graph), while the Voronoi diagram represents the *spatial subdivision of the area*.
-Since boundary regions can be neighbor to other distant regions through to-infinity borders (i.e. Voronoi Diagrams aren't bounded per se), a parameter $\sigma$ is given as a neighboring distance limit. The value chosen for this network is $\sigma = 5km$.
+Since boundary regions can be neighbor to other distant regions through to-infinity borders (i.e. Voronoi Diagrams aren't bounded per se), a parameter $\rho$ is given as a neighboring distance limit. The value chosen for this network is $\rho = 5km$.
 
 The neighbor graph represents the spatial connections between regions of a city. While connected spatially, neighboring regions might not be served by public transport. To obtain a graph representing the actual transit connections between regions of a city, we'll check the cell-to-cell flow between regions.
 
@@ -112,23 +109,60 @@ The cell-to-cell flow takes into account the number of effective *direct links* 
 The cell-to-cell flow graph represent the actual connections served by the public transport.
 
 
+## Network Analytics
+
+Analyzing the difference between the neighbor graph and the cell-to-cell graph can give interesting insights into how well-connected are different city regions and how resilient each connection is. Centrality measures can help measuring these differences by computing the importance of a node in the graph according to different parameters. Some of the measures used are explained below:
+
+The degree centrality represent the strength of the connection of a node to the network - lower degree regions might cause more inconveniences to the passengers were any of the stops to fail or close.
+$$
+C_D(G) = \frac{\sum_{i=1}^{|V|}[deg(v*)-deg(v_i)]}{|V|^2 - 3|V|+2}
+$$
+The closeness centrality represent how much a node can influence other nodes, or spread information, in the network. Highly connected networks tend to have similar closeness for every node. For transit systems this represents a measure of how much a node can offer access to other nodes and spread passengers quickly to any destination of the network.
+$$
+C_C(G) = \frac{1}{\sum_{x \in V}l(x, y)}
+$$
+The betweenness centrality represent how much a node has influence over flows in a graph. For transit systems this is a measure of how much a region acts as a bridge between different clusters of regions in the graph.
+$$
+C_B(G) = \sum_{s\neq v \neq t \in V}\frac{\sigma_{st}(v)}{\sigma_{st}}
+$$
+
 ![Voronoi diagram of the public transport network](images/net-voronoi.png)
 
-![Partitions of the public transport network with $\gamma = 2km$, $\sigma = 5km$, corresponds to the Delaunay triangulation of the Voronoi diagram](images/net-centroids.png)
+![Partitions of the public transport network with $\gamma = 2km$, $\rho = 5km$, corresponds to the Delaunay triangulation of the Voronoi diagram](images/net-centroids.png)
 
 ![Cell-to-cell flow graph of the public transport network](images/net-c2c.png)
 
-## Network Analytics
 
-Analyzing the difference between the neighbor graph and the cell-to-cell graph can give an interesting insight into how well-connected are different city regions and how resilient each connection is. Centrality measures can help measuring these differences.
+## Resilience to attacks and failures
 
-Nodes in the cell-to-cell graph with lower degree and eigenvector centralities represent regions weakly connected to the network - hence regions that might cause more troubles to the passengers of those regions if the stops were to undergo failures.
+In the resilience analysis we consider how the cell-to-cell flow graph reacts to different attack strategy. Clearly, this won't give a detailed insight into how each single stop reacts to failure, being an averaged graph, but on other hand, it allows us to observe how **area of effect** attack might influence the network. Such attacks might be, terrorist attacks or natural disasters, influencing a region with a radius $\gamma$. Moreover, being the $\gamma$ a simple parameter, it's possible to play with it to make it fit different scenarios - it is possible to create microregions that roughly represent a single stop, although we suggest to select a $\gamma$ value that's more than the minimum distance between two stops in the network, to avoid keeping disjointed routes.
 
-The nodes' closeness represent how much a node can influence other nodes, or spread information, in the network. Highly connected networks tend to have similar closeness for every node. This represents for transit systems a measure of how much a node can offer access to other nodes and spread passengers quickly to any destination of the network.
+The origin and scenario of an attack or cascading failures may vary wildly. It can be due to an eccessive load of the network, or be topological in nature (a node, or stop, becomes inaccessible, cutting the link between other nodes). We chose to inspect the second type of attacks, analyzing different strategies that go from random nodes elimination to eliminating nodes with the highest centrality of a certain kind.
 
-The nodes' betweenness represent how much a node has influence over flows in a graph. For transit systems this is a measure of "gateway" regions that act as a bridge between different regions.
+* **Random vertex** (RV): vertices are removed in random order
+* **Random neighbor** (RN): one by one, a random neighbor of a random node is removed, until the node has no neighbors
+* **Degree** ($C_D$): vertices are removed in the graph according to their highest degree, recomputed after every elimination
+* **Initial degree** ($C_{Di}$): vertices are removed in the graph according to their highest degree, computed once at the beginning
+* **Closeness** ($C_{D}$): vertices are removed in the graph according to their highest closeness, recomputed after every elimination
+* **Initial closeness** ($C_{Ci}$): vertices are removed in the graph according to their highest closeness, computed once at the beginning
+* **Betweenness** ($C_{B}$): vertices are removed in the graph according to their highest betweenness, recomputed after every elimination
+* **Initial betweenness** ($C_{Bi}$): vertices are removed in the graph according to their highest betweenness, computed once at the beginning
+* **Clustering coefficient** ($C_{C}$): vertices are removed in the graph according to their highest clustering coefficient, recomputed after every elimination
+* **Initial clustering coefficient** ($C_{CLi}$): vertices are removed in the graph according to their highest clustering coefficient, computed once at the beginning
+* **Eigenvalue** ($C_{E}$): vertices are removed in the graph according to their highest eigenvalue, recomputed after every elimination
+* **Initial eigenvalue** ($C_{Ei}$): vertices are removed in the graph according to their highest eigenvalue, computed once at the beginning
+* **PageRank** ($C_{P}$): vertices are removed in the graph according to their highest pagerank, recomputed after every elimination
+* **Initial PageRank** ($C_{Pi}$): vertices are removed in the graph according to their highest pagerank, computed once at the beginning
 
 
+## Results
+
+The results are measured by assessing the size of the giant connected component GCC, representing the largest connected component of a given network.
+The measure of the GCC will be called $S$, and be such that:
+$$
+S = \frac{N_{GCC}}{N}*100
+$$
+Where $N_{GCC}$ is the number of vertices in the GCC and $N$ is the number of nodes in the graph.
 
 \pagebreak
 

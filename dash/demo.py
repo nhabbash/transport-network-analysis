@@ -6,7 +6,7 @@ import plotly.graph_objs as go
 import networkx as nx
 import operator
 import random
-import dash_table_experiments as dt
+import dash_table as dt
 import folium
 import pandas as pd
 from collections import Counter
@@ -32,7 +32,7 @@ def list_values(result):
     return x
 
 def random_neighbor(dimension):
-    G = nx.read_gml("./data/graphs/net_c2c.gml")
+    G = nx.read_gml("../data/graphs/net_c2c.gml")
     N=nx.number_of_nodes(G)
     S=[100]
     #esegue gli attacchi
@@ -48,24 +48,20 @@ def random_neighbor(dimension):
     
     return S 
 
-c2c = nx.read_gml("./data/graphs/net_c2c.gml")
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+
 U=update_rank_attack(c2c,40,'degree',0)
-c2c = nx.read_gml("./data/graphs/net_c2c.gml")
 U1=update_rank_attack(c2c,40,'closeness',0)
-c2c = nx.read_gml("./data/graphs/net_c2c.gml")
 U2=update_rank_attack(c2c,40,'betweenness',0)
-c2c = nx.read_gml("./data/graphs/net_c2c.gml")
 U3=update_rank_attack(c2c,40,'eigenvector',0)
-c2c = nx.read_gml("./data/graphs/net_c2c.gml")
 U4=update_rank_attack(c2c,40,'pagerank',0)
-c2c = nx.read_gml("./data/graphs/net_c2c.gml")
 U5=update_rank_attack(c2c,40,'clustering',0)
 
 Rn=random_neighbor(40)
-Rv=random_vertex(nx.read_gml("./data/graphs/net_c2c.gml"),40)
+Rv=random_vertex(nx.read_gml("../data/graphs/net_c2c.gml"),40)
 
-c2c = nx.read_gml("./data/graphs/net_c2c.gml")
-neighbor=nx.read_gml("./data/graphs/net_neighbor.gml")
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+neighbor=nx.read_gml("../data/graphs/net_neighbor.gml")
 x_d,y_d=degree_values(c2c.degree())
 x_n,y_n=degree_values(neighbor.degree())
 
@@ -295,15 +291,15 @@ def render_content(tab):
     elif tab == 'tab-7-example':
         return html.Div([
             html.H3('Milano'),
-            html.Iframe(id ='m',srcDoc= open('./dash/primo_plot.html').read(),height='900',width='100%')
+            html.Iframe(id ='m',srcDoc= open('./primo_plot.html').read(),height='900',width='100%')
         ])
     elif tab == 'tab-8-example':
         return html.Div([
             html.Div([
             
-            html.Iframe(id ='m',srcDoc= open('./dash/secondo_plot.html').read(), style={'width': '49.5%', 'display': 'inline-block', 'margin-bottom': '20px'},height='900'),
+            html.Iframe(id ='m',srcDoc= open('./secondo_plot.html').read(), style={'width': '49.5%', 'display': 'inline-block', 'margin-bottom': '20px'},height='900'),
            
-            html.Iframe(id ='map',srcDoc= open('./dash/terzo_plot.html').read(),style={'width': '50%', 'display': 'inline-block', 'margin-bottom': '20px'},height='900'),
+            html.Iframe(id ='map',srcDoc= open('./terzo_plot.html').read(),style={'width': '50%', 'display': 'inline-block', 'margin-bottom': '20px'},height='900'),
              
             ]),
       

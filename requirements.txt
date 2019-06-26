@@ -1,11 +1,16 @@
 # Container
 psycopg2
-# Notebook
+# Graph processing
 networkx
 geojson
 scipy
 folium
 jupyter
 shapely
-# Jupyter Notebook
+pandas
+# Jupyter Notebook+Virtualenv
 ipykernel
+# Visualization
+dash
+dash_table
+
