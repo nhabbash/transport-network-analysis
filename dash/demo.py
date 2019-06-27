@@ -25,6 +25,12 @@ def degree_values(G):
         y_d.append(tmp[val])
     return(x_d,y_d)
 
+def list_values(result): 
+    x=[]
+    for i in result:
+        x.append(result[i])
+    return x
+
 def random_neighbor(dimension):
     G = nx.read_gml("../data/graphs/net_c2c.gml")
     N=nx.number_of_nodes(G)
@@ -61,16 +67,15 @@ neighbor=nx.read_gml("../data/graphs/net_neighbor.gml")
 x_d,y_d=degree_values(c2c.degree())
 x_n,y_n=degree_values(neighbor.degree())
 
-nei_closeness=list(nx.closeness_centrality(neighbor))
-nei_betweenness=list(nx.betweenness_centrality(neighbor, normalized=True))
-nei_cluster=list(nx.clustering(neighbor))
-nei_eigenvector=list(nx.eigenvector_centrality(neighbor))
+nei_closeness=list_values(nx.closeness_centrality(neighbor))
+nei_betweenness=list_values(nx.betweenness_centrality(neighbor, normalized=True))
+nei_cluster=list_values(nx.clustering(neighbor))
+nei_eigenvector=list_values(nx.eigenvector_centrality(neighbor))
 
-c2c_closeness=list(nx.closeness_centrality(c2c))
-c2c_betweenness=list(nx.betweenness_centrality(c2c, normalized=True))
-c2c_cluster=list(nx.clustering(c2c))
-c2c_eigenvector=list(nx.eigenvector_centrality(c2c))
-
+c2c_closeness=list_values(nx.closeness_centrality(c2c))
+c2c_betweenness=list_values(nx.betweenness_centrality(c2c, normalized=True))
+c2c_cluster=list_values(nx.clustering(c2c))
+c2c_eigenvector=list_values(nx.eigenvector_centrality(c2c))
 
 external_stylesheets = [
     "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
@@ -494,7 +499,6 @@ def render_content(tab):
             ) 
         ])
 
-      
 if __name__ == '__main__':
     app.run_server(debug=True)
 
