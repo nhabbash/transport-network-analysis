@@ -35,9 +35,9 @@ def random_neighbor(dimension):
         neighbor=list(G.neighbors(str(node)))
         for n in neighbor:
             G.remove_node(n)
-            #prende max componente connessa
-            G = max(nx.connected_component_subgraphs(G), key=len)
-            S.append((float(nx.number_of_nodes(G))/N)*100)
+        #prende max componente connessa
+        G = max(nx.connected_component_subgraphs(G), key=len)
+        S.append((float(nx.number_of_nodes(G))/N)*100)
         
         if len(G.nodes) ==1:
             return S
