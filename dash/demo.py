@@ -32,11 +32,13 @@ def random_neighbor(dimension):
     #esegue gli attacchi
     for i in range(dimension):
         node=int(random.choice(list(G.nodes)))
-        neighbor=int(random.choice(list(G.neighbors(str(node)))))
-        G.remove_node(str(neighbor))
-        #prende max componente connessa
-        G = max(nx.connected_component_subgraphs(G), key=len)
-        S.append((float(nx.number_of_nodes(G))/N)*100)
+        neighbor=list(G.neighbors(str(node)))
+        for n in neighbor:
+            G.remove_node(n)
+            #prende max componente connessa
+            G = max(nx.connected_component_subgraphs(G), key=len)
+            S.append((float(nx.number_of_nodes(G))/N)*100)
+        
         if len(G.nodes) ==1:
             return S
     
