@@ -25,12 +25,6 @@ def degree_values(G):
         y_d.append(tmp[val])
     return(x_d,y_d)
 
-def list_values(result): 
-    x=[]
-    for i in result:
-        x.append(result[i])
-    return x
-
 def random_neighbor(dimension):
     G = nx.read_gml("../data/graphs/net_c2c.gml")
     N=nx.number_of_nodes(G)
@@ -65,55 +59,195 @@ neighbor=nx.read_gml("../data/graphs/net_neighbor.gml")
 x_d,y_d=degree_values(c2c.degree())
 x_n,y_n=degree_values(neighbor.degree())
 
-nei_closeness=list_values(nx.closeness_centrality(neighbor))
-nei_betweenness=list_values(nx.betweenness_centrality(neighbor, normalized=True))
-nei_cluster=list_values(nx.clustering(neighbor))
-nei_eigenvector=list_values(nx.eigenvector_centrality(neighbor))
+nei_closeness=list(nx.closeness_centrality(neighbor))
+nei_betweenness=list(nx.betweenness_centrality(neighbor, normalized=True))
+nei_cluster=list(nx.clustering(neighbor))
+nei_eigenvector=list(nx.eigenvector_centrality(neighbor))
 
-c2c_closeness=list_values(nx.closeness_centrality(c2c))
-c2c_betweenness=list_values(nx.betweenness_centrality(c2c, normalized=True))
-c2c_cluster=list_values(nx.clustering(c2c))
-c2c_eigenvector=list_values(nx.eigenvector_centrality(c2c))
+c2c_closeness=list(nx.closeness_centrality(c2c))
+c2c_betweenness=list(nx.betweenness_centrality(c2c, normalized=True))
+c2c_cluster=list(nx.clustering(c2c))
+c2c_eigenvector=list(nx.eigenvector_centrality(c2c))
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+external_stylesheets = [
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
+    'https://codepen.io/chriddyp/pen/bWLwgP.css',
+    
+]
+
+external_js = [
+    "https://code.jquery.com/jquery-3.2.1.min.js",
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+]
+
+app = dash.Dash(__name__, 
+                external_scripts=external_js,
+                external_stylesheets=external_stylesheets)
+
+app.scripts.config.serve_locally = False
+
+tabs_styles = {
+    'height': '44px'
+}
+tab_style = {
+    'borderBottom': '1px solid #d6d6d6',
+    'padding': '6px',
+    'fontWeight': 'bold'
+}
+
+tab_selected_style = {
+    'borderTop': '1px solid #d6d6d6',
+    'borderBottom': '1px solid #d6d6d6',
+    'backgroundColor': '#119DFF',
+    'color': 'white',
+    'padding': '6px'
+}
 
 app.layout = html.Div([
-    html.H1('TRANSPORTATION NETWORK ANALYSIS'),
-    dcc.Tabs(id="tabs-example", value='tab-1-example', children=[
-        dcc.Tab(label='Introduction', value='tab-1-example'),
-        dcc.Tab(label='description data', value='tab-2-example'),
-        dcc.Tab(label='Data Managament', value='tab-3-example'),
-        dcc.Tab(label='MultiLayer Graphs', value='tab-4-example'),
-        dcc.Tab(label='Metro Graph', value='tab-5-example'),
-        dcc.Tab(label='Metro Network Analysis', value='tab-6-example'),
-        dcc.Tab(label='Delaunay & Boronoy', value='tab-7-example'),
-        dcc.Tab(label='Delaunay & C2C graph ', value='tab-8-example'),
-        dcc.Tab(label='centrality measures', value='tab-9-example'),
-        dcc.Tab(label='attacks based on centrality measures', value='tab-10-example'),
-    ]),
-
-    html.Div(id='tabs-content-example')
-])
-
-
-@app.callback(Output('tabs-content-example', 'children'),
-              [Input('tabs-example', 'value')])
-def render_content(tab):
-    if tab == 'tab-1-example':
-        return html.Div([
-            html.H2('Data Analytics 2018-2019'),
-            html.H3('Ricardo Anibal Matamoros Aragon, 807450'),
-            html.H3('Nassim Habbash, 808292'),
-            html.H3('Universita degli Studi di Milano-Bicocca'),
-            
-        ])
-    elif tab =='tab-9-example':
-        return html.Div([
-            html.H3("misure di centralita per C2C e neighbor graph"),
+        # Row: Title
+        html.Div([
+        # Col: Title
             html.Div([
-               
+                html.H1("Averaged graph analysis and failure resilience of a public transport network", className="text-center")
+            ], className="col-md-12 p-3"),
+        ], className="row"),
+
+        # Row: Tabs
+        html.Div([
+            # Col: Tabs
+            html.Div([
+                dcc.Tabs(id="tabs", value='tab-1', children=[
+                    dcc.Tab(label='Introduction', value='tab-1', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Data managament', value='tab-2', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Averaged graphs', value='tab-3', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Neighbor graph', value='tab-4', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Cell-to-cell flow graph', value='tab-5', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Graph comparison', value='tab-6', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Centrality distributions', value='tab-7', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Attacks', value='tab-8', style=tab_style, selected_style=tab_selected_style),
+                ], style=tabs_styles, className = "m-auto"),
+            ], className="col-md-12 text-center"),
+        ], className="row"),
+
+
+        # Row: Tabs content
+        html.Div(id='tabs-content', className="row")
+], className="container-fluid")
+
+
+@app.callback(Output('tabs-content', 'children'),
+              [Input('tabs', 'value')])
+def render_content(tab):
+    if tab == 'tab-1':
+        # Intro
+        return html.Div([
+
+                html.Div([
+                    dcc.Markdown('''
+                        #### Desc
+
+                        Desc
+                        ''', className="col"),
+
+                ], className="row"),
+
+            ], className = "container")
+
+        return html.Div([
+            html.H2('Averaged graph analysis and failure resilience of a public transport network'),
+            html.H3('Final project for the Data Analytics course for the MSc in Computer Science at University of Milano-Bicocca.'),
+            html.H5('Authors: Nassim Habbash (808292), Ricardo Anibal Matamoros Aragon (807450)'),
+        ])
+    elif tab == 'tab-2':
+        # Data management
+        return html.Div([
+
+        ]) 
+            
+    elif tab == 'tab-3':
+        # Averaged graphs
+        return html.Div([
+                html.Div([
+                    html.Iframe(srcDoc=open('./maps/metro_map.html').read(), className="col-md-6 m-2"),
+                    html.Iframe(srcDoc=open('./maps/metro_n_map.html').read(), className="col-md-6 m-2"),
+                ], className="row"),
+
+                html.Div([
+                    dcc.Markdown('''
+                        #### Desc
+
+                        Desc
+                        ''', className="col-md-6"),
+                    dcc.Markdown('''
+                        #### Desc
+
+                        Desc
+                        ''', className="col-md-6"),
+                ], className="row"),
+
+            ], className = "container-fluid")
+
+    elif tab == 'tab-4':
+        # Neighbor map
+        return html.Div([
+                html.Div([
+                    html.Iframe(srcDoc=open('./maps/vor_map.html').read(), className="col-md-6 m-2"),
+                    html.Iframe(srcDoc=open('./maps/neigh_map.html').read(), className="col-md-6 m-2"),
+                ], className="row"),
+
+                html.Div([
+                    dcc.Markdown('''
+                        #### Desc
+
+                        Desc
+                        ''', className="col-md-6"),
+                    dcc.Markdown('''
+                        #### Desc
+
+                        Desc
+                        ''', className="col-md-6"),
+                ], className="row"),
+
+            ], className = "container-fluid")
+
+    elif tab == 'tab-5':
+        # C2C flow graph
+        return html.Div([
+                html.Div([
+                     dcc.Markdown('''
+                        #### Desc
+
+                        Desc
+                        ''', className="col-md-4"),
+
+                    html.Iframe(srcDoc=open('./maps/c2c_map.html').read(), className="col-md-8"),
+                ], className="row center-row"),
+            ], className = "container-fluid")
+
+    elif tab == 'tab-6':
+        # Graph comparison
+        return html.Div([
+                html.Div([
+                    html.Iframe(srcDoc=open('./maps/neigh_c_map.html').read(), className="col-md-6 m-2"),
+                    html.Iframe(srcDoc=open('./maps/c2c_c_map.html').read(), className="col-md-6 m-2"),
+                ], className="row"),
+
+                html.Div([
+                    dcc.Markdown('''
+                        #### Desc
+
+                        Desc
+                        ''', className="col-md-6"),
+                ], className="row center-row"),
+
+            ], className = "container-fluid")
+
+    elif tab =='tab-7':
+        # Centrality distributions
+        return html.Div([
+            html.H3("Centrality measures for the neighbor graph and C2C graph"),
+            html.Div([
                 html.Div([
                     html.H3('C2C degree distribution'),
                     dcc.Graph(id='c2c_degree', figure={'data': [{
@@ -135,12 +269,9 @@ def render_content(tab):
                 ],style={"height" : "25%", "width" : "25%"},
                 className="six columns"),
                 html.Div([
-                    html.H3('Description Degree Distribution'),
-                    html.H6('''Questa misura di centralita indica il
-                               numero di nodi che possono essere
-                               raggiunte direttamente da un determinato
-                               nodo, quindi la capacita di connettere
-                               un insieme di nodi in modo diretto.'''),
+                    html.H3('Degree Distribution'),
+                    html.H6('''This measure indicates the number of nodes directly connected to a given nodes, 
+                            representing the capabilites of connecting a set of nodes directly.'''),
                
                 ],style={"height" : "25%", "width" : "25%"},
                 className="six columns"),
@@ -150,7 +281,7 @@ def render_content(tab):
             html.Div([
                
                 html.Div([
-                    html.H3('c2c eigenvector'),
+                    html.H3('C2C eigenvector distribution'),
                     dcc.Graph(id='c2c_eigen', figure={'data': [{
                      
                         'x': c2c_eigenvector,
@@ -160,7 +291,7 @@ def render_content(tab):
                  className="six columns"),
 
                 html.Div([
-                    html.H3('neighbor eigenvector'),
+                    html.H3('neighbor eigenvector distribution'),
                     dcc.Graph(id='nei_eigen', figure={'data': [{
                         'x':nei_eigenvector,
                         'layout': {'height': '50', 'width' : '50'},
@@ -285,50 +416,8 @@ def render_content(tab):
             ], className="row"),
                   
            ])
-            
-
-      
-    elif tab == 'tab-7-example':
-        return html.Div([
-            html.H3('Milano'),
-            html.Iframe(id ='m',srcDoc= open('./primo_plot.html').read(),height='900',width='100%')
-        ])
-    elif tab == 'tab-8-example':
-        return html.Div([
-            html.Div([
-            
-            html.Iframe(id ='m',srcDoc= open('./secondo_plot.html').read(), style={'width': '49.5%', 'display': 'inline-block', 'margin-bottom': '20px'},height='900'),
-           
-            html.Iframe(id ='map',srcDoc= open('./terzo_plot.html').read(),style={'width': '50%', 'display': 'inline-block', 'margin-bottom': '20px'},height='900'),
-             
-            ]),
-      
-        ])     
-        
-    elif tab == 'tab-2-example':
-        return html.Div([
-            dcc.Markdown('''
-            #### Dash and Markdown
-
-            Dash supports [Markdown](http://commonmark.org/help).
-
-            Markdown is a simple way to write and format text.
-            It includes a syntax for things like **bold text** and *italics*,
-            [links](http://commonmark.org/help), inline `code` snippets, lists,
-            quotes, and more.
-            ''')
-        ])
-    elif tab == 'tab-6-example':
-        return html.Div([
-            html.H1('metro net analysis'),
-            dcc.Slider(
-                min=0,
-                max=9,
-                marks={i: 'Label {}'.format(i) for i in range(10)},
-                value=5,
-            ) 
-        ])
-    elif tab == 'tab-10-example':
+    elif tab == 'tab-8':
+        # Attacks
         return html.Div([
             html.H1('ATTACKS'),
             html.Div([
@@ -392,6 +481,17 @@ def render_content(tab):
                  className="six columns"),
             
         ])
+    elif tab =="tab-9":
+         return html.Div([
+            html.H1('metro net analysis'),
+            dcc.Slider(
+                min=0,
+                max=9,
+                marks={i: 'Label {}'.format(i) for i in range(10)},
+                value=5,
+            ) 
+        ])
+
       
 if __name__ == '__main__':
     app.run_server(debug=True)

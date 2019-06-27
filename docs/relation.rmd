@@ -15,6 +15,8 @@ subparagraph: yes
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+
 ## Introduction
 
 This project aims to analyze the structure of a city network using averaged graphs of the different means of public transport.
@@ -162,7 +164,9 @@ The measure of the GCC will be called $S$, and be such that:
 $$
 S = \frac{N_{GCC}}{N}*100
 $$
-Where $N_{GCC}$ is the number of vertices in the GCC and $N$ is the number of nodes in the graph.
+Where $N_{GCC}$ is the number of vertices in the GCC and $N$ is the number of nodes in the graph. The effectiveness of the attack scenario will be judged by their impact on the value of $S$.
+
+TODO: add graphs of the attacks, considerations on the most effective strategies, graph of varying path lengths for the most effective attack, considerations on the varying path lenghts
 
 \pagebreak
 

@@ -13,4 +13,5 @@ ipykernel
 # Visualization
 dash
 dash_table
+dash-bootstrap-components
 
