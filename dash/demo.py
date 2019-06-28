@@ -62,7 +62,7 @@ U5=update_rank_attack(c2c,40,'clustering',0)
 Rn=random_neighbor(40)
 Rv=random_vertex(nx.read_gml("../data/graphs/net_c2c.gml"),40)
 
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+C2C = nx.read_gml("../data/graphs/net_c2c.gml")
 neighbor=nx.read_gml("../data/graphs/net_neighbor.gml")
 x_d,y_d=degree_values(c2c.degree())
 x_n,y_n=degree_values(neighbor.degree())
@@ -131,8 +131,8 @@ app.layout = html.Div([
                     dcc.Tab(label='Neighbor graph', value='tab-4', style=tab_style, selected_style=tab_selected_style),
                     dcc.Tab(label='Cell-to-cell flow graph', value='tab-5', style=tab_style, selected_style=tab_selected_style),
                     dcc.Tab(label='Graph comparison', value='tab-6', style=tab_style, selected_style=tab_selected_style),
-                    dcc.Tab(label='Local centrality measures', value='tab-7', style=tab_style, selected_style=tab_selected_style),
-                    dcc.Tab(label='Global centrality measures', value='tab-8', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Local centralities', value='tab-7', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Global centralities', value='tab-8', style=tab_style, selected_style=tab_selected_style),
                     dcc.Tab(label='Attacks', value='tab-9', style=tab_style, selected_style=tab_selected_style),
                 ], style=tabs_styles, className = "m-auto"),
             ], className="col-md-12 text-center"),
@@ -264,8 +264,8 @@ def render_content(tab):
                         'layout': {'height': 10},
                         'type': 'bar'}]})
                         
-                ],style={"height" : "25%", "width" : "25%"},
-                className="six columns"),
+                ],
+                className="col-md-4"),
                 html.Div([
                     html.H3('neighbor degree distribution'),
                     dcc.Graph(id='nei_degree', figure={'data': [{
@@ -274,15 +274,15 @@ def render_content(tab):
                         'layout': {'height': 10},
                         'type': 'bar'}]})
                         
-                ],style={"height" : "25%", "width" : "25%"},
-                className="six columns"),
+                ],
+                className="col-md-4"),
                 html.Div([
                     html.H3('Degree Distribution'),
                     html.H6('''This measure indicates the number of nodes directly connected to a given nodes, 
                             representing the capabilites of connecting a set of nodes directly.'''),
                
-                ],style={"height" : "25%", "width" : "25%"},
-                className="six columns"),
+                ],
+                className="col-md-4"),
                 
        
             ], className="row"),
@@ -295,8 +295,8 @@ def render_content(tab):
                         'x': c2c_eigenvector,
                         'type': 'histogram'}]})
                       
-                ],style={"height" : "25%", "width" : "25%"},
-                 className="six columns"),
+                ],
+                 className="col-md-4"),
 
                 html.Div([
                     html.H3('neighbor eigenvector distribution'),
@@ -304,32 +304,31 @@ def render_content(tab):
                         'x':nei_eigenvector,
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
-                ],style={"height" : "25%", "width" : "25%"},
-                 className="six columns"),
+                ],
+                 className="col-md-4"),
                 html.Div([
-                    html.H3('Description eigenvector'),
-                    html.H6('''Questa misura indica l'importanza di un
-                               determinato nodo rispetto ai nodi che lo
-                               raggiungono direttamente.
-                               E' utile perche indica non solo l'influenza
-                               diretta, ma anche in base alla centralita dei
-                               suoi vicini.'''),
+                    html.H3('Eigenvector'),
+                    html.H6('''This measure represents the importance of a certain
+                                node compared to the nodes directly connected to it.
+                                It does not factor in only direct influence, but also
+                                the centrality of its neighbors.
+                            '''),
                
-                ],style={"height" : "25%", "width" : "25%"},
-                className="six columns"),
+                ],
+                className="col-md-4"),
                 
        
             ], className="row"),  
             html.Div([             
                 html.Div([
-                    html.H3('c2c coefficient clustering'),
+                    html.H3('C2C clustering coefficient'),
                     dcc.Graph(id='c2c_clustering', figure={'data': [{
                      
                         'x': c2c_cluster,
                         'type': 'histogram'}]})
                       
-                ],style={"height" : "25%", "width" : "25%"},
-                 className="six columns"),
+                ],
+                 className="col-md-4"),
 
                 html.Div([
                     html.H3('neighbor coefficient clustering'),
@@ -337,20 +336,21 @@ def render_content(tab):
                         'x':nei_cluster,
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
-                ],style={"height" : "25%", "width" : "25%"},
-                 className="six columns"),
+                ],
+                 className="col-md-4"),
                 html.Div([
-                    html.H3('Description coefficient clustering'),
-                    html.H6('''Questo coefficiente cattura il grado
-                               con cui i vicini di un determinato nodo
-                               si collegano l'un all'altro.
-                               Dunque misura la densita di collegamento
-                               locale della rete, quanto maggiore e'
-                               l'interconnessione dei nodi vicini a un nodo,
-                               piu alto e' il suo coefficiente di Clustering locale.'''),
+                    html.H3('Clustering coefficient'),
+                    html.H6('''This coefficient captures the degree by which 
+                                neighbors of a certain node are connected to one 
+                                another. It measures the density of
+                                the local connection of a network,
+                                higher the interconnection of the neighboring nodes
+                                of a node and higher its local clustering coefficient is
+                                gonna be.
+                               '''),
                
-                ],style={"height" : "25%", "width" : "25%"},
-                className="six columns"),
+                ],
+                className="col-md-4"),
              ], className="row"), 
            ])
 
@@ -359,14 +359,14 @@ def render_content(tab):
         return html.Div([
             html.Div([               
                 html.Div([
-                    html.H3('c2c closeness'),
+                    html.H3('C2C closeness'),
                     dcc.Graph(id='c2c_closeness', figure={'data': [{
                      
                         'x': c2c_closeness,
                         'type': 'histogram'}]})
                       
-                ],style={"height" : "25%", "width" : "25%"},
-                 className="six columns"),
+                ],
+                 className="col-md-4"),
 
                 html.Div([
                     html.H3('neighbor closeness'),
@@ -374,30 +374,30 @@ def render_content(tab):
                         'x':nei_closeness,
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
-                ],style={"height" : "25%", "width" : "25%"},
-                 className="six columns"),
+                ],
+                 className="col-md-4"),
                 html.Div([
-                    html.H3('Description closeness'),
-                    html.H6('''Questa misura indica la velocita con la
-                               quale un nodo riesce a trasmettere
-                               certa informazione, e la capacita di interagire 
-                               con altri nodi nella rete data la sua posizione 
-                               rispetto alla centralita della rete.'''),
+                    html.H3('Closeness'),
+                    html.H6('''This measure represents the speed by which
+                                a node is capable of transmitting information
+                                and its capability to interact with other nodes in the network
+                                given its position compared to the network's centrality.
+                            '''),
                
-                ],style={"height" : "25%", "width" : "25%"},
-                className="six columns"),         
+                ],
+                className="col-md-4"),         
       
             ], className="row"),
         html.Div([
             html.Div([
-                    html.H3('c2c betweenness'),
+                    html.H3('C2C betweenness'),
                     dcc.Graph(id='c2c_bet', figure={'data': [{
                      
                         'x': c2c_betweenness,
                         'type': 'histogram'}]})
                       
-                ],style={"height" : "25%", "width" : "25%"},
-                 className="six columns"),
+                ],
+                 className="col-md-4"),
 
                 html.Div([
                     html.H3('neighbor betweenness'),
@@ -405,19 +405,18 @@ def render_content(tab):
                         'x':nei_betweenness,
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
-                ],style={"height" : "25%", "width" : "25%"},
-                 className="six columns"),
+                ],
+                 className="col-md-4"),
                 html.Div([
-                    html.H3('Description betweenness'),
-                    html.H6('''Questa misura indica l'importanza di un
-                               nodo rispetto alle volte nelle quali
-                               viene utilizzato come ponte da altre
-                               coppie di nodi, quindi maggiore sara' il
-                               valore associato e maggiore sara' la
-                               quantita' di informazione a disposizione.'''),
+                    html.H3('Betweenness'),
+                    html.H6('''This measure represents the importance
+                                of a node in respect to the times it is 
+                                used as a bridge between couples of nodes.
+                                The higher its value the more control the node
+                                has on different clusters of the network'''),
                
-                ],style={"height" : "25%", "width" : "25%"},
-                className="six columns"),
+                ],
+                className="col-md-4"),
              ], className="row"),
         ])
             
@@ -433,8 +432,8 @@ def render_content(tab):
                         'y':Rn,
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'lines'}]})
-                ],style={"height" : "25%", "width" : "25%"},
-                 className="six columns"),
+                ],
+                 className="col-md-4"),
             html.Div([
                     html.H3('attack random vertex'),
                     dcc.Graph(id='rv', figure={'data': [{
@@ -442,8 +441,8 @@ def render_content(tab):
                         'y':Rv,
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'lines'}]})
-                ],style={"height" : "25%", "width" : "25%"},
-                 className="six columns"),
+                ],
+                 className="col-md-4"),
             html.Div([
                     html.H3('attack update measures'),
                     dcc.Graph(id='attack', figure={'data': [{
@@ -483,8 +482,8 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'lines'} 
                           ]})
-                ],style={"height" : "25%", "width" : "25%"},
-                 className="six columns"),
+                ],
+                 className="col-md-4"),
             
         ])
 
