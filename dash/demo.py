@@ -131,8 +131,9 @@ app.layout = html.Div([
                     dcc.Tab(label='Neighbor graph', value='tab-4', style=tab_style, selected_style=tab_selected_style),
                     dcc.Tab(label='Cell-to-cell flow graph', value='tab-5', style=tab_style, selected_style=tab_selected_style),
                     dcc.Tab(label='Graph comparison', value='tab-6', style=tab_style, selected_style=tab_selected_style),
-                    dcc.Tab(label='Centrality distributions', value='tab-7', style=tab_style, selected_style=tab_selected_style),
-                    dcc.Tab(label='Attacks', value='tab-8', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Local centrality measures', value='tab-7', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Global centrality measures', value='tab-8', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Attacks', value='tab-9', style=tab_style, selected_style=tab_selected_style),
                 ], style=tabs_styles, className = "m-auto"),
             ], className="col-md-12 text-center"),
         ], className="row"),
@@ -318,9 +319,8 @@ def render_content(tab):
                 className="six columns"),
                 
        
-            ], className="row"),
-            html.Div([
-               
+            ], className="row"),  
+            html.Div([             
                 html.Div([
                     html.H3('c2c coefficient clustering'),
                     dcc.Graph(id='c2c_clustering', figure={'data': [{
@@ -351,11 +351,13 @@ def render_content(tab):
                
                 ],style={"height" : "25%", "width" : "25%"},
                 className="six columns"),
-                
-       
-            ], className="row"),
-            html.Div([
-               
+             ], className="row"), 
+           ])
+
+    elif tab =='tab-8':
+        # Centrality distributions
+        return html.Div([
+            html.Div([               
                 html.Div([
                     html.H3('c2c closeness'),
                     dcc.Graph(id='c2c_closeness', figure={'data': [{
@@ -383,13 +385,11 @@ def render_content(tab):
                                rispetto alla centralita della rete.'''),
                
                 ],style={"height" : "25%", "width" : "25%"},
-                className="six columns"),
-                
-       
+                className="six columns"),         
+      
             ], className="row"),
+        html.Div([
             html.Div([
-               
-                html.Div([
                     html.H3('c2c betweenness'),
                     dcc.Graph(id='c2c_bet', figure={'data': [{
                      
@@ -418,12 +418,11 @@ def render_content(tab):
                
                 ],style={"height" : "25%", "width" : "25%"},
                 className="six columns"),
+             ], className="row"),
+        ])
+            
                 
-       
-            ], className="row"),
-                  
-           ])
-    elif tab == 'tab-8':
+    elif tab == 'tab-9':
         # Attacks
         return html.Div([
             html.H1('ATTACKS'),
@@ -487,16 +486,6 @@ def render_content(tab):
                 ],style={"height" : "25%", "width" : "25%"},
                  className="six columns"),
             
-        ])
-    elif tab =="tab-9":
-         return html.Div([
-            html.H1('metro net analysis'),
-            dcc.Slider(
-                min=0,
-                max=9,
-                marks={i: 'Label {}'.format(i) for i in range(10)},
-                value=5,
-            ) 
         ])
 
 if __name__ == '__main__':
