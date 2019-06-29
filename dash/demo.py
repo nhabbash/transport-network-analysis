@@ -62,7 +62,7 @@ U5=update_rank_attack(c2c,40,'clustering',0)
 Rn=random_neighbor(40)
 Rv=random_vertex(nx.read_gml("../data/graphs/net_c2c.gml"),40)
 
-C2C = nx.read_gml("../data/graphs/net_c2c.gml")
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
 neighbor=nx.read_gml("../data/graphs/net_neighbor.gml")
 x_d,y_d=degree_values(c2c.degree())
 x_n,y_n=degree_values(neighbor.degree())
@@ -426,7 +426,7 @@ def render_content(tab):
         return html.Div([
             html.H1('ATTACKS'),
             html.Div([
-                    html.H3('attack random neighbor'),
+                    html.H3('Random Neighbor'),
                     dcc.Graph(id='rn', figure={'data': [{
                         'x':range(1,100),
                         'y':Rn,
@@ -435,7 +435,7 @@ def render_content(tab):
                 ],
                  className="col-md-4"),
             html.Div([
-                    html.H3('attack random vertex'),
+                    html.H3('Random Vertex'),
                     dcc.Graph(id='rv', figure={'data': [{
                         'x':range(1,100),
                         'y':Rv,
