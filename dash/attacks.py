@@ -97,15 +97,19 @@ def list_degree_average(G):
             davg_dic[i]=degree[str(i)]
     return davg_dic
 
+def list_edge_betweenness(G):
+    edge={}
+    edges_list=list(G.edges())
+    edge_betweenness=nx.edge_betweenness_centrality(G, normalized=True, weight='weight')
+    for i in edge_betweenness.keys():
+        edge[i]=edge_betweenness[i]
+    return edge
+
 #crea una lista ordinata in modo decrescente
 def ranking_nodes(measure):
     tmp= sorted_x = sorted(measure.items(), key=lambda kv: kv[1])
     tmp=tmp[::-1]
     return [i[0] for i in tmp]
-
-
-
-# In[5]:
 
 
 #attacchi 
@@ -153,16 +157,75 @@ def random_neighbor(G,dimension):
     #esegue gli attacchi
     for i in range(dimension):
         node=int(random.choice(list(G.nodes)))
-        neighbor=int(random.choice(list(G.neighbors(str(node)))))
-        G.remove_node(str(neighbor))
+        neighbor=list(G.neighbors(str(node)))
+        for nei in neighbor:
+            G.remove_node(str(nei))
         #prende max componente connessa
         G = max(nx.connected_component_subgraphs(G), key=len)
         S.append((float(nx.number_of_nodes(G))/N)*100)
         if len(G.nodes) ==1:
             return S
     
-    return S   
+    return S  
 
+def random_edge(G,dimension):
+    N=nx.number_of_nodes(G)
+    S=[100]
+    #esegue gli attacchi
+    for i in range(dimension):
+        node=int(random.choice(list(G.nodes)))
+        neighbor=int(random.choice(list(G.neighbors(str(node)))))
+        G.remove_edge(str(node),str(neighbor))
+        #prende max componente connessa
+        G = max(nx.connected_component_subgraphs(G), key=len)
+        S.append((float(nx.number_of_nodes(G))/N)*100)
+        if len(G.nodes) ==1:
+            return S
+    
+    return S
+
+def set_rank_attack_edge(G,ranking,dimension):
+    N=nx.number_of_nodes(G)
+    S=[100]
+    #esegue gli attacchi
+    for i in range(dimension):
+        #archi della max componente connessa 
+        edges =list(G.edges)
+        
+        #prende max edge presente nella componente connessa
+        if len(edges) < 3:
+            S.append(0)
+            return S
+        node1,node2=next(x for x in ranking if x in edges)
+        G.remove_edge(node1,node2)
+        
+        #prende nuova max componente connessa
+        G = max(nx.connected_component_subgraphs(G), key=len)
+        S.append((float(nx.number_of_nodes(G))/N)*100)
+        if len(G.edges) == 1:
+            return S        
+    return S
+
+def update_rank_attack_edge(G,dimension):
+    N=nx.number_of_nodes(G)
+    S=[100]
+   
+    #esegue gli attacchi
+    for i in range(dimension):
+        centrality=list_edge_betweenness(G)
+        
+        if ranking_nodes(centrality) == []:
+            S.append(0)
+            return S
+        node1,node2=ranking_nodes(centrality)[0]
+        
+        G.remove_edge(node1,node2)
+        #prende nuova max componente connessa
+        G = max(nx.connected_component_subgraphs(G), key=len)
+        S.append((float(nx.number_of_nodes(G))/N)*100)
+        if len(G.edges) == 1:
+            return S
+    return S
 
 def measure_path(G):
     aspl=[]
