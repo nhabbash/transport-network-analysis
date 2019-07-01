@@ -13,3 +13,4 @@ ipykernel
 # Visualization
 dash
 dash_table
+matplotlib

@@ -80,6 +80,7 @@ c2c_eigenvector=list_values(nx.eigenvector_centrality(c2c))
 external_stylesheets = [
     "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
     'https://codepen.io/chriddyp/pen/bWLwgP.css',
+    "https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap"
     
 ]
 
@@ -104,9 +105,9 @@ tab_style = {
 }
 
 tab_selected_style = {
-    'borderTop': '1px solid #d6d6d6',
+    'borderTop': '1px solid #FF4500',
     'borderBottom': '1px solid #d6d6d6',
-    'backgroundColor': '#119DFF',
+    'backgroundColor': '#FF7F50',
     'color': 'white',
     'padding': '6px'
 }
@@ -116,7 +117,7 @@ app.layout = html.Div([
         html.Div([
         # Col: Title
             html.Div([
-                html.H1("Averaged graph analysis and failure resilience of a public transport network", className="text-center")
+                html.Div("Averaged graph analysis and failure resilience of a public transport network", className="text-center", style={"backgroundColor": "#FF7F50", "color": "#ffffff", "marginBottom": "none", "fontSize": "4.5rem", "fontWeight": "bold"})
             ], className="col-md-12 p-3"),
         ], className="row"),
 
@@ -126,7 +127,6 @@ app.layout = html.Div([
             html.Div([
                 dcc.Tabs(id="tabs", value='tab-1', children=[
                     dcc.Tab(label='Introduction', value='tab-1', style=tab_style, selected_style=tab_selected_style),
-                    dcc.Tab(label='Data managament', value='tab-2', style=tab_style, selected_style=tab_selected_style),
                     dcc.Tab(label='Averaged graphs', value='tab-3', style=tab_style, selected_style=tab_selected_style),
                     dcc.Tab(label='Neighbor graph', value='tab-4', style=tab_style, selected_style=tab_selected_style),
                     dcc.Tab(label='Cell-to-cell flow graph', value='tab-5', style=tab_style, selected_style=tab_selected_style),
@@ -147,31 +147,16 @@ app.layout = html.Div([
 @app.callback(Output('tabs-content', 'children'),
               [Input('tabs', 'value')])
 def render_content(tab):
-    if tab == 'tab-1':
-        # Intro
+    if tab == "tab-1":
         return html.Div([
-
                 html.Div([
                     dcc.Markdown('''
-                        #### Desc
+                        ## Final project for the **Data Analytics** course for the MSc in Computer Science at University of Milano-Bicocca.
+                        #### **Authors**: Nassim Habbash (808292), Ricardo Anibal Matamoros Aragon (807450)
+                        ''', className="col-lg-11 text-center center", style={"flex-direction": "column", "marginTop":"10%"}),
+                ], className="row center"),
 
-                        Desc
-                        ''', className="col"),
-
-                ], className="row"),
-
-            ], className = "container")
-
-        return html.Div([
-            html.H2('Averaged graph analysis and failure resilience of a public transport network'),
-            html.H3('Final project for the Data Analytics course for the MSc in Computer Science at University of Milano-Bicocca.'),
-            html.H5('Authors: Nassim Habbash (808292), Ricardo Anibal Matamoros Aragon (807450)'),
-        ])
-    elif tab == 'tab-2':
-        # Data management
-        return html.Div([
-
-        ]) 
+            ], className = "container-fluid")
             
     elif tab == 'tab-3':
         # Averaged graphs
@@ -183,16 +168,17 @@ def render_content(tab):
 
                 html.Div([
                     dcc.Markdown('''
-                        #### Desc
+                        #### **Metro network**
 
-                        Desc
+                        Stops colored according to the line they belong to
+                        
                         ''', className="col-md-6"),
                     dcc.Markdown('''
-                        #### Desc
+                        #### **Partitioned metro network**
 
-                        Desc
+                        Partitioned with the clustering algorithm with parameters gamma = 2km rho = 5km 
                         ''', className="col-md-6"),
-                ], className="row"),
+                ], className="row text-center"),
 
             ], className = "container-fluid")
 
@@ -206,16 +192,16 @@ def render_content(tab):
 
                 html.Div([
                     dcc.Markdown('''
-                        #### Desc
+                        #### **Voronoi diagram**
 
-                        Desc
+                        Voronoi diagram of neighboring regions obtained from the whole network with gamma = 2km, rho = 5km
                         ''', className="col-md-6"),
                     dcc.Markdown('''
-                        #### Desc
+                        #### **Delaunay triangulation**
 
-                        Desc
+                        Graph of neighboring regions obtained from the whole network with gamma = 2km, rho = 5km
                         ''', className="col-md-6"),
-                ], className="row"),
+                ], className="row text-center"),
 
             ], className = "container-fluid")
 
@@ -224,13 +210,14 @@ def render_content(tab):
         return html.Div([
                 html.Div([
                      dcc.Markdown('''
-                        #### Desc
+                        #### **Cell-to-cell flow graph of the public transport network**
 
-                        Desc
-                        ''', className="col-md-4"),
+                        Edge weights are colored and bigger according to their weight.
+                        Weights represent the number of **direct** links between the stops in the regions.
+                        ''', className="col-md-4", style={"marginTop":"10%"}),
 
                     html.Iframe(srcDoc=open('./maps/c2c_map.html').read(), className="col-md-8"),
-                ], className="row center-row"),
+                ], className="row center"),
             ], className = "container-fluid")
 
     elif tab == 'tab-6':
@@ -243,11 +230,14 @@ def render_content(tab):
 
                 html.Div([
                     dcc.Markdown('''
-                        #### Desc
+                        #### **Centrality comparison**
 
-                        Desc
+                        Graphic point-to-point centrality comparison for the C2C and Neighbor graphs.
+                        * Node size: *degree*
+                        * Border color: *betweeness*
+                        * Fill color: *closeness*
                         ''', className="col-md-6"),
-                ], className="row center-row"),
+                ], className="row center"),
 
             ], className = "container-fluid")
 
@@ -268,18 +258,19 @@ def render_content(tab):
                 className="col-md-4"),
                 html.Div([
                     html.H3('neighbor degree distribution'),
-                    dcc.Graph(id='nei_degree', figure={'data': [{
-                        'x': x_n,
-                        'y': y_n,
-                        'layout': {'height': 10},
-                        'type': 'bar'}]})
+                    dcc.Graph(id='nei_degree', 
+                              figure={'data': [{
+                                        'x': x_n,
+                                        'y': y_n,
+                                        'layout': {'height': 10},
+                                        'type': 'bar'}]},
+                              )
                         
-                ],
+                    ],
                 className="col-md-4"),
                 html.Div([
                     html.H3('Degree Distribution'),
-                    html.H6('''This measure indicates the number of nodes directly connected to a given nodes, 
-                            representing the capabilites of connecting a set of nodes directly.'''),
+                    html.H6('''This measure indicates the number of nodes directly connected to a given nodes, representing the capabilites of connecting a set of nodes directly.'''),
                
                 ],
                 className="col-md-4"),

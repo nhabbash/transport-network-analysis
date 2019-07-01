@@ -1,4 +1,7 @@
-body, html {height: 100%;}
+body, html {
+    height: 100%;
+    font-family: 'Libre Franklin', sans-serif !important
+}
 
 iframe {
     height: 100%;
@@ -11,7 +14,13 @@ iframe {
     margin-top: 2vh
 }
 
-.center-row{
+.center{
     display: flex;
     justify-content: center;
 }
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+ }

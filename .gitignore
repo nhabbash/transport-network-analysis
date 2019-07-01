@@ -1,5 +1,7 @@
 container/db/dataset/
 .venv
+.venv3
+.venv2
 .vscode
 __pycache__
 debug
