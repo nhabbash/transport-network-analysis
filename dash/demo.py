@@ -8,11 +8,46 @@ import operator
 import random
 import dash_table as dt
 import folium
+import numpy as np
 import pandas as pd
 from collections import Counter
 import matplotlib.pyplot as plt
 from attacks import *
 
+G = nx.read_gml("../data/graphs/net_c2c.gml")
+def d_d_matrix(G):
+    #contiene la distribuzione di degree
+    degree_distribution={}
+    for i in list(G.degree()):
+        degree_distribution[i[1]]=[]
+    for i in list(G.degree()):
+        degree_distribution[i[1]].append(int(i[0]))
+
+    #contiene i vicini per ogni nodo
+    node_neighbor={}
+    for i in list(G.nodes):
+        node_neighbor[int(i)]=map(int,list(G.neighbors(i)))
+
+    #contiene il valore di degree per ogni vicino di ogni nodo
+    neighbor_degree={}
+    for node in node_neighbor.keys():
+        tmp=[]
+        for neighbor in node_neighbor[node]:
+            tmp.append(G.degree(str(neighbor)))
+        neighbor_degree[node]=tmp
+
+    n=len(degree_distribution.keys())
+    degree_degree = np.zeros((n, n))
+
+    for i in degree_distribution.keys():
+        for j in degree_distribution[i]:
+            for x in neighbor_degree[j]:
+                degree_degree[i-1][x-1]+=1
+    return degree_degree
+
+def degree_correlation_matrix(matrix):
+    avg=np.sum(matrix)/len(matrix)
+    return np.divide(matrix,avg)
 
 def degree_values(G):
     support=[]
@@ -149,6 +184,9 @@ U,spl,diameter,spl_average,diameter_av =update_rank_attack(c2c,45,'closeness',1)
 c2c = nx.read_gml("../data/graphs/net_c2c.gml")
 E,e_spl,e_diameter,e_spl_average,e_diameter_av =update_rank_attack(c2c,45,'clustering',1)
 
+#matrix correlation degree
+cc_c2c=degree_correlation_matrix(d_d_matrix(G)).tolist()
+cc_neighbor=degree_correlation_matrix(d_d_matrix(nx.read_gml("../data/graphs/net_neighbor.gml")))
 external_stylesheets = [
     "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
     'https://codepen.io/chriddyp/pen/bWLwgP.css',
@@ -446,6 +484,18 @@ def render_content(tab):
                
                 ],
                 className="col-md-3"),
+                html.Div([
+                    html.H3('degree correlation matrix to c2c'),
+                    html.H4('correlation coefficient degree : '+str(round(nx.degree_pearson_correlation_coefficient(G, weight='weight'),2))),
+                    dcc.Graph( id = "heatmap", figure = go.Figure( data = [go.Heatmap(z=cc_c2c)] ) )
+                ],
+                  className="col-md-6"),
+                 html.Div([
+                    html.H3('degree correlation matrix to neighbor'),
+                    html.H4('correlation coefficient degree : '+str(round(nx.degree_pearson_correlation_coefficient(neighbor, weight='weight'),2))),
+                    dcc.Graph( id = "heatmap2", figure = go.Figure( data = [go.Heatmap(z=cc_neighbor)] ) )
+                ],
+                  className="col-md-6"),
              ], className="row"), 
            ])
 
