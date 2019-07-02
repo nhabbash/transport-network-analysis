@@ -11,7 +11,8 @@ import folium
 import pandas as pd
 from collections import Counter
 import matplotlib.pyplot as plt
-from attacks import random_vertex, update_rank_attack
+from attacks import *
+
 
 def degree_values(G):
     support=[]
@@ -48,8 +49,24 @@ def random_neighbor(dimension):
         if len(G.nodes) ==1:
             return S
     
-    return S 
+    return S
 
+#create net 
+metro = nx.read_gml("../data/graphs/metro.gml")
+bus = nx.Graph(nx.read_gml("../data/graphs/bus.gml").to_undirected())
+tram = nx.Graph(nx.read_gml("../data/graphs/tram.gml").to_undirected())
+
+# Bus and tram share some stops, some processing is needed before uniting the nets. In the composition, bus attributes take the precedence
+bus_tram = nx.compose(tram, bus)
+
+for node in tram.nodes(data = True):
+    if node[1]["routes"] != bus_tram.node[node[0]]["routes"]:
+        bus_tram.node[node[0]]["routes"] += "," + (node[1]["routes"])
+
+net = nx.union(metro, bus_tram)
+
+
+#attack update list rank
 c2c = nx.read_gml("../data/graphs/net_c2c.gml")
 
 U=update_rank_attack(c2c,40,'degree',0)
@@ -58,24 +75,79 @@ U2=update_rank_attack(c2c,40,'betweenness',0)
 U3=update_rank_attack(c2c,40,'eigenvector',0)
 U4=update_rank_attack(c2c,40,'pagerank',0)
 U5=update_rank_attack(c2c,40,'clustering',0)
+#update list edge_betweenness
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+U6=update_rank_attack_edge(c2c,len(c2c.edges))
 
+
+#attack static list rank
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+degree,eigen,closeness,betweenness,pagerank,clustering=measures(c2c)
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+rank_degree=ranking_nodes(degree)
+R=set_rank_attack(c2c,rank_degree,40)
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+rank_eigen=ranking_nodes(eigen)
+R1=set_rank_attack(c2c,rank_eigen,40)
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+rank_closeness=ranking_nodes(closeness)
+R2=set_rank_attack(c2c,rank_closeness,40)
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+rank_bet=ranking_nodes(betweenness)
+R3=set_rank_attack(c2c,rank_bet,40)
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+rank_pagerank=ranking_nodes(pagerank)
+R4=set_rank_attack(c2c,rank_pagerank,40)
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+rank_cluster=ranking_nodes(clustering)
+R5=set_rank_attack(c2c,rank_cluster,40)
+#list edge_betweenness
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+edge_bet=list_edge_betweenness(c2c)
+rank_edge_bet=ranking_nodes(edge_bet)
+R6=set_rank_attack_edge(c2c,rank_edge_bet,len(c2c.edges))
+
+
+#attacks sequence to random_vertex
+attacks_rv=[]
+for i in range(10):
+    c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+    attacks_rv.append(random_vertex(c2c,60))
+
+#random attack
 Rn=random_neighbor(40)
 Rv=random_vertex(nx.read_gml("../data/graphs/net_c2c.gml"),40)
+Re=random_edge(nx.read_gml("../data/graphs/net_c2c.gml"),40)
 
 c2c = nx.read_gml("../data/graphs/net_c2c.gml")
 neighbor=nx.read_gml("../data/graphs/net_neighbor.gml")
 x_d,y_d=degree_values(c2c.degree())
 x_n,y_n=degree_values(neighbor.degree())
+x_net,y_net=degree_values(net.degree())
 
+#measures neighbor
 nei_closeness=list_values(nx.closeness_centrality(neighbor))
 nei_betweenness=list_values(nx.betweenness_centrality(neighbor, normalized=True))
 nei_cluster=list_values(nx.clustering(neighbor))
 nei_eigenvector=list_values(nx.eigenvector_centrality(neighbor))
 
+#measures c2c
 c2c_closeness=list_values(nx.closeness_centrality(c2c))
 c2c_betweenness=list_values(nx.betweenness_centrality(c2c, normalized=True))
 c2c_cluster=list_values(nx.clustering(c2c))
 c2c_eigenvector=list_values(nx.eigenvector_centrality(c2c))
+
+#measures net
+net_closeness=list_values(nx.closeness_centrality(net))
+net_betweenness=list_values(nx.betweenness_centrality(net, normalized=True))
+net_cluster=list_values(nx.clustering(net))
+net_eigenvector=list_values(nx.eigenvector_centrality_numpy(net))
+
+#shortest path lenght and diameter
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+U,spl,diameter,spl_average,diameter_av =update_rank_attack(c2c,45,'closeness',1)
+c2c = nx.read_gml("../data/graphs/net_c2c.gml")
+E,e_spl,e_diameter,e_spl_average,e_diameter_av =update_rank_attack(c2c,45,'clustering',1)
 
 external_stylesheets = [
     "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
@@ -149,13 +221,14 @@ app.layout = html.Div([
 def render_content(tab):
     if tab == "tab-1":
         return html.Div([
+                
                 html.Div([
                     dcc.Markdown('''
                         ## Final project for the **Data Analytics** course for the MSc in Computer Science at University of Milano-Bicocca.
                         #### **Authors**: Nassim Habbash (808292), Ricardo Anibal Matamoros Aragon (807450)
                         ''', className="col-lg-11 text-center center", style={"flex-direction": "column", "marginTop":"10%"}),
                 ], className="row center"),
-
+                
             ], className = "container-fluid")
             
     elif tab == 'tab-3':
@@ -244,7 +317,7 @@ def render_content(tab):
     elif tab =='tab-7':
         # Centrality distributions
         return html.Div([
-            html.H3("Centrality measures for the neighbor graph and C2C graph"),
+            #html.H3("Centrality measures for the neighbor graph and C2C graph"),
             html.Div([
                 html.Div([
                     html.H3('C2C degree distribution'),
@@ -255,7 +328,7 @@ def render_content(tab):
                         'type': 'bar'}]})
                         
                 ],
-                className="col-md-4"),
+                className="col-md-3"),
                 html.Div([
                     html.H3('neighbor degree distribution'),
                     dcc.Graph(id='nei_degree', 
@@ -267,13 +340,25 @@ def render_content(tab):
                               )
                         
                     ],
-                className="col-md-4"),
+                className="col-md-3"),
+                html.Div([
+                    html.H3('net degree distribution'),
+                    dcc.Graph(id='net_degree', 
+                              figure={'data': [{
+                                        'x': x_net,
+                                        'y': y_net,
+                                        'layout': {'height': 10},
+                                        'type': 'bar'}]},
+                              )
+                        
+                    ],
+                className="col-md-3"),
                 html.Div([
                     html.H3('Degree Distribution'),
                     html.H6('''This measure indicates the number of nodes directly connected to a given nodes, representing the capabilites of connecting a set of nodes directly.'''),
                
                 ],
-                className="col-md-4"),
+                className="col-md-3"),
                 
        
             ], className="row"),
@@ -287,7 +372,7 @@ def render_content(tab):
                         'type': 'histogram'}]})
                       
                 ],
-                 className="col-md-4"),
+                 className="col-md-3"),
 
                 html.Div([
                     html.H3('neighbor eigenvector distribution'),
@@ -296,7 +381,18 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
                 ],
-                 className="col-md-4"),
+            
+                 className="col-md-3"),
+
+                html.Div([
+                    html.H3('net eigenvector distribution'),
+                    dcc.Graph(id='net_eigen', figure={'data': [{
+                        'x':net_eigenvector,
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'histogram'}]})
+                ],
+            
+                 className="col-md-3"),
                 html.Div([
                     html.H3('Eigenvector'),
                     html.H6('''This measure represents the importance of a certain
@@ -306,7 +402,7 @@ def render_content(tab):
                             '''),
                
                 ],
-                className="col-md-4"),
+                className="col-md-3"),
                 
        
             ], className="row"),  
@@ -319,7 +415,7 @@ def render_content(tab):
                         'type': 'histogram'}]})
                       
                 ],
-                 className="col-md-4"),
+                 className="col-md-3"),
 
                 html.Div([
                     html.H3('neighbor coefficient clustering'),
@@ -328,7 +424,15 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
                 ],
-                 className="col-md-4"),
+                 className="col-md-3"),
+                html.Div([
+                    html.H3('net coefficient clustering'),
+                    dcc.Graph(id='net_clustering', figure={'data': [{
+                        'x':net_cluster,
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'histogram'}]})
+                ],
+                 className="col-md-3"),
                 html.Div([
                     html.H3('Clustering coefficient'),
                     html.H6('''This coefficient captures the degree by which 
@@ -341,7 +445,7 @@ def render_content(tab):
                                '''),
                
                 ],
-                className="col-md-4"),
+                className="col-md-3"),
              ], className="row"), 
            ])
 
@@ -357,7 +461,7 @@ def render_content(tab):
                         'type': 'histogram'}]})
                       
                 ],
-                 className="col-md-4"),
+                 className="col-md-3"),
 
                 html.Div([
                     html.H3('neighbor closeness'),
@@ -366,7 +470,15 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
                 ],
-                 className="col-md-4"),
+                 className="col-md-3"),
+                html.Div([
+                    html.H3('net closeness'),
+                    dcc.Graph(id='net_closeness', figure={'data': [{
+                        'x':net_closeness,
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'histogram'}]})
+                ],
+                 className="col-md-3"),
                 html.Div([
                     html.H3('Closeness'),
                     html.H6('''This measure represents the speed by which
@@ -376,7 +488,7 @@ def render_content(tab):
                             '''),
                
                 ],
-                className="col-md-4"),         
+                className="col-md-3"),         
       
             ], className="row"),
         html.Div([
@@ -388,7 +500,7 @@ def render_content(tab):
                         'type': 'histogram'}]})
                       
                 ],
-                 className="col-md-4"),
+                 className="col-md-3"),
 
                 html.Div([
                     html.H3('neighbor betweenness'),
@@ -397,7 +509,15 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
                 ],
-                 className="col-md-4"),
+                 className="col-md-3"),
+                 html.Div([
+                    html.H3('net betweenness'),
+                    dcc.Graph(id='net_betweenness', figure={'data': [{
+                        'x':net_betweenness,
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'histogram'}]})
+                ],
+                 className="col-md-3"),
                 html.Div([
                     html.H3('Betweenness'),
                     html.H6('''This measure represents the importance
@@ -407,7 +527,7 @@ def render_content(tab):
                                 has on different clusters of the network'''),
                
                 ],
-                className="col-md-4"),
+                className="col-md-3"),
              ], className="row"),
         ])
             
@@ -415,27 +535,133 @@ def render_content(tab):
     elif tab == 'tab-9':
         # Attacks
         return html.Div([
-            html.H1('ATTACKS'),
+            #html.H1('ATTACKS'),
             html.Div([
                     html.H3('Random Neighbor'),
                     dcc.Graph(id='rn', figure={'data': [{
                         'x':range(1,100),
                         'y':Rn,
                         'layout': {'height': '50', 'width' : '50'},
-                        'type': 'lines'}]})
+                        'type': 'lines'}],'layout':{
+                         #'title':'Basic non interactive',
+                         'xaxis':{
+                         'title':'percents of removed nodes'
+                          },
+                          'yaxis':{
+                          'title':'normalized size S to GCC'
+                          }
+            }})
                 ],
-                 className="col-md-4"),
+                 className="col-md-6"),
             html.Div([
                     html.H3('Random Vertex'),
                     dcc.Graph(id='rv', figure={'data': [{
                         'x':range(1,100),
                         'y':Rv,
                         'layout': {'height': '50', 'width' : '50'},
-                        'type': 'lines'}]})
+                        'type': 'lines'}],'layout':{
+                         #'title':'Basic non interactive',
+                         'xaxis':{
+                         'title':'percents of removed nodes'
+                          },
+                          'yaxis':{
+                          'title':'normalized size S to GCC'
+                          }
+            }})
                 ],
-                 className="col-md-4"),
+                 className="col-md-6"),
             html.Div([
-                    html.H3('attack update measures'),
+                    html.H3('Random edge'),
+                    dcc.Graph(id='re', figure={'data': [{
+                        'x':range(1,100),
+                        'y':Re,
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'}],'layout':{
+                         #'title':'Basic non interactive',
+                         'xaxis':{
+                         'title':'percents of removed nodes'
+                          },
+                          'yaxis':{
+                          'title':'normalized size S to GCC'
+                          }
+            }})
+                ],
+                 className="col-md-6"),
+            html.Div([
+                    html.H3('sequence random vertex attack'),
+                    dcc.Graph(id='attack_sequence', figure={'data': [{
+                        'x':range(1,100),
+                        'y':attacks_rv[0],
+                        'name': 'attack1',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':attacks_rv[1],
+                        'name': 'attack2',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':attacks_rv[2],
+                        'name': 'attack3',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                        {
+                        'x':range(1,100),
+                        'y':attacks_rv[3],
+                        'name': 'attack4',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines+markers'}, 
+                        {
+                        'x':range(1,100),
+                        'y':attacks_rv[4],
+                        'name': 'attack5',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':attacks_rv[5],
+                        'name': 'attack6',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':attacks_rv[6],
+                        'name': 'attack7',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':attacks_rv[7],
+                        'name': 'attack8',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'}, 
+                        {
+                        'x':range(1,100),
+                        'y':attacks_rv[8],
+                        'name': 'attack9',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'}, 
+                        {
+                        'x':range(1,100),
+                        'y':attacks_rv[9],
+                        'name': 'attack10',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},  
+                          ],'layout':{
+                         #'title':'Basic non interactive',
+                         'xaxis':{
+                         'title':'percents of removed nodes'
+                          },
+                          'yaxis':{
+                          'title':'normalized size S to GCC'
+                          }
+            }})
+                ],
+                 className="col-md-6"),
+            html.Div([
+                    html.H3('attack update list measures'),
                     dcc.Graph(id='attack', figure={'data': [{
                         'x':range(1,100),
                         'y':U,
@@ -471,11 +697,130 @@ def render_content(tab):
                         'y':U5,
                         'name': 'clustering coefficient',
                         'layout': {'height': '50', 'width' : '50'},
-                        'type': 'lines'} 
-                          ]})
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':U6,
+                        'name': 'edge_betweenness',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'}, 
+                          ],'layout':{
+                         #'title':'Basic non interactive',
+                         'xaxis':{
+                         'title':'percents of removed nodes'
+                          },
+                          'yaxis':{
+                          'title':'normalized size S to GCC'
+                          }
+            }})
                 ],
-                 className="col-md-4"),
-            
+                 className="col-md-6"),
+             html.Div([
+                    html.H3('attack static list measures'),
+                    dcc.Graph(id='attack_static', figure={'data': [{
+                        'x':range(1,100),
+                        'y':R,
+                        'name': 'degree',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':R2,
+                        'name': 'closeness',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':R3,
+                        'name': 'betweenness',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                        {
+                        'x':range(1,100),
+                        'y':R1,
+                        'name': 'eignvector',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines+markers'}, 
+                        {
+                        'x':range(1,100),
+                        'y':R4,
+                        'name': 'pagerank',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':R5,
+                        'name': 'clustering coefficient',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                         {
+                        'x':range(1,100),
+                        'y':R6,
+                        'name': 'edge_betweenness',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'}, 
+                          ],'layout':{
+                         #'title':'Basic non interactive',
+                         'xaxis':{
+                         'title':'percents of removed nodes'
+                          },
+                          'yaxis':{
+                          'title':'normalized size S to GCC'
+                          }
+            }})
+                ],
+                 className="col-md-6"),
+            html.Div([
+                    html.H3('Diameter and Shortest path length based to closeness'),
+                    dcc.Graph(id='d_spl', figure={'data': [{
+                        'x':range(1,100),
+                        'y':spl,
+                        'name': 'average_shortest_path_gcc',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                        {
+                        'x':range(1,100),
+                        'y':diameter,
+                        'name': 'diameter_gcc',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'}
+                         ],'layout':{
+                         #'title':'Basic non interactive',
+                         'xaxis':{
+                         'title':'percents of removed nodes'
+                          },
+                          'yaxis':{
+                          'title':"measure's values"
+                          }
+            }})
+                ],
+                 className="col-md-6"),
+
+            html.Div([
+                    html.H3('Diameter and Shortest path length based to clustering coefficient'),
+                    dcc.Graph(id='cc_spl', figure={'data': [{
+                        'x':range(1,100),
+                        'y':e_spl,
+                        'name': 'average_shortest_path_gcc',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'},
+                        {
+                        'x':range(1,100),
+                        'y':e_diameter,
+                        'name': 'diameter_gcc',
+                        'layout': {'height': '50', 'width' : '50'},
+                        'type': 'lines'}
+                         ],'layout':{
+                         #'title':'Basic non interactive',
+                         'xaxis':{
+                         'title':'percents of removed nodes'
+                          },
+                          'yaxis':{
+                          'title':"measure's values"
+                          }
+            }})
+                ],
+                 className="col-md-6"),
         ])
 
 if __name__ == '__main__':
