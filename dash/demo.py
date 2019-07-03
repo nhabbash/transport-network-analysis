@@ -14,6 +14,12 @@ from collections import Counter
 import matplotlib.pyplot as plt
 from attacks import *
 
+def read_data(name):
+    with open(name, "r") as f:
+        test=[float(i) for line in f for i in line.split(',')]
+    return test
+
+
 G = nx.read_gml("../data/graphs/net_c2c.gml")
 def d_d_matrix(G):
     #contiene la distribuzione di degree
@@ -61,30 +67,6 @@ def degree_values(G):
         y_d.append(tmp[val])
     return(x_d,y_d)
 
-def list_values(result): 
-    x=[]
-    for i in result:
-        x.append(result[i])
-    return x
-
-def random_neighbor(dimension):
-    G = nx.read_gml("../data/graphs/net_c2c.gml")
-    N=nx.number_of_nodes(G)
-    S=[100]
-    #esegue gli attacchi
-    for i in range(dimension):
-        node=int(random.choice(list(G.nodes)))
-        neighbor=list(G.neighbors(str(node)))
-        for n in neighbor:
-            G.remove_node(n)
-        #prende max componente connessa
-        G = max(nx.connected_component_subgraphs(G), key=len)
-        S.append((float(nx.number_of_nodes(G))/N)*100)
-        
-        if len(G.nodes) ==1:
-            return S
-    
-    return S
 
 #create net 
 metro = nx.read_gml("../data/graphs/metro.gml")
@@ -104,44 +86,23 @@ net = nx.union(metro, bus_tram)
 #attack update list rank
 c2c = nx.read_gml("../data/graphs/net_c2c.gml")
 
-U=update_rank_attack(c2c,40,'degree',0)
-U1=update_rank_attack(c2c,40,'closeness',0)
-U2=update_rank_attack(c2c,40,'betweenness',0)
-U3=update_rank_attack(c2c,40,'eigenvector',0)
-U4=update_rank_attack(c2c,40,'pagerank',0)
-U5=update_rank_attack(c2c,40,'clustering',0)
-#update list edge_betweenness
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
-U6=update_rank_attack_edge(c2c,len(c2c.edges))
-
+#U=update_rank_attack(c2c,40,'degree',0)
+U=read_data("./data_plots/degree_u.txt")
+U1=read_data("./data_plots/closeness_u.txt")
+U2=read_data("./data_plots/bet_u.txt")
+U3=read_data("./data_plots/eig_u.txt")
+U4=read_data("./data_plots/pg_u.txt")
+U5=read_data("./data_plots/clu_u.txt")
+U6=read_data("./data_plots/edbe_u.txt")
 
 #attack static list rank
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
-degree,eigen,closeness,betweenness,pagerank,clustering=measures(c2c)
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
-rank_degree=ranking_nodes(degree)
-R=set_rank_attack(c2c,rank_degree,40)
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
-rank_eigen=ranking_nodes(eigen)
-R1=set_rank_attack(c2c,rank_eigen,40)
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
-rank_closeness=ranking_nodes(closeness)
-R2=set_rank_attack(c2c,rank_closeness,40)
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
-rank_bet=ranking_nodes(betweenness)
-R3=set_rank_attack(c2c,rank_bet,40)
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
-rank_pagerank=ranking_nodes(pagerank)
-R4=set_rank_attack(c2c,rank_pagerank,40)
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
-rank_cluster=ranking_nodes(clustering)
-R5=set_rank_attack(c2c,rank_cluster,40)
-#list edge_betweenness
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
-edge_bet=list_edge_betweenness(c2c)
-rank_edge_bet=ranking_nodes(edge_bet)
-R6=set_rank_attack_edge(c2c,rank_edge_bet,len(c2c.edges))
-
+R=read_data("./data_plots/degree_r.txt")
+R1=read_data("./data_plots/eig_r.txt")
+R2=read_data("./data_plots/clos_r.txt")
+R3=read_data("./data_plots/bet_r.txt")
+R4=read_data("./data_plots/pg_r.txt")
+R5=read_data("./data_plots/clu_r.txt")
+R6=read_data("./data_plots/edbe_r.txt")
 
 #attacks sequence to random_vertex
 attacks_rv=[]
@@ -150,9 +111,9 @@ for i in range(10):
     attacks_rv.append(random_vertex(c2c,60))
 
 #random attack
-Rn=random_neighbor(40)
-Rv=random_vertex(nx.read_gml("../data/graphs/net_c2c.gml"),40)
-Re=random_edge(nx.read_gml("../data/graphs/net_c2c.gml"),40)
+Rn=read_data("./data_plots/rn.txt")
+Rv=read_data("./data_plots/rv.txt")
+Re=read_data("./data_plots/re.txt")
 
 c2c = nx.read_gml("../data/graphs/net_c2c.gml")
 neighbor=nx.read_gml("../data/graphs/net_neighbor.gml")
@@ -161,28 +122,28 @@ x_n,y_n=degree_values(neighbor.degree())
 x_net,y_net=degree_values(net.degree())
 
 #measures neighbor
-nei_closeness=list_values(nx.closeness_centrality(neighbor))
-nei_betweenness=list_values(nx.betweenness_centrality(neighbor, normalized=True))
-nei_cluster=list_values(nx.clustering(neighbor))
-nei_eigenvector=list_values(nx.eigenvector_centrality(neighbor))
+nei_closeness=read_data("./data_plots/nei_clo.txt")
+nei_betweenness=read_data("./data_plots/nei_bet.txt")
+nei_cluster=read_data("./data_plots/nei_clu.txt")
+nei_eigenvector=read_data("./data_plots/nei_eig.txt")
 
 #measures c2c
-c2c_closeness=list_values(nx.closeness_centrality(c2c))
-c2c_betweenness=list_values(nx.betweenness_centrality(c2c, normalized=True))
-c2c_cluster=list_values(nx.clustering(c2c))
-c2c_eigenvector=list_values(nx.eigenvector_centrality(c2c))
+c2c_closeness=read_data("./data_plots/c2c_clo.txt")
+c2c_betweenness=read_data("./data_plots/c2c_bet.txt")
+c2c_cluster=read_data("./data_plots/c2c_clu.txt")
+c2c_eigenvector=read_data("./data_plots/c2c_eig.txt")
 
 #measures net
-net_closeness=list_values(nx.closeness_centrality(net))
-net_betweenness=list_values(nx.betweenness_centrality(net, normalized=True))
-net_cluster=list_values(nx.clustering(net))
-net_eigenvector=list_values(nx.eigenvector_centrality_numpy(net))
+net_closeness=read_data("./data_plots/net_clo.txt")
+net_betweenness=read_data("./data_plots/net_bet.txt")
+net_cluster=read_data("./data_plots/net_clu.txt")
+net_eigenvector=read_data("./data_plots/net_eig.txt")
 
 #shortest path lenght and diameter
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
-U,spl,diameter,spl_average,diameter_av =update_rank_attack(c2c,45,'closeness',1)
-c2c = nx.read_gml("../data/graphs/net_c2c.gml")
-E,e_spl,e_diameter,e_spl_average,e_diameter_av =update_rank_attack(c2c,45,'clustering',1)
+spl=read_data("./data_plots/spl.txt")
+diameter=read_data("./data_plots/diameter.txt")
+e_spl=read_data("./data_plots/e_spl.txt")
+e_diameter=read_data("./data_plots/e_diameter.txt")
 
 #matrix correlation degree
 cc_c2c=degree_correlation_matrix(d_d_matrix(G)).tolist()
@@ -442,7 +403,7 @@ def render_content(tab):
                 ],
             
                  className="col-md-3"),
-
+                
                 html.Div([
                     html.H3('net eigenvector distribution'),
                     dcc.Graph(id='net_eigen', figure={'data': [{
@@ -450,8 +411,9 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
                 ],
-            
+                
                  className="col-md-3"),
+                
                 html.Div([
                     html.H3('Eigenvector'),
                     html.H6('''This measure represents the importance of a certain
@@ -483,7 +445,9 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
                 ],
+                
                  className="col-md-3"),
+                
                 html.Div([
                     html.H3('net coefficient clustering'),
                     dcc.Graph(id='net_clustering', figure={'data': [{
@@ -491,7 +455,9 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
                 ],
+                
                  className="col-md-3"),
+                
                 html.Div([
                     html.H3('Clustering coefficient'),
                     html.H6('''This coefficient captures the degree by which 
@@ -541,7 +507,9 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
                 ],
+                
                  className="col-md-3"),
+               
                 html.Div([
                     html.H3('net closeness'),
                     dcc.Graph(id='net_closeness', figure={'data': [{
@@ -549,7 +517,9 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
                 ],
+                
                  className="col-md-3"),
+               
                 html.Div([
                     html.H3('Closeness'),
                     html.H6('''This measure represents the speed by which
@@ -580,7 +550,9 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
                 ],
+                
                  className="col-md-3"),
+                
                  html.Div([
                     html.H3('net betweenness'),
                     dcc.Graph(id='net_betweenness', figure={'data': [{
@@ -588,7 +560,9 @@ def render_content(tab):
                         'layout': {'height': '50', 'width' : '50'},
                         'type': 'histogram'}]})
                 ],
+                
                  className="col-md-3"),
+                
                 html.Div([
                     html.H3('Betweenness'),
                     html.H6('''This measure represents the importance
@@ -619,7 +593,7 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S of GCC'
+                          'title':'normalized size S to GCC'
                           }
             }})
                 ],
@@ -636,7 +610,7 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S of GCC'
+                          'title':'normalized size S to GCC'
                           }
             }})
                 ],
@@ -653,7 +627,7 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S of GCC'
+                          'title':'normalized size S to GCC'
                           }
             }})
                 ],
@@ -726,7 +700,7 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S of GCC'
+                          'title':'normalized size S to GCC'
                           }
             }})
                 ],
@@ -781,7 +755,7 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S of GCC'
+                          'title':'normalized size S to GCC'
                           }
             }})
                 ],
@@ -836,13 +810,13 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S of GCC'
+                          'title':'normalized size S to GCC'
                           }
             }})
                 ],
                  className="col-md-6"),
             html.Div([
-                    html.H3('Diameter and Shortest path length based on closeness'),
+                    html.H3('Diameter and Shortest path length based to closeness'),
                     dcc.Graph(id='d_spl', figure={'data': [{
                         'x':range(1,100),
                         'y':spl,
@@ -868,7 +842,7 @@ def render_content(tab):
                  className="col-md-6"),
 
             html.Div([
-                    html.H3('Diameter and Shortest path length based on clustering coefficient'),
+                    html.H3('Diameter and Shortest path length based to clustering coefficient'),
                     dcc.Graph(id='cc_spl', figure={'data': [{
                         'x':range(1,100),
                         'y':e_spl,
