@@ -111,7 +111,7 @@ The cell-to-cell flow takes into account the number of effective *direct links* 
 The cell-to-cell flow graph represent the actual connections served by the public transport.
 
 
-## Network Analytics
+## Comparison - Network Analytics
 
 Analyzing the difference between the neighbor graph and the cell-to-cell graph can give interesting insights into how well-connected are different city regions and how resilient each connection is. Centrality measures can help measuring these differences by computing the importance of a node in the graph according to different parameters. Some of the measures used are explained below:
 
@@ -128,12 +128,13 @@ $$
 C_B(G) = \sum_{s\neq v \neq t \in V}\frac{\sigma_{st}(v)}{\sigma_{st}}
 $$
 
+### TODO ADDING OTHER COMPARISONS
+
 ![Voronoi diagram of the public transport network](images/net-voronoi.png)
 
 ![Partitions of the public transport network with $\gamma = 2km$, $\rho = 5km$, corresponds to the Delaunay triangulation of the Voronoi diagram](images/net-centroids.png)
 
 ![Cell-to-cell flow graph of the public transport network](images/net-c2c.png)
-
 
 ## Resilience to attacks and failures
 
@@ -155,6 +156,8 @@ The origin and scenario of an attack or cascading failures may vary wildly. It c
 * **Initial eigenvalue** ($C_{Ei}$): vertices are removed in the graph according to their highest eigenvalue, computed once at the beginning
 * **PageRank** ($C_{P}$): vertices are removed in the graph according to their highest pagerank, recomputed after every elimination
 * **Initial PageRank** ($C_{Pi}$): vertices are removed in the graph according to their highest pagerank, computed once at the beginning
+* **Edge betweenness** ($C_{BE}$): edges are removed in the graph according to their highest edge betweenness, ecomputed after every elimination
+* **Initial edge betweenness** ($C_{BEi}$): edges are removed in the graph according to their highest edge betweenness, computed once at the beginning
 
 
 ## Results
@@ -164,10 +167,44 @@ The measure of the GCC will be called $S$, and be such that:
 $$
 S = \frac{N_{GCC}}{N}*100
 $$
-Where $N_{GCC}$ is the number of vertices in the GCC and $N$ is the number of nodes in the graph. The effectiveness of the attack scenario will be judged by their impact on the value of $S$.
+Where $N_{GCC}$ is the number of vertices in the GCC and $N$ is the number of nodes in the graph. The effectiveness of the attack scenario will be judged by their impact on the value of $S$. In particular, we asses when the GCC reaches its percolation threshold and dissolves.
 
-TODO: add graphs of the attacks, considerations on the most effective strategies, graph of varying path lengths for the most effective attack, considerations on the varying path lenghts
+We assessed that the RV and RN scenarios are the least effective attacks conducted against the C2C graph. Different tests show how it always takes over 30 attacks for RV, and even more for RN to make the network inadoperable. Being casual in nature, we analyzed the dispersion of the RV attack. This is done to assure the effectiveness of the attack itself - being casual in nature, it's not possible to assure that one single attack represents the whole scenario. In 10 different attack scenarios, we found out that the effectiveness of the RV scenario is compressed in the interval [30, 50], securing it as the least effective scenario.
 
-\pagebreak
+The scenarios regarding the initial list of centrality measure fared somewhat better. We obtained that by eliminating nodes with higher initial betweenness we remove nodes with a high percentage of transit in shortest paths, breaking up the network the fastest. It being a global measure plays a big role in it. Another measure with a high level of effectiveness is degree. Eigenvector, clustering and closeness are the least effective in relative terms, as they take a couple more attacks to render the network inadoperable.
+The edge betweenness attack is by far the least effective, taking way more attacks to break up the network. This is due to the edge removal being less impactful than the removal of a whole node.
+
+![Graph of the centrality attack scenarios from the initial measurements](images/attack-initial.png)
+
+The scenarios regarding updated centrality measure is by far the most effective. The most effective attacks are closeness and betweenness. Both are global indicators, and the recomputation allows the choosing of the most impactful node in every iteration.
+
+In conclusion, the network is most vulnerable to **smart** strategies that try to maximize the damage for every attack, by choosing nodes that act as hubs or gateways.
+
+The change in diameter and average shortest path was also analyzed for the most effective strategy and the least effective strategy. The information obtained from this test allows us to verify how paths change during an attack. We can assess how the diameter increases in size as the size between peripheral nodes increases, until a point into which the GCC is broken up, and the leftover bigger component decreases drastically in diameter.
+The average shortest path presents a similar behaviour. The more nodes get eliminated, the longer the shortest path between nodes has to become, as deviations in the shortest path must be introduced. These measures in other terms represent how long it would take, given a failure or an attack scenario, to move inside the city.
+![Diameter and average shortest path in the updating closeness scenario](images/paths-closeness.png)
+![Diameter and average shortest path in the updating clustering coefficient scenario](images/paths-clustering.png)
+
+
+![Graph of the centrality attack scenarios with update](images/attack-update.png)
+
+## Conclusions
+This analysis drives two major themes:
+
+* The usefulness of average graphs in the comparative analysis of transportation means in a city
+* The resilience of Milan's public transportation network
+
+  
+For the first point, it can be said that average graphs offer great utility for analists at a lower cost than the alternative - costly data quality assessments - and can also allow for different kind of analytic explorations.
+This project explored strictly the topology of the network, but it is possible to analyze the network from a temporal dimension, by creating an average network for each time slice of a day, to assess the frequency of the transportations. (@spgen)
+
+The second points builds on the first one, as it made possible to analyze what was initially a disjointed network in a complete fashion, avoiding erroneus assumptions that could lead to false conclusions - as we mentioned in the beginning, passengers do travel between disjointed stops.
+
+Future works could include:
+
+* Topological analysis of regions at different $\sigma$ sizes
+* Temporal analysis of traffic flows in the city
+* Attack scenarios in a temporal domain
+* Different city networks comparisons
 
 ## References

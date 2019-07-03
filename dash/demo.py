@@ -619,7 +619,7 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S to GCC'
+                          'title':'normalized size S of GCC'
                           }
             }})
                 ],
@@ -636,7 +636,7 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S to GCC'
+                          'title':'normalized size S of GCC'
                           }
             }})
                 ],
@@ -653,7 +653,7 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S to GCC'
+                          'title':'normalized size S of GCC'
                           }
             }})
                 ],
@@ -726,7 +726,7 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S to GCC'
+                          'title':'normalized size S of GCC'
                           }
             }})
                 ],
@@ -781,7 +781,7 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S to GCC'
+                          'title':'normalized size S of GCC'
                           }
             }})
                 ],
@@ -836,13 +836,13 @@ def render_content(tab):
                          'title':'percents of removed nodes'
                           },
                           'yaxis':{
-                          'title':'normalized size S to GCC'
+                          'title':'normalized size S of GCC'
                           }
             }})
                 ],
                  className="col-md-6"),
             html.Div([
-                    html.H3('Diameter and Shortest path length based to closeness'),
+                    html.H3('Diameter and Shortest path length based on closeness'),
                     dcc.Graph(id='d_spl', figure={'data': [{
                         'x':range(1,100),
                         'y':spl,
@@ -868,7 +868,7 @@ def render_content(tab):
                  className="col-md-6"),
 
             html.Div([
-                    html.H3('Diameter and Shortest path length based to clustering coefficient'),
+                    html.H3('Diameter and Shortest path length based on clustering coefficient'),
                     dcc.Graph(id='cc_spl', figure={'data': [{
                         'x':range(1,100),
                         'y':e_spl,
