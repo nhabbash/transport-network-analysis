@@ -6,3 +6,5 @@ container/db/dataset/
 __pycache__
 debug
 .ipynb*
+*.pyc
+maps/*.pyc

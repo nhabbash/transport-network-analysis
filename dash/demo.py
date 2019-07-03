@@ -237,10 +237,10 @@ app.layout = html.Div([
             html.Div([
                 dcc.Tabs(id="tabs", value='tab-1', children=[
                     dcc.Tab(label='Introduction', value='tab-1', style=tab_style, selected_style=tab_selected_style),
-                    dcc.Tab(label='Averaged graphs', value='tab-3', style=tab_style, selected_style=tab_selected_style),
-                    dcc.Tab(label='Neighbor graph', value='tab-4', style=tab_style, selected_style=tab_selected_style),
-                    dcc.Tab(label='Cell-to-cell flow graph', value='tab-5', style=tab_style, selected_style=tab_selected_style),
-                    dcc.Tab(label='Graph comparison', value='tab-6', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Averaged graphs', value='tab-2', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Neighbor graph', value='tab-3', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Cell-to-cell flow graph', value='tab-4', style=tab_style, selected_style=tab_selected_style),
+                    dcc.Tab(label='Comparison', value='tab-5', style=tab_style, selected_style=tab_selected_style),
                     dcc.Tab(label='Local centralities', value='tab-7', style=tab_style, selected_style=tab_selected_style),
                     dcc.Tab(label='Global centralities', value='tab-8', style=tab_style, selected_style=tab_selected_style),
                     dcc.Tab(label='Attacks', value='tab-9', style=tab_style, selected_style=tab_selected_style),
@@ -269,7 +269,7 @@ def render_content(tab):
                 
             ], className = "container-fluid")
             
-    elif tab == 'tab-3':
+    elif tab == 'tab-2':
         # Averaged graphs
         return html.Div([
                 html.Div([
@@ -293,7 +293,7 @@ def render_content(tab):
 
             ], className = "container-fluid")
 
-    elif tab == 'tab-4':
+    elif tab == 'tab-3':
         # Neighbor map
         return html.Div([
                 html.Div([
@@ -316,7 +316,7 @@ def render_content(tab):
 
             ], className = "container-fluid")
 
-    elif tab == 'tab-5':
+    elif tab == 'tab-4':
         # C2C flow graph
         return html.Div([
                 html.Div([
@@ -331,26 +331,47 @@ def render_content(tab):
                 ], className="row center"),
             ], className = "container-fluid")
 
-    elif tab == 'tab-6':
+    elif tab == 'tab-5':
         # Graph comparison
         return html.Div([
-                html.Div([
-                    html.Iframe(srcDoc=open('./maps/neigh_c_map.html').read(), className="col-md-6 m-2"),
-                    html.Iframe(srcDoc=open('./maps/c2c_c_map.html').read(), className="col-md-6 m-2"),
-                ], className="row"),
+                dcc.Tabs(vertical=True, style=tabs_styles, className = "m-auto", id="tabs-comparison", children=[
+                    dcc.Tab(label='Node-to-node comparison', children=[
+                        html.Div([
+                            html.Div([
+                                html.Iframe(srcDoc=open('./maps/neigh_c_map.html').read(), className="col-md-6 m-2"),
+                                html.Iframe(srcDoc=open('./maps/c2c_c_map.html').read(), className="col-md-6 m-2"),
+                            ], className="row"),
 
-                html.Div([
-                    dcc.Markdown('''
-                        #### **Centrality comparison**
+                            html.Div([
+                                dcc.Markdown('''
+                                    #### **Centrality comparison**
 
-                        Graphic point-to-point centrality comparison for the C2C and Neighbor graphs.
-                        * Node size: *degree*
-                        * Border color: *betweeness*
-                        * Fill color: *closeness*
-                        ''', className="col-md-6"),
-                ], className="row center"),
+                                    Graphic point-to-point centrality comparison for the C2C and Neighbor graphs.
+                                    * Node size: *degree*
+                                    * Border color: *betweeness*
+                                    * Fill color: *closeness*
+                                    ''', className="col-md-6"),
+                            ], className="row center"),
 
-            ], className = "container-fluid")
+                        ], className = "container-fluid")
+                    ]),
+                    dcc.Tab(label='Local centralities', children=[
+                    ]),
+                    dcc.Tab(label='Tab three', children=[
+                            dcc.Graph(
+                                id='example-graph-2',
+                                figure={
+                                    'data': [
+                                        {'x': [1, 2, 3], 'y': [2, 4, 3],
+                                            'type': 'bar', 'name': 'SF'},
+                                        {'x': [1, 2, 3], 'y': [5, 4, 3],
+                                        'type': 'bar', 'name': u'Montreal'},
+                                    ]
+                                }
+                            )
+                    ]),
+                ])
+            ])
 
     elif tab =='tab-7':
         # Centrality distributions
