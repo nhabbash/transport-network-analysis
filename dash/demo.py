@@ -298,12 +298,12 @@ def render_content(tab):
                         html.Div([
                             html.Div([
                                 dcc.Markdown('''
-                                    #### **Centrality comparison**
+                                    |                | Vertices | Edges | Density |
+                                    |----------------|----------|-------|---------|
+                                    | Original graph | '''+ str(nx.number_of_nodes(net)) +'''| '''+ str(nx.number_of_edges(net)) +''' | '''+ str(nx.density(net)) +'''   |
+                                    | Neighbor graph | '''+ str(nx.number_of_nodes(neighbor)) +'''| '''+ str(nx.number_of_edges(neighbor)) +''' | '''+ str(nx.density(neighbor)) +'''   ||
+                                    | C2C graph      | '''+ str(nx.number_of_nodes(c2c)) +''' | '''+ str(nx.number_of_edges(c2c)) +''' | '''+ str(nx.density(c2c)) +'''   ||
 
-                                    Graphic point-to-point centrality comparison for the Neighbor graph (left) and C2C graph (right).
-                                    * Node size: *degree*
-                                    * Border color: *betweeness*
-                                    * Fill color: *closeness*
                                     ''', className="col-md-6"),
                             ], className="row center"),
                         ], className = "container-fluid", style={"width": "100%"})
