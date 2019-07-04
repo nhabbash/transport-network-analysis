@@ -128,13 +128,21 @@ $$
 C_B(G) = \sum_{s\neq v \neq t \in V}\frac{\sigma_{st}(v)}{\sigma_{st}}
 $$
 
-### TODO ADDING OTHER COMPARISONS
-
 ![Voronoi diagram of the public transport network](images/net-voronoi.png)
 
 ![Partitions of the public transport network with $\gamma = 2km$, $\rho = 5km$, corresponds to the Delaunay triangulation of the Voronoi diagram](images/net-centroids.png)
 
 ![Cell-to-cell flow graph of the public transport network](images/net-c2c.png)
+
+The comparison of these distributions seems to denote that, for the clustering parameters chosen, Milan's transport network connects efficiently the center and the nort-western regions of the city, while it is still somewhat lacking for the regions outside the main Milan province. 
+
+An assortativity analysis was conducted on both networks, finding how both of them tend to be mostly assortative - hubs connecting to hubs. The center of the city seems to show a number of hubs helping to redistribute the flow of traffic along most regions. The C2C graph is more assortative than the nieghbor graph as it presents a large number of nodes of the same degree connecting with each other.
+
+![Degree correlation matrix of the C2C graph](images/assortativity-c2c.png)
+
+![Degree correlation matrix of the neighbor graph](images/assortativity-neighbor.png)
+
+
 
 ## Resilience to attacks and failures
 
@@ -183,10 +191,14 @@ In conclusion, the network is most vulnerable to **smart** strategies that try t
 The change in diameter and average shortest path was also analyzed for the most effective strategy and the least effective strategy. The information obtained from this test allows us to verify how paths change during an attack. We can assess how the diameter increases in size as the size between peripheral nodes increases, until a point into which the GCC is broken up, and the leftover bigger component decreases drastically in diameter.
 The average shortest path presents a similar behaviour. The more nodes get eliminated, the longer the shortest path between nodes has to become, as deviations in the shortest path must be introduced. These measures in other terms represent how long it would take, given a failure or an attack scenario, to move inside the city.
 ![Diameter and average shortest path in the updating closeness scenario](images/paths-closeness.png)
+
 ![Diameter and average shortest path in the updating clustering coefficient scenario](images/paths-clustering.png)
 
 
 ![Graph of the centrality attack scenarios with update](images/attack-update.png)
+
+![Variation of the centrality measures for the updated degree measure](images/degree-attack.png)
+
 
 ## Conclusions
 This analysis drives two major themes:

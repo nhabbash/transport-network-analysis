@@ -294,24 +294,18 @@ def render_content(tab):
         # Graph comparison
         return html.Div([
                 dcc.Tabs(vertical=True, style=tabs_styles, id="tabs-comparison", children=[
-                    dcc.Tab(style=tab_style, selected_style=tab_selected_style, label='Node-to-node comparison', children=[
+                    dcc.Tab(style=tab_style, selected_style=tab_selected_style, label='General measures', children=[
                         html.Div([
-                            html.Div([
-                                html.Iframe(srcDoc=open('./maps/neigh_c_map.html').read(), className="col-md-6 m-2"),
-                                html.Iframe(srcDoc=open('./maps/c2c_c_map.html').read(), className="col-md-6 m-2"),
-                            ], className="row"),
-
                             html.Div([
                                 dcc.Markdown('''
                                     #### **Centrality comparison**
 
-                                    Graphic point-to-point centrality comparison for the C2C and Neighbor graphs.
+                                    Graphic point-to-point centrality comparison for the Neighbor graph (left) and C2C graph (right).
                                     * Node size: *degree*
                                     * Border color: *betweeness*
                                     * Fill color: *closeness*
                                     ''', className="col-md-6"),
                             ], className="row center"),
-
                         ], className = "container-fluid", style={"width": "100%"})
                     ]),
                     dcc.Tab(style=tab_style, selected_style=tab_selected_style, label='Local centralities', children=[
@@ -558,6 +552,26 @@ def render_content(tab):
                                     className="col-md-3"),
                                 ], className="row"),
                             ])
+                    ]),
+                    dcc.Tab(style=tab_style, selected_style=tab_selected_style, label='Node-to-node comparison', children=[
+                        html.Div([
+                            html.Div([
+                                html.Iframe(srcDoc=open('./maps/neigh_c_map.html').read(), className="col-md-6 m-2"),
+                                html.Iframe(srcDoc=open('./maps/c2c_c_map.html').read(), className="col-md-6 m-2"),
+                            ], className="row"),
+
+                            html.Div([
+                                dcc.Markdown('''
+                                    #### **Centrality comparison**
+
+                                    Graphic point-to-point centrality comparison for the Neighbor graph (left) and C2C graph (right).
+                                    * Node size: *degree*
+                                    * Border color: *betweeness*
+                                    * Fill color: *closeness*
+                                    ''', className="col-md-6"),
+                            ], className="row center"),
+
+                        ], className = "container-fluid", style={"width": "100%"})
                     ]),
                     dcc.Tab(style=tab_style, selected_style=tab_selected_style, label='Assortativity', children=[
                         html.Div([
