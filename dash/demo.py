@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 import dash
 import dash_html_components as html
 import dash_core_components as dcc
@@ -9,9 +11,6 @@ import random
 import dash_table as dt
 import numpy as np
 from collections import Counter
-import matplotlib
-import matplotlib.pyplot as plt
-matplotlib.use('Agg')
 from attacks import *
 
 def read_data(name):
