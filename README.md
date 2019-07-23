@@ -7,6 +7,8 @@ Final project for the *Data Analytics* course for the MSc in Computer Science at
 
 The project aimed to analyze the structure of the city network using multilayer graph representing the union of the different available means of transportation.
 
+Live Dash [demo](https://transport-network-analysis.herokuapp.com/) on Heroku.
+
 ## Structure
 
 The project is structured in four main parts:
