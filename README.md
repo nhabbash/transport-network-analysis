@@ -7,25 +7,20 @@ Final project for the *Data Analytics* course for the MSc in Computer Science at
 
 The project aimed to analyze the structure of the city network using multilayer graph representing the union of the different available means of transportation.
 
+## Structure
+
+The project is structured in four main parts:
+* Database container containing the raw GTFS data
+    * The CSV to GML conversion of the data (with some processing)
+* The graph processing notebook
+* The attacks processing notebook
+* A visualization demo
+
 #
 ## Prerequisites
 
 * Python 3.0 or greater
-
-### To access the DB with unprocessed GTFS data
-* Docker
-* Docker Compose
-* PostgreSQL (Binary necessary for the psycopg2 Python connector)
-* psycopg2
-
-### To generate graphs
-* networkx
-* geopy
-* scipy
-
-### For visualization
-* folium
-* Jupyter Notebook
+* Other requisites listed in `requirements.txt`
 
 #
 ## Installation
@@ -44,11 +39,15 @@ $ python init_data.py
 $ docker-compose up --build
 ``` 
 #
-## Visualizing data
+## Accessing notebooks
 ```sh
 $ jupyter-notebook maps.ipynb
 ``` 
-
+#
+## Accessing dash demo
+```sh
+$ python2 dash/demo.py
+``` 
 
 #
 ## Authors
