@@ -17,7 +17,7 @@ def read_data(name):
     return test
 
 
-G = nx.read_gml("./data/graphs/net_c2c.gml")
+G = nx.read_gml("./graphs/net_c2c.gml")
 def d_d_matrix(G):
     #contiene la distribuzione di degree
     degree_distribution={}
@@ -66,9 +66,9 @@ def degree_values(G):
 
 
 #create net 
-metro = nx.read_gml("./data/graphs/metro.gml")
-bus = nx.Graph(nx.read_gml("./data/graphs/bus.gml").to_undirected())
-tram = nx.Graph(nx.read_gml("./data/graphs/tram.gml").to_undirected())
+metro = nx.read_gml("./graphs/metro.gml")
+bus = nx.Graph(nx.read_gml("./graphs/bus.gml").to_undirected())
+tram = nx.Graph(nx.read_gml("./graphs/tram.gml").to_undirected())
 
 # Bus and tram share some stops, some processing is needed before uniting the nets. In the composition, bus attributes take the precedence
 bus_tram = nx.compose(tram, bus)
@@ -81,7 +81,7 @@ net = nx.union(metro, bus_tram)
 
 
 #attack update list rank
-c2c = nx.read_gml("./data/graphs/net_c2c.gml")
+c2c = nx.read_gml("./graphs/net_c2c.gml")
 
 #U=update_rank_attack(c2c,40,'degree',0)
 U=read_data("./data_plots/degree_u.txt")
@@ -104,7 +104,7 @@ R6=read_data("./data_plots/edbe_r.txt")
 #attacks sequence to random_vertex
 attacks_rv=[]
 for i in range(10):
-    c2c = nx.read_gml("./data/graphs/net_c2c.gml")
+    c2c = nx.read_gml("./graphs/net_c2c.gml")
     attacks_rv.append(random_vertex(c2c,60))
 
 #random attack
@@ -112,8 +112,8 @@ Rn=read_data("./data_plots/rn.txt")
 Rv=read_data("./data_plots/rv.txt")
 Re=read_data("./data_plots/re.txt")
 
-c2c = nx.read_gml("./data/graphs/net_c2c.gml")
-neighbor=nx.read_gml("./data/graphs/net_neighbor.gml")
+c2c = nx.read_gml("./graphs/net_c2c.gml")
+neighbor=nx.read_gml("./graphs/net_neighbor.gml")
 x_d,y_d=degree_values(c2c.degree())
 x_n,y_n=degree_values(neighbor.degree())
 x_net,y_net=degree_values(net.degree())
@@ -144,7 +144,7 @@ e_diameter=read_data("./data_plots/e_diameter.txt")
 
 #matrix correlation degree
 cc_c2c=degree_correlation_matrix(d_d_matrix(G)).tolist()
-cc_neighbor=degree_correlation_matrix(d_d_matrix(nx.read_gml("./data/graphs/net_neighbor.gml")))
+cc_neighbor=degree_correlation_matrix(d_d_matrix(nx.read_gml("./graphs/net_neighbor.gml")))
 external_stylesheets = [
     "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
     'https://codepen.io/chriddyp/pen/bWLwgP.css',
