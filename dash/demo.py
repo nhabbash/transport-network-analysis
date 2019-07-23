@@ -9,7 +9,9 @@ import random
 import dash_table as dt
 import numpy as np
 from collections import Counter
+import matplotlib
 import matplotlib.pyplot as plt
+matplotlib.use('Agg')
 from attacks import *
 
 def read_data(name):
