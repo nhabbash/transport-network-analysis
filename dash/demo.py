@@ -7,9 +7,7 @@ import networkx as nx
 import operator
 import random
 import dash_table as dt
-import folium
 import numpy as np
-import pandas as pd
 from collections import Counter
 import matplotlib.pyplot as plt
 from attacks import *
