@@ -1,8 +1,6 @@
 import networkx as nx
 import operator
 import random
-import plotly.plotly as py
-import plotly.graph_objs as go
 
 #misure di centralita
 def measures(G):
