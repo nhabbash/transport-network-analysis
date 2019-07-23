@@ -2,5 +2,4 @@ networkx
 numpy
 dash
 dash_table
-matplotlib
 gunicorn
