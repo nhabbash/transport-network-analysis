@@ -1,0 +1,5 @@
+networkx
+pandas
+dash
+dash_table
+matplotlib
