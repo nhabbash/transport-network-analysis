@@ -3,3 +3,4 @@ pandas
 dash
 dash_table
 matplotlib
+gunicorn
