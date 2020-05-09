@@ -1,11 +1,5 @@
 # Transportation Network Analysis
-> Analysis of Milan's public transportation network through a multi-layered graph representing different entities
-
-Final project for the *Data Analytics* course for the MSc in Computer Science at University of Milano-Bicocca.
-
-## Brief
-
-The project aimed to analyze the structure of the city network using multilayer graph representing the union of the different available means of transportation.
+> Analysis of the structure and resilience of a city's public transport network using an average graph representing its heterogeneous means of transportation.
 
 Live Dash [demo](https://transport-network-analysis.herokuapp.com/) on Heroku.
 
