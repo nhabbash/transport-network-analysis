@@ -9,9 +9,10 @@
 
 ## Overview
 This work is a graph-based analysis of a city's public transport network. It uses an average, aggregated graph to represent the different means of public transportation offered by the city, inspecting its structure, connectivity and resilience to different failure/attack strategies. 
-More information on the technical aspects of the work can be found in the report and project presentation under [`docs`](/docs).
 
-Live Dash [demo](https://transport-network-analysis.herokuapp.com/) on Heroku.
+#### [Live demo](https://transport-network-analysis.herokuapp.com/)
+#### [Documentatation](docs/report.pdf)
+#### [Presentation](docs/presentation.pdf)
 
 #
 ## Prerequisites
