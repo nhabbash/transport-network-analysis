@@ -4,7 +4,7 @@
 <p align="center">
   <img  src="docs/images/net-voronoi.png" width="55%">
   <br>
-  <em>Voronoi diagram of the neighbor graph with γ=2km and ρ=5km</em>
+  <em>Voronoi diagram of the transport network's neighbor graph overlaid on the city map (γ=2km and ρ=5km)</em>
 </p>
 
 ## Overview
